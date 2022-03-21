@@ -1,9 +1,9 @@
 import type { NextPage } from 'next'
+import Base_Template from '../components/templates/base'
 
 const Home: NextPage = () => {
   return (
-    <div>
-    </div>
+    <Base_Template />
   )
 }
 
