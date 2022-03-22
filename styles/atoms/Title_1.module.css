@@ -1,0 +1,9 @@
+.Title_1 {
+  font-family: Julius Sans One, sans-serif;
+  font-weight: normal;
+  font-size: 18px;
+  text-align: center;
+  letter-spacing: 0.4em;
+  text-transform: uppercase;
+  color: hsl(0deg 0% 0% / 1);
+}
