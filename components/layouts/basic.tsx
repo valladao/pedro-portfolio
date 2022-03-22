@@ -1,6 +1,10 @@
 import React, { FC } from "react"
 
-const Basic_Layout: FC<{}> = ({ children }) => {
+type Basic_Layout_Props = {
+  children: React.ReactNode
+}
+
+const Basic_Layout = ({ children }: Basic_Layout_Props) => {
   return (
     <>
       <main>{children}</main>
