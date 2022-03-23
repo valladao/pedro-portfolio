@@ -1,0 +1,9 @@
+.Subtitle_1 {
+  font-family: Julius Sans One, sans-serif;
+  font-weight: normal;
+  font-size: 14px;
+  text-align: center;
+  letter-spacing: 0.7em;
+  text-transform: uppercase;
+  color: hsl(0deg 0% 0% / 1);
+}

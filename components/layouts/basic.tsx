@@ -1,4 +1,5 @@
 import React, { FC } from "react"
+import Header from "../sections/header";
 
 type Basic_Layout_Props = {
   children: React.ReactNode
@@ -7,6 +8,7 @@ type Basic_Layout_Props = {
 const Basic_Layout = ({ children }: Basic_Layout_Props) => {
   return (
     <>
+      <Header></Header>
       <main>{children}</main>
     </>
   );
