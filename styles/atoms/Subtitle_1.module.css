@@ -7,3 +7,7 @@
   text-transform: uppercase;
   color: hsl(0deg 0% 0% / 1);
 }
+
+:global(.head-title) .Subtitle_1 {
+  margin-bottom: 0;
+}
