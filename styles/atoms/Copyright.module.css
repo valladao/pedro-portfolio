@@ -1,0 +1,13 @@
+.Copyright {
+  font-family: Julius Sans One, sans-serif;
+  font-weight: normal;
+  font-size: 15px;
+  text-align: center;
+  text-transform: uppercase;
+  color: hsl(0deg 0% 0% / 1);
+}
+
+footer .Copyright {
+  padding-top: 21px;
+  padding-bottom: 21px;
+}
