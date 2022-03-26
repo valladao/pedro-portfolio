@@ -1,0 +1,10 @@
+.Hero_Image {
+  width: 100%;
+}
+
+@media only screen and (max-width: 639px) {
+  .Hero_Image {
+    position: relative;
+    z-index: -2;
+  }
+}
