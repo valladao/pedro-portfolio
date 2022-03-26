@@ -1,8 +1,9 @@
 import Menu_Link from "../atoms/menu-link"
+import styles from '../../styles/molecules/Menu_Mobile.module.css'
 
 const Menu_Mobile = () => {
   return (
-    <nav>
+    <nav className={styles.Menu_Mobile}>
       <ul>
         <Menu_Link href="/about" title="About"></Menu_Link>
         <Menu_Link href="/portfolio" title="Portfolio"></Menu_Link>
