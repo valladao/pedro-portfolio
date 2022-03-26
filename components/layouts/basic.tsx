@@ -1,5 +1,5 @@
 import React, { FC } from "react"
-import Header from "../sections/header";
+import Header from "../organisms/header";
 
 type Basic_Layout_Props = {
   children: React.ReactNode
