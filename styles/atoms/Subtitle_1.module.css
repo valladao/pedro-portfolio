@@ -1,14 +1,13 @@
-.Title_1 {
+.Subtitle_1 {
   font-family: Julius Sans One, sans-serif;
   font-weight: normal;
-  font-size: 18px;
+  font-size: 14px;
   text-align: center;
-  letter-spacing: 0.4em;
+  letter-spacing: 0.7em;
   text-transform: uppercase;
   color: hsl(0deg 0% 0% / 1);
 }
 
-:global(.head-title) .Title_1 {
-  margin-top: 0;
-  margin-bottom: 10px;
+:global(.head-title) .Subtitle_1 {
+  margin-bottom: 0;
 }

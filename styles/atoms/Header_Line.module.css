@@ -1,0 +1,10 @@
+.Header_Line {
+  border-width: 1px 0 0 0;
+  color: hsl(0deg 0% 0% / 0.48);
+  margin: auto;
+}
+
+:global(.head-title) .Header_Line {
+  margin-bottom: 13px;
+  width: 243px;
+}

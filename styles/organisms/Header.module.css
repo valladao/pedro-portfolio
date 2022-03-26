@@ -1,0 +1,8 @@
+@media only screen and (min-width: 640px) {
+  .Header {
+    max-width: 1440px;
+    height: 127px;
+    margin: auto;
+    margin-bottom: 27px;
+  }
+}

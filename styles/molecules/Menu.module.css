@@ -1,0 +1,65 @@
+.Menu_Mobile {
+  padding: 0;
+}
+
+.Menu_Mobile ul {
+  margin: 0;
+  padding: 0;
+}
+
+.Menu_Mobile a {
+  text-align: center;
+}
+
+.Menu_Desktop {
+  padding: 0;
+}
+
+.Menu_Desktop a {
+  text-align: right;
+}
+
+.Menu_Desktop ul {
+  padding: 0;
+  width: fit-content;
+  float: right;
+}
+
+.Menu_Desktop::after {
+  content: "";
+  clear: both;
+  display: table;
+}
+
+:global(.header) .Menu_Mobile {
+  margin-top: 0;
+  padding-top: 16px;
+  aspect-ratio: 5 / 8;
+  background-image: linear-gradient(
+    180deg,
+    hsl(0deg 0% 100% / 1),
+    hsl(0deg 0% 100% / 0)
+  );
+  position: absolute;
+  width: 100%;
+  z-index: -1;
+  transition: 0.85s;
+  transform: translateY(-100%);
+}
+
+@media only screen and (max-width: 639px) {
+  .Menu_Desktop {
+    display: none;
+  }
+}
+
+@media only screen and (min-width: 640px) {
+  .Menu_Mobile {
+    display: none;
+  }
+
+  :global(.header) .Menu_Desktop {
+    margin-top: 34px;
+    margin-right: 28px;
+  }
+}
