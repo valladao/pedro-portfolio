@@ -1,4 +1,5 @@
 import React, { FC } from "react"
+import Footer from "../organisms/footer";
 import Header from "../organisms/header";
 
 type Basic_Layout_Props = {
@@ -10,6 +11,7 @@ const Basic_Layout = ({ children }: Basic_Layout_Props) => {
     <>
       <Header></Header>
       <main>{children}</main>
+      <Footer></Footer>
     </>
   );
 };
