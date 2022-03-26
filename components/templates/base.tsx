@@ -1,10 +1,8 @@
-import Title_1 from "../atoms/title-1"
+import Hero_Image from "../sections/hero-image"
 
 const Base_Template = () => {
   return (
-    <div>
-
-    </div>
+    <Hero_Image></Hero_Image>
   )
 }
 
