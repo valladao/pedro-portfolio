@@ -6,11 +6,11 @@ type Menu_Link_Props = {
   title: string
 }
 
-const Menu_Link = (props: Menu_Link_Props) => {
+const Menu_Link = ({ href, title }: Menu_Link_Props) => {
   return (
     <li className={styles.Menu_Link}>
-      <Link href={props.href}>
-        <a>{props.title}</a>
+      <Link href={href}>
+        <a>{title}</a>
       </Link>
     </li>
   )
