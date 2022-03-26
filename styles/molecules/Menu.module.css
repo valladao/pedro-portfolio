@@ -1,12 +1,32 @@
-.Menu {
+.Menu_Mobile {
   padding: 0;
 }
 
-.Menu ul {
+.Menu_Mobile ul {
   margin: 0;
   padding: 0;
 }
 
-.Menu a {
+.Menu_Mobile a {
   text-align: center;
+}
+
+.Menu_Desktop {
+  padding: 0;
+}
+
+.Menu_Desktop a {
+  text-align: right;
+}
+
+.Menu_Desktop ul {
+  padding: 0;
+  width: fit-content;
+  float: right;
+}
+
+.Menu_Desktop::after {
+  content: "";
+  clear: both;
+  display: table;
 }
