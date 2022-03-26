@@ -3,13 +3,8 @@ import styles from '../../styles/atoms/Hamburger_Menu.module.css'
 
 const Hamburger_Menu = () => {
   return (
-    <Image
-      className={styles.Hamburger_Menu}
-      src="/assets/hamburger-menu.png"
-      alt="Menu"
-      width={34}
-      height={34}
-    />
+    // eslint-disable-next-line @next/next/no-img-element
+    <img src="/assets/hamburger-menu.png" alt="Menu" />
   );
 };
 
