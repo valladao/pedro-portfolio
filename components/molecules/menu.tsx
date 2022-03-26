@@ -5,10 +5,10 @@ type Menu_Props = {
   mobile?: boolean
 }
 
-const Menu = ({mobile=true}: Menu_Props) => {
+const Menu = ({ mobile = true }: Menu_Props) => {
   let menuClass = mobile ? styles.Menu_Mobile : styles.Menu_Desktop
   return (
-    <nav className={menuClass}>
+    <nav className={menuClass + ' menu'}>
       <ul>
         <Menu_Link href="/about" title="About"></Menu_Link>
         <Menu_Link href="/portfolio" title="Portfolio"></Menu_Link>

@@ -1,0 +1,14 @@
+/*==========
+  Animations
+  ==========*/
+
+/* move-in */
+.move-in {
+  transform: translateY(0%) !important;
+  z-index: 0 !important;
+}
+
+/* rotate-90-cw */
+.rotate-90-cw {
+  transform: rotate(90deg);
+}
