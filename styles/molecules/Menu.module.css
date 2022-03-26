@@ -1,12 +1,12 @@
-.Menu_Mobile {
+.Menu {
   padding: 0;
 }
 
-.Menu_Mobile ul {
+.Menu ul {
   margin: 0;
   padding: 0;
 }
 
-.Menu_Mobile a {
+.Menu a {
   text-align: center;
 }
