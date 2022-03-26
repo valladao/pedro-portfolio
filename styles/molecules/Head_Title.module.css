@@ -1,3 +1,21 @@
 .Head_Title a {
   text-decoration: none;
 }
+
+@media only screen and (max-width: 639px) {
+  :global(.header) .Head_Title {
+    background-color: hsl(0deg 0% 100% / 1);
+    padding-top: 51px;
+    padding-bottom: 18px;
+    z-index: 1;
+    position: relative;
+  }
+}
+
+@media only screen and (min-width: 640px) {
+  :global(.header) .Head_Title {
+    margin-top: 15px;
+    margin-left: 33px;
+    float: left;
+  }
+}

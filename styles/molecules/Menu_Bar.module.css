@@ -1,3 +1,19 @@
 .Menu_Bar {
   height: 34px;
 }
+
+.Menu_Bar img {
+  margin: auto;
+}
+
+:global(.header) .Menu_Bar {
+  background-color: hsl(0deg 0% 100% / 1);
+  z-index: 1;
+  position: relative;
+}
+
+@media only screen and (min-width: 640px) {
+  .Menu_Bar {
+    display: none;
+  }
+}
