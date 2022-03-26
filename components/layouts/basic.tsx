@@ -1,4 +1,4 @@
-import React, { FC } from "react"
+import React from "react"
 import Footer from "../organisms/footer";
 import Header from "../organisms/header";
 
