@@ -2,13 +2,13 @@ import Hamburger_Menu from "../atoms/hamburger-menu";
 import styles from '../../styles/molecules/Menu_Bar.module.css'
 
 // Scripts added to create Menu animation
-const menuBar = document.querySelector(".menu-bar")
-const menu = document.querySelector(".menu")
-const hamburgerMenu = document.querySelector(".hamburger-menu")
-
-let menuMobileOpen = false
-
 const openMenu = () => {
+  const menuBar = document.querySelector(".menu-bar")
+  const menu = document.querySelector(".menu")
+  const hamburgerMenu = document.querySelector(".hamburger-menu")
+
+  let menuMobileOpen = false
+
   // On menu click
   if (menuBar && menu && hamburgerMenu) {
     if (!menuMobileOpen) {

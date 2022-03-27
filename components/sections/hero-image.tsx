@@ -1,14 +1,21 @@
 /* eslint-disable @next/next/no-img-element */
 import styles from '../../styles/sections/Hero_Image.module.css'
+import buildImageUrl from '../../scripts/build-image-url';
 
-const Hero_Image = () => {
+type Hero_Image_Props = {
+  imageDesktop: Sanity_Image,
+  imageMobile: Sanity_Image
+}
+
+const Hero_Image = ({ imageDesktop, imageMobile }: Hero_Image_Props) => {
+
   return (
     <picture>
       <source
-        srcSet="https://i.ibb.co/McvcVBg/home-desktop.jpg"
+        srcSet={buildImageUrl(imageDesktop)}
         media="(min-width: 920px)"
       />
-      <img className={styles.Hero_Image} src="https://i.ibb.co/K9W38HV/home-mobile.jpg" alt="Pedro H Valladao - Music Composer" />
+      <img className={styles.Hero_Image} src={buildImageUrl(imageMobile)} alt="Pedro H Valladao - Music Composer" />
     </picture>
   );
 };
