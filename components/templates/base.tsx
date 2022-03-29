@@ -10,7 +10,7 @@ const Base_Template = ({ data, slug = "index" }: Base_Template_Props) => {
   switch (slug) {
     case "index":
       return (
-        <Hero_Image imageDesktop={data.imageDesktop} imageMobile={data.imageMobile} ></Hero_Image>
+        <Hero_Image imageDesktop={data.imageDesktop} imageMobile={data.imageMobile} altText={data.altText}></Hero_Image>
       )
       break;
     default:

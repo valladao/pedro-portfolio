@@ -4,10 +4,11 @@ import buildImageUrl from '../../scripts/build-image-url';
 
 type Hero_Image_Props = {
   imageDesktop: Sanity_Image,
-  imageMobile: Sanity_Image
+  imageMobile: Sanity_Image,
+  altText: string
 }
 
-const Hero_Image = ({ imageDesktop, imageMobile }: Hero_Image_Props) => {
+const Hero_Image = ({ imageDesktop, imageMobile, altText }: Hero_Image_Props) => {
 
   return (
     <picture>
@@ -15,7 +16,7 @@ const Hero_Image = ({ imageDesktop, imageMobile }: Hero_Image_Props) => {
         srcSet={buildImageUrl(imageDesktop)}
         media="(min-width: 920px)"
       />
-      <img className={styles.Hero_Image} src={buildImageUrl(imageMobile)} alt="Pedro H Valladao - Music Composer" />
+      <img className={styles.Hero_Image} src={buildImageUrl(imageMobile)} alt={altText} />
     </picture>
   );
 };

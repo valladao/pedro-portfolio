@@ -15,4 +15,5 @@ type Base_Pages_Props = {
   imageMobile: Sanity_Image;
   pageTitle: string;
   slug: string;
+  altText: string;
 };
