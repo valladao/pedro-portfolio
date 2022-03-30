@@ -13,6 +13,11 @@ const Base_Template = ({ data, slug = "index" }: Base_Template_Props) => {
         <Hero_Image imageDesktop={data.imageDesktop} imageMobile={data.imageMobile} altText={data.altText}></Hero_Image>
       )
       break;
+    case "contact":
+      return (
+        <Hero_Image imageDesktop={data.imageDesktop} imageMobile={data.imageMobile} altText={data.altText}></Hero_Image>
+      )
+      break;
     default:
       return (
         // This must be a 404 return component
