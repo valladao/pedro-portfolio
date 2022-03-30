@@ -10,5 +10,5 @@
 
 /* rotate-90-cw */
 .rotate-90-cw {
-  transform: rotate(90deg);
+  transform: rotate(90deg) !important;
 }
