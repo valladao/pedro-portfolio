@@ -18,7 +18,7 @@ const Base_Template = ({ data, slug = "index" }: Base_Template_Props) => {
       return (
         <>
           <Hero_Image imageDesktop={data.imageDesktop} imageMobile={data.imageMobile} altText={data.altText}></Hero_Image>
-          <Email_Bar></Email_Bar>
+          <Email_Bar email={data.email}></Email_Bar>
         </>
       )
       break;

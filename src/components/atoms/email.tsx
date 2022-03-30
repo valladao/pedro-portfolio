@@ -1,8 +1,12 @@
 import styles from '../../styles/atoms/Email.module.css'
 
-const Email = () => {
+type Email_Props = {
+  email: string
+}
+
+const Email = ({ email }: Email_Props) => {
   return (
-    <p className={styles.Email}>contact@pedrohvalladao.com</p>
+    <p className={styles.Email}>{email}</p>
   );
 };
 
