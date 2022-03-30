@@ -1,0 +1,24 @@
+.Email_Bar {
+  position: relative;
+  padding-top: 7px;
+  padding-bottom: 8px;
+  background-color: hsl(0deg 0% 0% / 0.5);
+  width: 100%;
+  top: -125px;
+  margin-top: -39px;
+}
+
+@media only screen and (max-width: 639px) {
+  .Email_Bar {
+    z-index: -2;
+  }
+}
+
+@media only screen and (min-width: 920px) {
+  .Email_Bar {
+    padding-top: 14px;
+    padding-bottom: 14px;
+    margin-top: -67px;
+    top: -8vw;
+  }
+}
