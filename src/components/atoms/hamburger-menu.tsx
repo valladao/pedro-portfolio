@@ -1,4 +1,3 @@
-import Image from "next/image";
 import styles from '../../styles/atoms/Hamburger_Menu.module.css'
 
 const Hamburger_Menu = () => {
