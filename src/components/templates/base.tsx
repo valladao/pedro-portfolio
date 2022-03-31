@@ -1,3 +1,4 @@
+import Email_Bar from "../sections/email-bar"
 import Hero_Image from "../sections/hero-image"
 
 type Base_Template_Props = {
@@ -15,7 +16,10 @@ const Base_Template = ({ data, slug = "index" }: Base_Template_Props) => {
       break;
     case "contact":
       return (
-        <Hero_Image imageDesktop={data.imageDesktop} imageMobile={data.imageMobile} altText={data.altText}></Hero_Image>
+        <>
+          <Hero_Image imageDesktop={data.imageDesktop} imageMobile={data.imageMobile} altText={data.altText}></Hero_Image>
+          <Email_Bar email={data.email}></Email_Bar>
+        </>
       )
       break;
     default:

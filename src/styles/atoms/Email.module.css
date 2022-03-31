@@ -1,0 +1,22 @@
+.Email {
+  font-family: Julius Sans One, sans-serif;
+  font-size: 18px;
+  letter-spacing: 0.05em;
+  text-transform: uppercase;
+  color: hsl(0deg 0% 100% / 1);
+}
+
+:global(.email-bar) .Email {
+  margin: 0;
+  text-align: center;
+  line-height: 24px;
+}
+
+@media only screen and (min-width: 920px) {
+  :global(.email-bar) .Email {
+    font-size: 36px;
+    text-align: left;
+    margin-left: 33px;
+    line-height: 39px;
+  }
+}
