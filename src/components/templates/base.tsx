@@ -1,3 +1,4 @@
+import Title_Bar from "../sections/title-bar"
 import Email_Bar from "../sections/email-bar"
 import Hero_Image from "../sections/hero-image"
 
@@ -19,6 +20,14 @@ const Base_Template = ({ data, slug = "index" }: Base_Template_Props) => {
         <>
           <Hero_Image imageDesktop={data.imageDesktop} imageMobile={data.imageMobile} altText={data.altText}></Hero_Image>
           <Email_Bar email={data.email}></Email_Bar>
+        </>
+      )
+      break;
+    case "about":
+      return (
+        <>
+          <Title_Bar pageTitle={data.pageTitle}></Title_Bar>
+          <Hero_Image imageDesktop={data.imageDesktop} imageMobile={data.imageMobile} altText={data.altText}></Hero_Image>
         </>
       )
       break;
