@@ -1,0 +1,8 @@
+.Full_Name {
+  font-family: Julius Sans One, sans-serif;
+  font-size: 36px;
+  line-height: 39px;
+  letter-spacing: 0.05em;
+  text-transform: uppercase;
+  color: hsl(0deg 0% 100% / 1);
+}
