@@ -1,0 +1,19 @@
+.Name_Bar {
+  position: relative;
+  padding: 16px 25px 18px 25px;
+  background-color: hsl(0deg 0% 81% / 0.5);
+  transform: translateY(-100%);
+  margin-bottom: -112px;
+}
+
+@media only screen and (min-width: 920px) {
+  .Name_Bar {
+    padding-top: 21px;
+    padding-bottom: 20px;
+    position: static;
+    margin-top: 0;
+    transform: translateY(0%);
+    margin-bottom: 0;
+    background-color: hsl(0deg 0% 0% / 50%);
+  }
+}
