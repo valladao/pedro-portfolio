@@ -1,0 +1,11 @@
+.Preheading {
+  font-family: "Open Sans", sans-serif;
+  font-style: normal;
+  font-weight: 600;
+  font-size: 14px;
+  text-align: center;
+  margin: 0;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+  color: hsl(0deg 0% 0% / 1);
+}
