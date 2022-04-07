@@ -1,0 +1,13 @@
+.Content_Bar {
+  margin-top: 44px;
+}
+
+@media only screen and (min-width: 640px) {
+  .Content_Bar {
+    margin-top: 78px;
+  }
+
+  .Content_Bar h1 {
+    font-size: 24px;
+  }
+}
