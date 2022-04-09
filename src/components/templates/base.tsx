@@ -5,6 +5,7 @@ import Name_Bar from "../sections/name-bar"
 import Preheading_Bar from "../sections/preheading-bar"
 import Content_Bar from "../sections/content-bar"
 import Content_Body from "../sections/content-body"
+import Social_Box from "../sections/social-box"
 
 type Base_Template_Props = {
   data: Base_Pages_Props
@@ -36,6 +37,7 @@ const Base_Template = ({ data, slug = "index" }: Base_Template_Props) => {
           <Preheading_Bar></Preheading_Bar>
           <Content_Bar></Content_Bar>
           <Content_Body></Content_Body>
+          <Social_Box></Social_Box>
         </>
       )
       break;
