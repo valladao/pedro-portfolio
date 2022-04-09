@@ -10,6 +10,27 @@ type Sanity_Image = {
   }
 }
 
+type Children = {
+  _key: string
+  _type: string
+  marks: Array<string>
+  text: string
+}
+
+type markDefs = {
+  _type: string
+  _key: string
+  href: string
+}
+
+type Block = {
+  _key: string
+  _type: string
+  children: Array<Children>
+  markDefs: Array<markDefs>
+  style: string
+}
+
 type Base_Pages_Props = {
   imageDesktop: Sanity_Image
   imageMobile: Sanity_Image
@@ -17,4 +38,5 @@ type Base_Pages_Props = {
   slug: string
   altText: string
   email: string
+  content: Array<Block>
 }

@@ -1,0 +1,10 @@
+:global(.social-box) .Apple_Icon {
+  height: 44px;
+  vertical-align: top;
+}
+
+@media only screen and (min-width: 640px) {
+  :global(.social-box) .Apple_Icon {
+    height: 66px;
+  }
+}

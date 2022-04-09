@@ -1,0 +1,12 @@
+.Title_Bar {
+  padding-top: 7px;
+  padding-bottom: 8px;
+  background-color: hsl(0deg 0% 0% / 1);
+}
+
+@media only screen and (max-width: 639px) {
+  .Title_Bar {
+    z-index: -2;
+    position: relative;
+  }
+}

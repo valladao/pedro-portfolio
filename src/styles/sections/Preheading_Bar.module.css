@@ -1,0 +1,13 @@
+.Preheading_Bar {
+  max-width: 970px;
+  margin: auto;
+  margin-top: 44px;
+  padding: 0 46px;
+}
+
+@media only screen and (min-width: 640px) {
+  .Preheading_Bar {
+    margin-top: 88px;
+    padding: 0;
+  }
+}

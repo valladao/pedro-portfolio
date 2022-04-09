@@ -1,0 +1,20 @@
+.Page_Title {
+  font-family: Julius Sans One, sans-serif;
+  font-weight: normal;
+  font-size: 24px;
+  letter-spacing: 0.05em;
+  text-transform: uppercase;
+  color: hsl(0deg 0% 100% / 1);
+}
+
+:global(.title-bar) .Page_Title {
+  margin: 0;
+  text-align: center;
+}
+
+@media only screen and (min-width: 640px) {
+  :global(.title-bar) .Page_Title {
+    text-align: left;
+    margin-left: 110px;
+  }
+}
