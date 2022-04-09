@@ -40,7 +40,7 @@ const Base_Template = ({ data, slug = "index" }: Base_Template_Props) => {
           <Social_Box></Social_Box>
         </>
       )
-      break;
+      break
     default:
       return (
         // This must be a 404 return component
