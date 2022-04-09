@@ -3,6 +3,7 @@ import Email_Bar from "../sections/email-bar"
 import Hero_Image from "../sections/hero-image"
 import Name_Bar from "../sections/name-bar"
 import Preheading_Bar from "../sections/preheading-bar"
+import Content_Bar from "../sections/content-bar"
 
 type Base_Template_Props = {
   data: Base_Pages_Props
@@ -32,6 +33,7 @@ const Base_Template = ({ data, slug = "index" }: Base_Template_Props) => {
           <Hero_Image imageDesktop={data.imageDesktop} imageMobile={data.imageMobile} altText={data.altText}></Hero_Image>
           <Name_Bar></Name_Bar>
           <Preheading_Bar></Preheading_Bar>
+          <Content_Bar></Content_Bar>
         </>
       )
       break;
