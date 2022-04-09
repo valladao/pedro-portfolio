@@ -1,0 +1,34 @@
+.Social_Box {
+  width: 211px;
+  height: 48px;
+  margin: auto;
+  padding-top: 28px;
+  padding-bottom: 76px;
+}
+
+.Social_Box a {
+  text-decoration: none;
+}
+
+.Social_Box svg {
+  vertical-align: middle;
+  display: inline;
+  width: 48px;
+  height: 48px;
+}
+
+@media only screen and (min-width: 640px) {
+  .Social_Box {
+    width: auto;
+    max-width: 1157px;
+    height: 72px;
+    padding-left: 31px;
+    padding-top: 8px;
+    padding-bottom: 83px;
+  }
+
+  .Social_Box svg {
+    width: 72px;
+    height: 72px;
+  }
+}
