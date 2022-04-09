@@ -1,5 +1,4 @@
 import styles from '../../styles/sections/Content_Body.module.css'
-import Paragraph from '../atoms/paragraph'
 import { PortableText } from '@portabletext/react'
 
 type Content_Body_Props = {
