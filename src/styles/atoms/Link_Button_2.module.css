@@ -1,0 +1,46 @@
+/* Selector original: .album-tile .button-title-2 */
+.Link_Button_2 h4 {
+  position: relative;
+  top: 50%;
+  transform: translateY(-50%);
+  background-color: hsl(0deg 0% 91% / 1);
+  border-radius: 5px;
+  font-family: "Gruppo", cursive;
+  font-weight: 400;
+  font-size: 48px;
+  letter-spacing: 0.2em;
+  text-transform: uppercase;
+  line-height: 50px;
+  max-width: 425px;
+  margin: auto;
+  color: hsl(0deg 0% 45% / 1);
+}
+
+.album-tile .Link_Button_2 {
+  background-color: hsl(0deg 0% 77% / 0.6);
+  opacity: 0;
+  position: absolute;
+  height: 100%;
+  width: 100%;
+  right: 0;
+  top: 0;
+  padding: 0px 50px;
+  transition: 0.4s;
+  text-align: center;
+  display: none;
+}
+
+.album-tile .Link_Button_2:hover {
+  opacity: 1;
+}
+
+.album-banner .Link_Button_2 {
+  display: block;
+}
+
+@media only screen and (min-width: 640px) {
+  /* Selector original: .album-tile .button-title-2 */
+  .Link_Button_2 h4 {
+    line-height: inherit;
+  }
+}
