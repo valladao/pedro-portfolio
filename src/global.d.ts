@@ -40,3 +40,17 @@ type Base_Pages_Props = {
   email: string
   content: Array<Block>
 }
+
+type heroImage = {
+  _key: string
+  _type: string
+  altText: string
+  imageDesktop: Sanity_Image
+  imageMobile: Sanity_Image
+}
+
+type Portfolio_Pages_Props = {
+  pageTitle: string
+  sections: Array<heroImage>
+  slug: string
+}
