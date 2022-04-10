@@ -2,25 +2,11 @@ import client from "../client"
 
 export default async function getSanityPagesQuery(
   template: string,
-  slug: string
+  slug: string,
+  fields: string
 ) {
-  let getFields = ""
-
-  switch (template) {
-    case "base":
-      getFields =
-        "{slug,pageTitle,imageDesktop,imageMobile,altText,email,content}"
-      break
-    case "portfolio":
-      getFields = "{pageTitle,slug,sections}"
-      break
-    default:
-      getFields = ""
-      break
-  }
-
   const query = await client.fetch(
-    `*[_type == "${template}-pages" && slug == "${slug}"]${getFields}`
+    `*[_type == "${template}-pages" && slug == "${slug}"]${fields}`
   )
   return query[0]
 }
