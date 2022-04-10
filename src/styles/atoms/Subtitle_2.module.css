@@ -1,0 +1,10 @@
+.Subtitle_2 {
+  font-family: "Open Sans", sans-serif;
+  font-weight: normal;
+  font-size: 18px;
+  line-height: 25px;
+  text-align: center;
+  letter-spacing: 0.2em;
+  text-transform: uppercase;
+  color: hsl(0deg 0% 100% / 1);
+}
