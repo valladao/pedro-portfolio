@@ -8,3 +8,10 @@
   text-transform: uppercase;
   color: hsl(0deg 0% 100% / 1);
 }
+
+@media only screen and (min-width: 920px) {
+  :global(.subtitle-bar-2) .Subtitle_2 {
+    font-size: 36px;
+    line-height: 49px;
+  }
+}
