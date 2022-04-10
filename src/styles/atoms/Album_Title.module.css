@@ -1,0 +1,10 @@
+.Album_Title {
+  font-family: open-sans-condensed, "Open Sans", sans-serif;
+  font-weight: 400;
+  font-style: italic;
+  font-size: 24px;
+  line-height: 33px;
+  text-align: center;
+  letter-spacing: 0.2em;
+  text-transform: uppercase;
+}
