@@ -10,6 +10,14 @@
   color: hsl(0deg 0% 0% / 1);
 }
 
+/* Removing probably unseful
+
 .album-tile .release-date {
+  display: none;
+}
+
+*/
+
+:global(.album-banner) .Release_Date {
   display: none;
 }

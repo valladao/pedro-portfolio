@@ -9,6 +9,12 @@
   text-transform: uppercase;
 }
 
+/*
 :global(.album-tile) .Album_Title {
+  display: none;
+}
+*/
+
+:global(.album-banner) .Album_Title {
   display: none;
 }

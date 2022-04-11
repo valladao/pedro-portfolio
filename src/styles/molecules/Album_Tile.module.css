@@ -8,3 +8,8 @@
 .Album_Tile a {
   text-decoration: none;
 }
+
+:global(.album-banner) .Album_Tile {
+  background-color: hsl(0deg 0% 26% / 0.4);
+  padding: 0 15px;
+}

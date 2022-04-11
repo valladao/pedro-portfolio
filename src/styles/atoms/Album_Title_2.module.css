@@ -15,6 +15,10 @@
   padding: 14px 10px 15px 10px;
 }
 
+:global(.album-banner) .Album_Title_2 {
+  display: block;
+}
+
 @media only screen and (min-width: 640px) {
   :global(.album-tile) .Album_Title_2 {
     font-size: 24px;

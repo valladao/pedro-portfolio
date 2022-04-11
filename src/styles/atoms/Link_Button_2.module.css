@@ -34,7 +34,7 @@
   opacity: 1;
 }
 
-.album-banner .Link_Button_2 {
+:global(.album-banner) .Link_Button_2 {
   display: block;
 }
 
