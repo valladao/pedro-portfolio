@@ -8,3 +8,7 @@
   letter-spacing: 0.2em;
   text-transform: uppercase;
 }
+
+:global(.album-tile) .Album_Title {
+  display: none;
+}

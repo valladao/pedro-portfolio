@@ -1,5 +1,5 @@
-/* Selector original: .album-tile .button-title-2 */
-.Link_Button_2 h4 {
+/* Selector original: :global(.album-tile) .button-title-2 */
+:global(.album-tile) h4 {
   position: relative;
   top: 50%;
   transform: translateY(-50%);
@@ -16,7 +16,7 @@
   color: hsl(0deg 0% 45% / 1);
 }
 
-.album-tile .Link_Button_2 {
+:global(.album-tile) .Link_Button_2 {
   background-color: hsl(0deg 0% 77% / 0.6);
   opacity: 0;
   position: absolute;
@@ -30,7 +30,7 @@
   display: none;
 }
 
-.album-tile .Link_Button_2:hover {
+:global(.album-tile) .Link_Button_2:hover {
   opacity: 1;
 }
 

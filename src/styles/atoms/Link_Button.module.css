@@ -26,3 +26,7 @@
   margin: 0 14%;
   color: hsl(0deg 0% 45% / 1);
 }
+
+:global(.album-tile) .Link_Button {
+  display: none;
+}

@@ -9,3 +9,7 @@
   text-transform: uppercase;
   color: hsl(0deg 0% 0% / 1);
 }
+
+.album-tile .release-date {
+  display: none;
+}

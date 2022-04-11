@@ -9,3 +9,19 @@
   text-transform: uppercase;
   color: hsl(0deg 0% 100% / 1);
 }
+
+:global(.album-tile) .Album_Title_2 {
+  display: none;
+  padding: 14px 10px 15px 10px;
+}
+
+@media only screen and (min-width: 640px) {
+  :global(.album-tile) .Album_Title_2 {
+    font-size: 24px;
+    line-height: 33px;
+  }
+
+  :global(.album-tile) .Album_Title_2 {
+    line-height: inherit;
+  }
+}

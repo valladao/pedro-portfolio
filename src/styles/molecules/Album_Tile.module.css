@@ -1,0 +1,10 @@
+.Album_Tile {
+  margin: auto;
+  max-width: 665px;
+  position: relative;
+  width: 100%;
+}
+
+.Album_Tile a {
+  text-decoration: none;
+}
