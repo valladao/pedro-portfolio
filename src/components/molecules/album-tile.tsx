@@ -1,5 +1,5 @@
 import Link from 'next/link'
-import styles from '../../styles/atoms/Album_Tile.module.css'
+import styles from '../../styles/molecules/Album_Tile.module.css'
 import Album_Cover from '../atoms/album-cover'
 import Album_Title from '../atoms/album-title'
 import Album_Title_2 from '../atoms/album-title-2'

@@ -1,4 +1,4 @@
-import styles from '../../styles/atoms/Subtitle_Bar_2.module.css'
+import styles from '../../styles/molecules/Subtitle_Bar_2.module.css'
 import Subtitle_2 from '../atoms/subtitle-2'
 
 const Subtitle_Bar_2 = () => {
