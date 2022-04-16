@@ -6,7 +6,7 @@ export default async function getSanityPagesQuery(
   fields: string
 ) {
   const query = await client.fetch(
-    `*[_type == "${template}-pages" && slug == "${slug}"]${fields}`
+    `*[_type == "${template}Page" && slug == "${slug}"]${fields}`
   )
   return query[0]
 }

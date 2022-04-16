@@ -36,7 +36,7 @@ const Base_Template = ({ data, slug = "index" }: Base_Template_Props) => {
           <Name_Bar></Name_Bar>
           <Preheading_Bar></Preheading_Bar>
           <Content_Bar></Content_Bar>
-          <Content_Body portableText={data.content}></Content_Body>
+          <Content_Body portableText={data.contents}></Content_Body>
           <Social_Box></Social_Box>
         </>
       )

@@ -38,7 +38,7 @@ type Base_Pages_Props = {
   slug: string
   altText: string
   email: string
-  content: Array<Block>
+  contents: Array<Block>
 }
 
 type heroImage = {
