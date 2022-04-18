@@ -7,18 +7,25 @@ import Link_Button from '../atoms/link-button'
 import Link_Button_2 from '../atoms/link-button-2'
 import Release_Date from '../atoms/release-date'
 
-const Album_Tile = () => {
+type Album_Tile_Props = {
+  albumTitle: string
+  albumCover: Sanity_Image
+  altText: string
+  slug: string
+}
+
+const Album_Tile = ({ albumTitle, albumCover, altText, slug }: Album_Tile_Props) => {
   return (
     <div className={styles.Album_Tile + ' album-tile'}>
       <Release_Date></Release_Date>
-      <Link href="#">
+      <Link href={`/album/${slug}`}>
         <a>
           <Link_Button_2></Link_Button_2>
           <div className='album-box'>
             <Link_Button></Link_Button>
-            <Album_Cover></Album_Cover>
+            <Album_Cover albumCover={albumCover} altText={altText}></Album_Cover>
           </div>
-          <Album_Title_2></Album_Title_2>
+          <Album_Title_2 albumTitle={albumTitle}></Album_Title_2>
         </a>
       </Link>
       <Album_Title></Album_Title>

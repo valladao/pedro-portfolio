@@ -1,12 +1,18 @@
 import styles from '../../styles/atoms/Album_Cover.module.css'
+import buildImageUrl from '../../scripts/build-image-url';
 
-const Album_Cover = () => {
+type Album_Cover_Props = {
+  albumCover: Sanity_Image
+  altText: string
+}
+
+const Album_Cover = ({ albumCover, altText }: Album_Cover_Props) => {
   return (
     // eslint-disable-next-line @next/next/no-img-element
     <img
       className={styles.Album_Cover}
-      src="https://i.ibb.co/T2Yk6sp/album-cover.jpg"
-      alt=""
+      src={buildImageUrl(albumCover)}
+      alt={altText}
     />
   )
 }

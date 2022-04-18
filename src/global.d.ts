@@ -31,6 +31,18 @@ type Block = {
   style: string
 }
 
+type Album = {
+  _createdAt: string
+  _id: string
+  _rev: string
+  _type: string
+  _updatedAt: string
+  albumCover: Sanity_Image
+  albumTitle: string
+  altText: string
+  slug: string
+}
+
 type Base_Pages_Props = {
   imageDesktop: Sanity_Image
   imageMobile: Sanity_Image
@@ -41,7 +53,7 @@ type Base_Pages_Props = {
   contents: Array<Block>
 }
 
-type heroImage = {
+type HeroImage = {
   _key: string
   _type: string
   altText: string
@@ -49,8 +61,16 @@ type heroImage = {
   imageMobile: Sanity_Image
 }
 
+type AlbumBanner = {
+  _key: string
+  _type: string
+  album: Album
+}
+
+type Sections = HeroImage & AlbumBanner
+
 type Portfolio_Pages_Props = {
   pageTitle: string
-  sections: Array<heroImage>
+  sections: Array<Sections>
   slug: string
 }

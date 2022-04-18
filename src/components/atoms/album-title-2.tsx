@@ -1,9 +1,13 @@
 import styles from '../../styles/atoms/Album_Title_2.module.css'
 
-const Album_Title_2 = () => {
+type Album_Title_2_Type = {
+  albumTitle: string
+}
+
+const Album_Title_2 = ({ albumTitle }: Album_Title_2_Type) => {
   return (
     <h3 className={styles.Album_Title_2}>
-      Symphony in two movements in E/E-flat minor, Op.3
+      {albumTitle}
     </h3>
   );
 };
