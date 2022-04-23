@@ -12,7 +12,7 @@ type Album_Banner_Props = {
 const Album_Banner = ({ albumTitle, albumCover, altText, slug }: Album_Banner_Props) => {
   return (
     <>
-      <Subtitle_Bar_2></Subtitle_Bar_2>
+      <Subtitle_Bar_2 text="Recent Works & Releases"></Subtitle_Bar_2>
       <div className={styles.Album_Banner + ' album-banner'}>
         <Album_Tile albumTitle={albumTitle} albumCover={albumCover} altText={altText} slug={slug}></Album_Tile>
       </div>
