@@ -8,12 +8,12 @@
   border-radius: 12px;
 }
 
-.track-list .Spotify_Track {
+:global(.track-list).Spotify_Track {
   padding: 11px 44px;
 }
 
 @media only screen and (min-width: 640px) {
-  .track-list .Spotify_Track {
+  :global(.track-list) .Spotify_Track {
     padding: 11px 34px;
   }
 }

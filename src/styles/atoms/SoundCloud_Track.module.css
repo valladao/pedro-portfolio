@@ -3,6 +3,10 @@
   padding: 7px;
 }
 
+.SoundCloud_Track iframe {
+  border-radius: 12px;
+}
+
 :global(.track-list) .SoundCloud_Track {
   padding: 11px 44px;
 }
