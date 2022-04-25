@@ -16,7 +16,7 @@ const trackRender = (track: Tracks) => {
 
     case "youtubeTrack":
       return (
-        <YouTube_Track></YouTube_Track>
+        <YouTube_Track trackId={track.trackID} startTime={track.startTime}></YouTube_Track>
       )
 
     default:

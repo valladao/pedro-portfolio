@@ -77,7 +77,7 @@ type YouTube_Track = {
   _key: string
   _type: string
   trackID: string
-  time: number
+  startTime: number
 }
 
 type Track_List = {
