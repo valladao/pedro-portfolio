@@ -11,7 +11,7 @@ const trackRender = (track: Tracks) => {
 
     case "spotifyTrack":
       return (
-        <Spotify_Track></Spotify_Track>
+        <Spotify_Track trackId={track.trackID}></Spotify_Track>
       )
 
     case "youtubeTrack":
