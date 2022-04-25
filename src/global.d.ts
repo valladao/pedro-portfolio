@@ -67,19 +67,28 @@ type AlbumBanner = {
   album: Album
 }
 
-type Soundcloud_Track = {
+type Standard_Track = {
   _key: string
   _type: string
   trackID: string
 }
 
+type YouTube_Track = {
+  _key: string
+  _type: string
+  trackID: string
+  time: number
+}
+
 type Track_List = {
   _key: string
   _type: string
-  tracks: Array<Soundcloud_Track>
+  tracks: Array<Tracks>
 }
 
 type Sections = HeroImage & AlbumBanner & Track_List
+
+type Tracks = Standard_Track & YouTube_Track
 
 type Portfolio_Pages_Props = {
   pageTitle: string
