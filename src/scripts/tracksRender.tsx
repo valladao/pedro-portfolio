@@ -6,17 +6,26 @@ const trackRender = (track: Tracks) => {
   switch (track._type) {
     case "soundcloudTrack":
       return (
-        <SoundCloud_Track trackId={track.trackID}></SoundCloud_Track>
+        <SoundCloud_Track
+          key={track._key}
+          trackId={track.trackID}
+        ></SoundCloud_Track>
       )
 
     case "spotifyTrack":
       return (
-        <Spotify_Track trackId={track.trackID}></Spotify_Track>
+        <Spotify_Track
+          key={track._key}
+          trackId={track.trackID}
+        ></Spotify_Track>
       )
 
     case "youtubeTrack":
       return (
-        <YouTube_Track trackId={track.trackID} startTime={track.startTime}></YouTube_Track>
+        <YouTube_Track
+          key={track._key}
+          trackId={track.trackID} startTime={track.startTime}
+        ></YouTube_Track>
       )
 
     default:
