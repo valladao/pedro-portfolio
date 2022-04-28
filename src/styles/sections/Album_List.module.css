@@ -1,0 +1,14 @@
+@media only screen and (min-width: 640px) {
+  .Album_List {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    padding: 0 5.5%;
+  }
+}
+
+@media only screen and (min-width: 920px) {
+  .Album_List {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+  }
+}

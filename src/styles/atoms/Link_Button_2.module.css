@@ -38,6 +38,10 @@
   display: block;
 }
 
+:global(.album-list) .Link_Button_2 {
+  display: none;
+}
+
 @media only screen and (min-width: 640px) {
   /* Selector original: .album-tile .button-title-2 */
   .Link_Button_2 h4 {

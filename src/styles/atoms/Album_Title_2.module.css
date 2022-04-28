@@ -19,6 +19,10 @@
   display: block;
 }
 
+:global(.album-list) .Album_Title_2 {
+  display: none;
+}
+
 @media only screen and (min-width: 640px) {
   :global(.album-tile) .Album_Title_2 {
     font-size: 24px;
