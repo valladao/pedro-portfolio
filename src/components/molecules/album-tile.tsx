@@ -21,7 +21,7 @@ const Album_Tile = ({ albumTitle, albumCover, altText, slug }: Album_Tile_Props)
       <Link href={`/album/${slug}`}>
         <a>
           <Link_Button_2></Link_Button_2>
-          <div className='album-box'>
+          <div className={styles.Album_Box}>
             <Link_Button></Link_Button>
             <Album_Cover albumCover={albumCover} altText={altText}></Album_Cover>
           </div>
