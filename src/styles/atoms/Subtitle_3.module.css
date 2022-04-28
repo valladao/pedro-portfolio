@@ -9,3 +9,15 @@
   text-transform: uppercase;
   color: hsl(0deg 0% 0% / 1);
 }
+
+:global(.portfolio-bar) .Subtitle_3 {
+  padding-top: 7px;
+  padding-bottom: 11px;
+}
+
+@media only screen and (min-width: 640px) {
+  :global(.portfolio-bar) .Subtitle_3 {
+    padding-top: 18px;
+    padding-bottom: 16px;
+  }
+}
