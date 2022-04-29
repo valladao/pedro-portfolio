@@ -16,7 +16,16 @@ const Portfolio = ({ query }: Portfolio_Props) => {
 
 export async function getServerSideProps() {
 
-  const fields = "{pageTitle,slug,sections[]{...,album != NULL => {album->}}}"
+  const fields = `
+  {
+    pageTitle,
+      slug,
+      sections[]{
+        ...,
+        album != NULL => { album ->},
+        selectedAlbuns[0] == "all" => { "albunsList": * [_type == "album"] }
+    }
+  }`
 
   const query = await getSanityPagesQuery("portfolio", "portfolio", fields)
 
