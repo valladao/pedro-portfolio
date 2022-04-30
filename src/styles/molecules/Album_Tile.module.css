@@ -13,3 +13,19 @@
   background-color: hsl(0deg 0% 26% / 0.4);
   padding: 0 15px;
 }
+
+:global(.album-list) .Album_Tile {
+  margin-top: 46px;
+  margin-bottom: 49px;
+  padding: 0 40px;
+}
+
+:global(.album-list) .Album_Box {
+  position: relative;
+}
+
+@media only screen and (min-width: 640px) {
+  :global(.album-list) .Album_Tile {
+    padding: 0 20px;
+  }
+}

@@ -41,6 +41,7 @@ type Album = {
   albumTitle: string
   altText: string
   slug: string
+  releaseDate: number
 }
 
 type Base_Pages_Props = {
@@ -86,7 +87,13 @@ type Track_List = {
   tracks: Array<Tracks>
 }
 
-type Sections = HeroImage & AlbumBanner & Track_List
+type Album_List = {
+  _key: string
+  _type: string
+  albunsList: Array<Album>
+}
+
+type Sections = HeroImage & AlbumBanner & Track_List & Album_List
 
 type Tracks = Standard_Track & YouTube_Track
 

@@ -36,3 +36,11 @@
 :global(.album-banner) .Link_Button {
   display: none;
 }
+
+:global(.album-list) .Link_Button {
+  display: block;
+}
+
+:global(.album-list) .Link_Button:hover {
+  opacity: 1;
+}

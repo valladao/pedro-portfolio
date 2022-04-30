@@ -1,6 +1,7 @@
 import Hero_Image from "../components/sections/hero-image"
 import Album_Banner from "../components/sections/album-banner"
 import Track_List from "../components/sections/track-list"
+import Album_List from "../components/sections/album-list"
 
 const sectionRender = (section: Sections) => {
   switch (section._type) {
@@ -31,6 +32,14 @@ const sectionRender = (section: Sections) => {
           key={section._key}
           tracks={section.tracks}
         ></Track_List>
+      )
+
+    case "albumList":
+      return (
+        <Album_List
+          key={section._key}
+          albuns={section.albunsList}
+        ></Album_List>
       )
 
     default:
