@@ -1,10 +1,10 @@
 import styles from '../../styles/atoms/Album_Title_2.module.css'
 
-type Album_Title_2_Type = {
+type Album_Title_2_Props = {
   albumTitle: string
 }
 
-const Album_Title_2 = ({ albumTitle }: Album_Title_2_Type) => {
+const Album_Title_2 = ({ albumTitle }: Album_Title_2_Props) => {
   return (
     <h3 className={styles.Album_Title_2}>
       {albumTitle}
