@@ -28,7 +28,7 @@ const Album_Tile = ({ albumTitle, albumCover, altText, slug }: Album_Tile_Props)
           <Album_Title_2 albumTitle={albumTitle}></Album_Title_2>
         </a>
       </Link>
-      <Album_Title></Album_Title>
+      <Album_Title albumTitle={albumTitle}></Album_Title>
     </div>
   )
 }
