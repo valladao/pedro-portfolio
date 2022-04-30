@@ -23,7 +23,7 @@ export async function getServerSideProps() {
       sections[]{
         ...,
         album != NULL => { album ->},
-        selectedAlbuns[0] == "all" => { "albunsList": * [_type == "album"] }
+        selectedAlbuns[0] == "all" => { "albunsList": * [_type == "album"] | order(releaseDate desc) | order(_createdAt asc) }
     }
   }`
 
