@@ -20,6 +20,7 @@ const Album_List = ({ albuns }: Album_List_Props) => {
               albumCover={album.albumCover}
               altText={album.altText}
               slug={album.slug}
+              releaseDate={album.releaseDate}
             ></Album_Tile>
           )
         })}

@@ -1,8 +1,12 @@
 import styles from '../../styles/atoms/Release_Date.module.css'
 
-const Release_Date = () => {
+type Release_Date_Props = {
+  releaseDate?: number
+}
+
+const Release_Date = ({ releaseDate }: Release_Date_Props) => {
   return (
-    <h3 className={styles.Release_Date}>2022</h3>
+    <h3 className={styles.Release_Date}>{releaseDate}</h3>
   )
 }
 

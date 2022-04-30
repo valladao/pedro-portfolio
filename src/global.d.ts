@@ -41,6 +41,7 @@ type Album = {
   albumTitle: string
   altText: string
   slug: string
+  releaseDate: number
 }
 
 type Base_Pages_Props = {
