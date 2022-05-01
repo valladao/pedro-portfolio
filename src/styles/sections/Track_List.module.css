@@ -1,0 +1,21 @@
+.Track_List {
+  padding-top: 16px;
+  padding-bottom: 16px;
+  max-width: 1440px;
+  margin: auto;
+}
+
+@media only screen and (min-width: 640px) {
+  .Track_List {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    padding: 100px 30px;
+  }
+}
+
+@media only screen and (min-width: 920px) {
+  .Track_List {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+  }
+}

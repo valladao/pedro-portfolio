@@ -1,0 +1,27 @@
+.Release_Date {
+  font-family: open-sans-condensed, "Open Sans", sans-serif;
+  font-weight: 400;
+  font-style: italic;
+  font-size: 24px;
+  text-align: center;
+  letter-spacing: 0.2em;
+  line-height: 33px;
+  text-transform: uppercase;
+  color: hsl(0deg 0% 0% / 1);
+}
+
+/* Removing probably unseful
+
+.album-tile .release-date {
+  display: none;
+}
+
+*/
+
+:global(.album-banner) .Release_Date {
+  display: none;
+}
+
+:global(.album-list) .Release_Date {
+  display: block;
+}

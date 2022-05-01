@@ -1,0 +1,28 @@
+.Album_Title {
+  font-family: open-sans-condensed, "Open Sans", sans-serif;
+  font-weight: 400;
+  font-style: italic;
+  font-size: 24px;
+  line-height: 33px;
+  text-align: center;
+  letter-spacing: 0.2em;
+  text-transform: uppercase;
+}
+
+/*
+:global(.album-tile) .Album_Title {
+  display: none;
+}
+*/
+
+:global(.album-banner) .Album_Title {
+  display: none;
+}
+
+:global(.album-list) .Album_Title {
+  padding-top: 20px;
+}
+
+:global(.album-list) .Album_Title {
+  display: block;
+}

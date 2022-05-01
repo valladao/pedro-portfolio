@@ -1,0 +1,21 @@
+.Spotify_Track {
+  margin-top: auto;
+  margin-bottom: auto;
+  padding: 7px;
+}
+
+.Spotify_Track iframe {
+  border-radius: 12px;
+  margin: auto;
+  display: block;
+}
+
+:global(.track-list) .Spotify_Track {
+  padding: 11px 44px;
+}
+
+@media only screen and (min-width: 640px) {
+  :global(.track-list) .Spotify_Track {
+    padding: 11px 34px;
+  }
+}

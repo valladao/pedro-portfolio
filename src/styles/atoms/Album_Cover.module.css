@@ -1,0 +1,7 @@
+:global(.album-tile) .Album_Cover {
+  margin: auto;
+}
+
+:global(.album-banner) .Album_Cover {
+  padding-top: 15px;
+}
