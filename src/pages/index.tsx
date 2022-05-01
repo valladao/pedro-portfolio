@@ -1,7 +1,7 @@
 import type { NextPage } from 'next'
 import Basic_Layout from '../components/layouts/basic'
 import Base_Template from '../components/templates/base'
-import getBasePagesQuery from '../scripts/get-base-pages-query'
+import getSanityPagesQuery from '../scripts/get-sanity-pages-query'
 
 type Home_Props = {
   query: Base_Pages_Props
@@ -19,7 +19,9 @@ const Home: NextPage<Home_Props> = ({ query }) => {
 
 export async function getServerSideProps() {
 
-  const query = await getBasePagesQuery("index")
+  const fields = `{slug,pageTitle,imageDesktop,imageMobile,altText,email,contents}`
+
+  const query = await getSanityPagesQuery("base", "index", fields)
 
   return {
     props: {

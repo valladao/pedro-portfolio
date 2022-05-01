@@ -1,6 +1,6 @@
 import Basic_Layout from "../components/layouts/basic"
 import Base_Template from "../components/templates/base"
-import getBasePagesQuery from "../scripts/get-base-pages-query"
+import getSanityPagesQuery from '../scripts/get-sanity-pages-query'
 
 type About_Props = {
   query: Base_Pages_Props
@@ -16,7 +16,9 @@ const About = ({ query }: About_Props) => {
 
 export async function getServerSideProps() {
 
-  const query = await getBasePagesQuery("about")
+  const fields = `{slug,pageTitle,imageDesktop,imageMobile,altText,email,contents}`
+
+  const query = await getSanityPagesQuery("base", "about", fields)
 
   return {
     props: {
