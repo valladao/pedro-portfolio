@@ -16,7 +16,7 @@ const About = ({ query }: About_Props) => {
 
 export async function getServerSideProps() {
 
-  const fields = `{slug,pageTitle,imageDesktop,imageMobile,altText,email,contents}`
+  const fields = `{'slug': slug.current,pageTitle,imageDesktop,imageMobile,altText,email,contents}`
 
   const query = await getSanityPagesQuery("base", "about", fields)
 
