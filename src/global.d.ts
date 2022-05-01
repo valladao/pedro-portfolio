@@ -31,6 +31,11 @@ type Block = {
   style: string
 }
 
+type Slug = {
+  _type: string
+  current: string
+}
+
 type Album = {
   _createdAt: string
   _id: string
@@ -40,7 +45,7 @@ type Album = {
   albumCover: Sanity_Image
   albumTitle: string
   altText: string
-  slug: string
+  slug: Slug
   releaseDate: number
 }
 

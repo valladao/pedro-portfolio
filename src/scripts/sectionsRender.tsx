@@ -22,7 +22,7 @@ const sectionRender = (section: Sections) => {
           albumTitle={section.album.albumTitle}
           albumCover={section.album.albumCover}
           altText={section.album.altText}
-          slug={section.album.slug}
+          slug={section.album.slug.current}
         ></Album_Banner>
       )
 
