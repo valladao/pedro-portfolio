@@ -16,7 +16,9 @@ const Portfolio = ({ query }: Portfolio_Props) => {
 
 export async function getServerSideProps() {
 
-  const fields = `
+  const filters = `*[_type == "portfolioPage" && slug.current == "portfolio"]`
+
+  const projections = `
   {
     pageTitle,
     'slug': slug.current,
@@ -27,7 +29,7 @@ export async function getServerSideProps() {
     }
   }`
 
-  const query = await getSanityPagesQuery("portfolio", "portfolio", fields)
+  const query = await getSanityPagesQuery(filters, projections)
 
   return {
     props: {

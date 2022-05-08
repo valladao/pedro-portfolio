@@ -16,18 +16,11 @@ const Album = ({ query }: Album_Props) => {
 
 export async function getServerSideProps() {
 
-  const fields = `
-  {
-    pageTitle,
-    'slug': slug.current,
-    sections[]{
-      ...,
-      album != NULL => { album ->},
-      selectedAlbuns[0] == "all" => { "albunsList": * [_type == "album"] | order(releaseDate desc) | order(_createdAt asc) }
-    }
-  }`
+  const filters = `*[_type == "portfolioPage" && album->slug.current=="under-streetlight"]`
 
-  const query = await getSanityPagesQuery("portfolio", "portfolio", fields)
+  const projections = `{...,album ->}`
+
+  const query = await getSanityPagesQuery(filters, projections)
 
   return {
     props: {
