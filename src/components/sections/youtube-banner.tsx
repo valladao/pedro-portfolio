@@ -1,9 +1,9 @@
 import YouTube_Video from '../atoms/youtube-video'
 
-const YouTube_Banner = () => {
+const YouTube_Banner = ({ trackId, startTime }: YouTube_Track_Props) => {
   return (
     <>
-      <YouTube_Video></YouTube_Video>
+      <YouTube_Video trackId={trackId} startTime={startTime} ></YouTube_Video>
     </>
   )
 }

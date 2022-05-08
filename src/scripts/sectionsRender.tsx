@@ -2,6 +2,7 @@ import Hero_Image from "../components/sections/hero-image"
 import Album_Banner from "../components/sections/album-banner"
 import Track_List from "../components/sections/track-list"
 import Album_List from "../components/sections/album-list"
+import YouTube_Banner from "../components/sections/youtube-banner"
 
 const sectionRender = (section: Sections) => {
   switch (section._type) {
@@ -40,6 +41,14 @@ const sectionRender = (section: Sections) => {
           key={section._key}
           albuns={section.albunsList}
         ></Album_List>
+      )
+
+    case "youtubeVideo":
+      return (
+        <YouTube_Banner
+          trackId={section.trackID}
+          startTime={section.startTime}
+        ></YouTube_Banner>
       )
 
     default:

@@ -98,7 +98,11 @@ type Album_List = {
   albunsList: Array<Album>
 }
 
-type Sections = HeroImage & AlbumBanner & Track_List & Album_List
+type Sections = HeroImage &
+  AlbumBanner &
+  Track_List &
+  Album_List &
+  YouTube_Track
 
 type Tracks = Standard_Track & YouTube_Track
 
@@ -106,4 +110,10 @@ type Portfolio_Pages_Props = {
   pageTitle: string
   sections: Array<Sections>
   slug: string
+}
+
+// Other types (used multiple times)
+type YouTube_Track_Props = {
+  trackId: string
+  startTime: number
 }

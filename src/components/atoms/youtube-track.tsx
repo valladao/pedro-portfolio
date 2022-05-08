@@ -1,10 +1,5 @@
 import styles from '../../styles/atoms/YouTube_Track.module.css'
 
-type YouTube_Track_Props = {
-  trackId: string
-  startTime: number
-}
-
 const YouTube_Track = ({ trackId, startTime }: YouTube_Track_Props) => {
 
   let trackUrl = `https://www.youtube.com/embed/${trackId}`
