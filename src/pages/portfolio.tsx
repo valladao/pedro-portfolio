@@ -16,18 +16,20 @@ const Portfolio = ({ query }: Portfolio_Props) => {
 
 export async function getServerSideProps() {
 
-  const fields = `
+  const filters = `*[_type == "portfolioPage" && slug.current == "portfolio"]`
+
+  const projections = `
   {
     pageTitle,
-      slug,
-      sections[]{
-        ...,
-        album != NULL => { album ->},
-        selectedAlbuns[0] == "all" => { "albunsList": * [_type == "album"] | order(releaseDate desc) | order(_createdAt asc) }
+    'slug': slug.current,
+    sections[]{
+      ...,
+      album != NULL => { album ->},
+      selectedAlbuns[0] == "all" => { "albunsList": * [_type == "album"] | order(releaseDate desc) | order(_createdAt asc) }
     }
   }`
 
-  const query = await getSanityPagesQuery("portfolio", "portfolio", fields)
+  const query = await getSanityPagesQuery(filters, projections)
 
   return {
     props: {

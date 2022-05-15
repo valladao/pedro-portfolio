@@ -16,9 +16,11 @@ const About = ({ query }: About_Props) => {
 
 export async function getServerSideProps() {
 
-  const fields = `{slug,pageTitle,imageDesktop,imageMobile,altText,email,contents}`
+  const filters = `*[_type == "basePage" && slug.current == "about"]`
 
-  const query = await getSanityPagesQuery("base", "about", fields)
+  const projections = `{'slug': slug.current,pageTitle,imageDesktop,imageMobile,altText,email,contents}`
+
+  const query = await getSanityPagesQuery(filters, projections)
 
   return {
     props: {

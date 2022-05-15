@@ -19,9 +19,11 @@ const Home: NextPage<Home_Props> = ({ query }) => {
 
 export async function getServerSideProps() {
 
-  const fields = `{slug,pageTitle,imageDesktop,imageMobile,altText,email,contents}`
+  const filters = `*[_type == "basePage" && slug.current == "index"]`
 
-  const query = await getSanityPagesQuery("base", "index", fields)
+  const projections = `{'slug': slug.current,pageTitle,imageDesktop,imageMobile,altText,email,contents}`
+
+  const query = await getSanityPagesQuery(filters, projections)
 
   return {
     props: {

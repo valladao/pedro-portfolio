@@ -1,12 +1,10 @@
 import client from "../client"
 
 export default async function getSanityPagesQuery(
-  template: string,
-  slug: string,
-  fields: string
+  filters: string,
+  projections: string
 ) {
-  const query = await client.fetch(
-    `*[_type == "${template}Page" && slug == "${slug}"]${fields}`
-  )
+  const query = await client.fetch(`${filters}${projections}`)
+
   return query[0]
 }
