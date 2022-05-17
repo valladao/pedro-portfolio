@@ -98,11 +98,19 @@ type Album_List = {
   albunsList: Array<Album>
 }
 
+type Youtube_Video = {
+  _key: string
+  _type: string
+  trackID: string
+  startTime: number
+  withTitle: boolean
+}
+
 type Sections = HeroImage &
   AlbumBanner &
   Track_List &
   Album_List &
-  YouTube_Track
+  Youtube_Video
 
 type Tracks = Standard_Track & YouTube_Track
 
