@@ -44,13 +44,12 @@ const sectionRender = (section: Sections) => {
       )
 
     case "youtubeVideo":
-      const albumTitle = section.withTitle ? "My Title true" : "My title false"
       return (
         <YouTube_Banner
           key={section._key}
           trackId={section.trackID}
           startTime={section.startTime}
-          albumTitle={albumTitle}
+          albumTitle={section.withTitle}
         ></YouTube_Banner>
       )
 

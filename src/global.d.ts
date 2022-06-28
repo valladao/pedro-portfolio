@@ -103,7 +103,7 @@ type Youtube_Video = {
   _type: string
   trackID: string
   startTime: number
-  withTitle: boolean
+  withTitle: string
 }
 
 type Sections = HeroImage &
