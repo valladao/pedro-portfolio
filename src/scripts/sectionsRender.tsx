@@ -3,6 +3,7 @@ import Album_Banner from "../components/sections/album-banner"
 import Track_List from "../components/sections/track-list"
 import Album_List from "../components/sections/album-list"
 import YouTube_Banner from "../components/sections/youtube-banner"
+import Content_Body from "../components/sections/content-body"
 
 const sectionRender = (section: Sections) => {
   switch (section._type) {
@@ -51,6 +52,14 @@ const sectionRender = (section: Sections) => {
           startTime={section.startTime}
           albumTitle={section.withTitle}
         ></YouTube_Banner>
+      )
+
+    case "contentBody":
+      return (
+        <Content_Body
+          key={section._key}
+          portableText={section.contents}
+        ></Content_Body>
       )
 
     default:

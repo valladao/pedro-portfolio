@@ -106,11 +106,16 @@ type Youtube_Video = {
   withTitle: string
 }
 
+type Content_Body = {
+  contents: Array<Block>
+}
+
 type Sections = HeroImage &
   AlbumBanner &
   Track_List &
   Album_List &
-  Youtube_Video
+  Youtube_Video &
+  Content_Body
 
 type Tracks = Standard_Track & YouTube_Track
 
