@@ -110,12 +110,18 @@ type Content_Body = {
   contents: Array<Block>
 }
 
+type Text_with_Photo = {
+  content: Array<Block>
+  image: Sanity_Image
+}
+
 type Sections = HeroImage &
   AlbumBanner &
   Track_List &
   Album_List &
   Youtube_Video &
-  Content_Body
+  Content_Body &
+  Text_with_Photo
 
 type Tracks = Standard_Track & YouTube_Track
 

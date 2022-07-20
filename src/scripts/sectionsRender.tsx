@@ -4,6 +4,7 @@ import Track_List from "../components/sections/track-list"
 import Album_List from "../components/sections/album-list"
 import YouTube_Banner from "../components/sections/youtube-banner"
 import Content_Body from "../components/sections/content-body"
+import Text_with_Photo from "../components/sections/text-with-photo"
 
 const sectionRender = (section: Sections) => {
   switch (section._type) {
@@ -60,6 +61,15 @@ const sectionRender = (section: Sections) => {
           key={section._key}
           portableText={section.contents}
         ></Content_Body>
+      )
+
+    case "textWithPhoto":
+      return (
+        <Text_with_Photo
+          key={section._key}
+          content={section.content}
+          image={section.image}
+        ></Text_with_Photo>
       )
 
     default:
