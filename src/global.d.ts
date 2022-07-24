@@ -116,13 +116,21 @@ type Text_with_Photo = {
   altText: string
 }
 
+type Spotify_Album = {
+  albumID: string
+  hasCover: boolean
+  altText: string
+  albumCover: Sanity_Image
+}
+
 type Sections = HeroImage &
   AlbumBanner &
   Track_List &
   Album_List &
   Youtube_Video &
   Content_Body &
-  Text_with_Photo
+  Text_with_Photo &
+  Spotify_Album
 
 type Tracks = Standard_Track & YouTube_Track
 
@@ -130,6 +138,7 @@ type Portfolio_Pages_Props = {
   pageTitle: string
   sections: Array<Sections>
   slug: string
+  album: Album
 }
 
 // Other types (used multiple times)
