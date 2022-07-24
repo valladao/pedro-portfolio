@@ -113,6 +113,7 @@ type Content_Body = {
 type Text_with_Photo = {
   content: Array<Block>
   image: Sanity_Image
+  altText: string
 }
 
 type Sections = HeroImage &

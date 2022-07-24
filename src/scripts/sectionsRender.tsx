@@ -69,6 +69,7 @@ const sectionRender = (section: Sections) => {
           key={section._key}
           content={section.content}
           image={section.image}
+          altText={section.altText}
         ></Text_with_Photo>
       )
 
