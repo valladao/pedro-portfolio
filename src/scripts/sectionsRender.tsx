@@ -5,6 +5,7 @@ import Album_List from "../components/sections/album-list"
 import YouTube_Banner from "../components/sections/youtube-banner"
 import Content_Body from "../components/sections/content-body"
 import Text_with_Photo from "../components/sections/text-with-photo"
+import Spotify_Album from "../components/sections/spotify-album"
 
 const sectionRender = (section: Sections) => {
   switch (section._type) {
@@ -71,6 +72,13 @@ const sectionRender = (section: Sections) => {
           image={section.image}
           altText={section.altText}
         ></Text_with_Photo>
+      )
+
+    case "spotifyAlbum":
+      return (
+        <Spotify_Album
+          key={section._key}
+        ></Spotify_Album>
       )
 
     default:
