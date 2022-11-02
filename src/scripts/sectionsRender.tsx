@@ -80,6 +80,7 @@ const sectionRender = (section: Sections) => {
           key={section._key}
           albumCover={section.albumCover}
           altText={section.altText}
+          albumID={section.albumID}
         ></Spotify_Album>
       )
 
