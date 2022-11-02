@@ -1,5 +1,12 @@
 // This file contains global types statements
 
+// Next.js Types
+type Context_Params = {
+  query: {
+    slug: string
+  }
+}
+
 // Types for data got from api Sanity.io
 
 type Sanity_Image = {
