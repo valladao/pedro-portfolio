@@ -1,5 +1,12 @@
 // This file contains global types statements
 
+// Next.js Types
+type Context_Params = {
+  query: {
+    slug: string
+  }
+}
+
 // Types for data got from api Sanity.io
 
 type Sanity_Image = {
@@ -98,7 +105,39 @@ type Album_List = {
   albunsList: Array<Album>
 }
 
-type Sections = HeroImage & AlbumBanner & Track_List & Album_List
+type Youtube_Video = {
+  _key: string
+  _type: string
+  trackID: string
+  startTime: number
+  withTitle: string
+}
+
+type Content_Body = {
+  contents: Array<Block>
+}
+
+type Text_with_Photo = {
+  content: Array<Block>
+  image: Sanity_Image
+  altText: string
+}
+
+type Spotify_Album = {
+  albumID: string
+  hasCover: boolean
+  altText: string
+  albumCover: Sanity_Image
+}
+
+type Sections = HeroImage &
+  AlbumBanner &
+  Track_List &
+  Album_List &
+  Youtube_Video &
+  Content_Body &
+  Text_with_Photo &
+  Spotify_Album
 
 type Tracks = Standard_Track & YouTube_Track
 
@@ -106,4 +145,11 @@ type Portfolio_Pages_Props = {
   pageTitle: string
   sections: Array<Sections>
   slug: string
+  album: Album
+}
+
+// Other types (used multiple times)
+type YouTube_Track_Props = {
+  trackId: string
+  startTime: number
 }

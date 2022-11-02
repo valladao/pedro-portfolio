@@ -1,0 +1,25 @@
+.Spotify_Album {
+  margin: auto;
+  margin-top: 80px;
+  margin-bottom: 80px;
+  max-width: 920px;
+}
+
+.Spotify_Album img {
+  margin: auto;
+}
+
+@media only screen and (max-width: 639px) {
+  .Spotify_Album {
+    max-width: 640px;
+    margin-top: 90px;
+    margin-bottom: 90px;
+  }
+}
+
+@media only screen and (min-width: 920px) {
+  .Spotify_Album {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+  }
+}

@@ -71,3 +71,11 @@ h6 {
 #__next {
   isolation: isolate;
 }
+
+/*======================
+  My own CSS Adjustments
+  ======================*/
+
+main {
+  font-size: 0px;
+}

@@ -2,6 +2,10 @@ import Hero_Image from "../components/sections/hero-image"
 import Album_Banner from "../components/sections/album-banner"
 import Track_List from "../components/sections/track-list"
 import Album_List from "../components/sections/album-list"
+import YouTube_Banner from "../components/sections/youtube-banner"
+import Content_Body from "../components/sections/content-body"
+import Text_with_Photo from "../components/sections/text-with-photo"
+import Spotify_Album from "../components/sections/spotify-album"
 
 const sectionRender = (section: Sections) => {
   switch (section._type) {
@@ -40,6 +44,44 @@ const sectionRender = (section: Sections) => {
           key={section._key}
           albuns={section.albunsList}
         ></Album_List>
+      )
+
+    case "youtubeVideo":
+      return (
+        <YouTube_Banner
+          key={section._key}
+          trackId={section.trackID}
+          startTime={section.startTime}
+          albumTitle={section.withTitle}
+        ></YouTube_Banner>
+      )
+
+    case "contentBody":
+      return (
+        <Content_Body
+          key={section._key}
+          portableText={section.contents}
+        ></Content_Body>
+      )
+
+    case "textWithPhoto":
+      return (
+        <Text_with_Photo
+          key={section._key}
+          content={section.content}
+          image={section.image}
+          altText={section.altText}
+        ></Text_with_Photo>
+      )
+
+    case "spotifyAlbum":
+      return (
+        <Spotify_Album
+          key={section._key}
+          albumCover={section.albumCover}
+          altText={section.altText}
+          albumID={section.albumID}
+        ></Spotify_Album>
       )
 
     default:

@@ -1,0 +1,43 @@
+.Text_with_Photo {
+  padding: 0 46px 40px 46px;
+}
+
+.Text_with_Photo p {
+  padding: 40px 0;
+  font-family: "Open Sans", sans-serif;
+  font-style: normal;
+  font-weight: 300;
+  font-size: 14px;
+  line-height: 19px;
+  text-align: justify;
+  letter-spacing: 0.05em;
+}
+
+.Text_with_Photo img {
+  padding: 40px 0;
+  margin: auto;
+}
+
+@media only screen and (min-width: 920px) {
+  .Text_with_Photo {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    padding-top: 45px;
+    padding-left: 12%;
+    padding-right: 12%;
+    margin-bottom: 90px;
+  }
+
+  .Text_with_Photo p {
+    order: 1;
+    font-size: 24px;
+    line-height: 33px;
+    padding-left: 9%;
+    align-self: center;
+  }
+
+  .Text_with_Photo img {
+    order: 0;
+    padding-right: 9%;
+  }
+}
