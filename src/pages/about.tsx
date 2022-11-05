@@ -14,7 +14,7 @@ const About = ({ query }: About_Props) => {
   );
 };
 
-export async function getServerSideProps() {
+export async function getStaticProps() {
 
   const filters = `*[_type == "basePage" && slug.current == "about"]`
 
