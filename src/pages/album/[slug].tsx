@@ -7,11 +7,6 @@ type Album_Props = {
   query: Portfolio_Pages_Props
 }
 
-const GetSlug = () => {
-  const router = useRouter()
-  return router.query
-}
-
 const Album = ({ query }: Album_Props) => {
   return (
     <Basic_Layout>
