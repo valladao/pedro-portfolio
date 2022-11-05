@@ -1,8 +1,8 @@
 // This file contains global types statements
 
 // Next.js Types
-type Context_Params = {
-  query: {
+type Paths_Params = {
+  params: {
     slug: string
   }
 }

@@ -14,7 +14,7 @@ const Portfolio = ({ query }: Portfolio_Props) => {
   )
 }
 
-export async function getServerSideProps() {
+export async function getStaticProps() {
 
   const filters = `*[_type == "portfolioPage" && slug.current == "portfolio"]`
 

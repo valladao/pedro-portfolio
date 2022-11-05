@@ -15,7 +15,7 @@ const Contact: NextPage<Contact_Props> = ({ query }) => {
   )
 }
 
-export async function getServerSideProps() {
+export async function getStaticProps() {
 
   const filters = `*[_type == "basePage" && slug.current == "contact"]`
 
