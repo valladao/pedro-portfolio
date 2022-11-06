@@ -1,37 +1,15 @@
-.Hero_Image {
-  width: 100%;
-}
-
 @media only screen and (max-width: 639px) {
   .Hero_Image {
     /* Vertical View port - Header + Footer size */
-    max-height: calc(100vh - 239.5px);
     object-fit: cover;
     position: relative;
     z-index: -2;
-  }
-
-  :global(.about) .Hero_Image {
-    max-height: calc(100vh - 226.5px);
-  }
-
-  :global(.portfolio) .Hero_Image {
-    max-height: calc(100vh - 226.5px);
   }
 }
 
 @media only screen and (min-width: 640px) {
   .Hero_Image {
     /* Vertical View port - Header + Footer size */
-    max-height: calc(100vh - 254.5px);
     object-fit: cover;
-  }
-
-  :global(.about) .Hero_Image {
-    max-height: calc(100vh - 239px);
-  }
-
-  :global(.portfolio) .Hero_Image {
-    max-height: calc(100vh - 239px);
   }
 }
