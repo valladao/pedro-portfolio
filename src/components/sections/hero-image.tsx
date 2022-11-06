@@ -56,6 +56,7 @@ const Hero_Image = ({ imageDesktop, imageMobile, altText }: Hero_Image_Props) =>
         width={width}
         height={height}
         className={styles.Hero_Image + ' hero-image'}
+        priority
       />
     )
   } else {
@@ -66,6 +67,7 @@ const Hero_Image = ({ imageDesktop, imageMobile, altText }: Hero_Image_Props) =>
         width={width}
         height={height}
         className={styles.Hero_Image + ' hero-image'}
+        priority
       />
     )
   }
