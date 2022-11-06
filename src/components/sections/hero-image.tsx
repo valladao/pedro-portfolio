@@ -1,6 +1,8 @@
 /* eslint-disable @next/next/no-img-element */
 import styles from '../../styles/sections/Hero_Image.module.css'
 import buildImageUrl from '../../scripts/build-image-url';
+import Image from 'next/image';
+import { useEffect, useState } from 'react';
 
 type Hero_Image_Props = {
   imageDesktop: Sanity_Image,
@@ -10,15 +12,65 @@ type Hero_Image_Props = {
 
 const Hero_Image = ({ imageDesktop, imageMobile, altText }: Hero_Image_Props) => {
 
-  return (
-    <picture>
-      <source
-        srcSet={buildImageUrl(imageDesktop)}
-        media="(min-width: 920px)"
+  const [width, setWidth] = useState<number>(0);
+  const [height, setHeight] = useState<number>(0);
+
+  useEffect(() => {
+
+    const titleBar = document.getElementsByClassName('title-bar')
+    const hasTitleBar = titleBar[0] ? true : false
+
+    function handleResize() {
+
+      setWidth(window.innerWidth)
+
+      if (hasTitleBar) {
+        if (width > 639) {
+          setHeight(window.innerHeight - 233)
+        } else {
+          setHeight(window.innerHeight - 226.5)
+        }
+      } else {
+        if (width > 639) {
+          setHeight(window.innerHeight - 254.5)
+        } else {
+          setHeight(window.innerHeight - 239.5)
+        }
+      }
+    }
+
+    window.addEventListener('resize', handleResize)
+
+    handleResize()
+
+    return () => {
+      window.removeEventListener('resize', handleResize)
+    };
+  });
+
+  if (width > 639) {
+    return (
+      <Image
+        src={buildImageUrl(imageDesktop)}
+        alt={altText}
+        width={width}
+        height={height}
+        className={styles.Hero_Image + ' hero-image'}
+        priority
       />
-      <img className={styles.Hero_Image} src={buildImageUrl(imageMobile)} alt={altText} />
-    </picture>
-  );
+    )
+  } else {
+    return (
+      <Image
+        src={buildImageUrl(imageMobile)}
+        alt={altText}
+        width={width}
+        height={height}
+        className={styles.Hero_Image + ' hero-image'}
+        priority
+      />
+    )
+  }
 };
 
 export default Hero_Image

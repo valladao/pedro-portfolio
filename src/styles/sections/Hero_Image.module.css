@@ -1,10 +1,15 @@
-.Hero_Image {
-  width: 100%;
-}
-
 @media only screen and (max-width: 639px) {
   .Hero_Image {
+    /* Vertical View port - Header + Footer size */
+    object-fit: cover;
     position: relative;
     z-index: -2;
+  }
+}
+
+@media only screen and (min-width: 640px) {
+  .Hero_Image {
+    /* Vertical View port - Header + Footer size */
+    object-fit: cover;
   }
 }

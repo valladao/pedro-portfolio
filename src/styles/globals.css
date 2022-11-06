@@ -79,3 +79,12 @@ h6 {
 main {
   font-size: 0px;
 }
+
+/*
+  Avoid scroll due body shift related with margin collapsing
+*/
+@media only screen and (min-width: 640px) {
+  body {
+    padding-top: 34px;
+  }
+}
