@@ -9,7 +9,7 @@ type Album_Props = {
 
 const Album = ({ query }: Album_Props) => {
   return (
-    <Basic_Layout>
+    <Basic_Layout page="album">
       <Portfolio_Template data={query}></Portfolio_Template>
     </Basic_Layout>
   )

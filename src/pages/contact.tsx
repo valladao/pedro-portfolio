@@ -9,7 +9,7 @@ type Contact_Props = {
 
 const Contact: NextPage<Contact_Props> = ({ query }) => {
   return (
-    <Basic_Layout>
+    <Basic_Layout page="contact">
       <Base_Template slug="contact" data={query}></Base_Template>
     </Basic_Layout>
   )

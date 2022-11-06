@@ -16,7 +16,7 @@ const Hero_Image = ({ imageDesktop, imageMobile, altText }: Hero_Image_Props) =>
         srcSet={buildImageUrl(imageDesktop)}
         media="(min-width: 920px)"
       />
-      <img className={styles.Hero_Image} src={buildImageUrl(imageMobile)} alt={altText} />
+      <img className={styles.Hero_Image + ' hero-image'} src={buildImageUrl(imageMobile)} alt={altText} />
     </picture>
   );
 };

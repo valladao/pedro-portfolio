@@ -8,7 +8,7 @@ type Portfolio_Props = {
 
 const Portfolio = ({ query }: Portfolio_Props) => {
   return (
-    <Basic_Layout>
+    <Basic_Layout page="portfolio">
       <Portfolio_Template data={query}></Portfolio_Template>
     </Basic_Layout>
   )

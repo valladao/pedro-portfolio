@@ -15,4 +15,12 @@
     max-height: calc(100vh - 254.5px);
     object-fit: cover;
   }
+
+  :global(.about) .Hero_Image {
+    max-height: calc(100vh - 239px);
+  }
+
+  :global(.portfolio) .Hero_Image {
+    max-height: calc(100vh - 239px);
+  }
 }

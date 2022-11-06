@@ -3,14 +3,15 @@ import Footer from "../organisms/footer";
 import Header from "../organisms/header";
 
 type Basic_Layout_Props = {
+  page?: string
   children: React.ReactNode
 }
 
-const Basic_Layout = ({ children }: Basic_Layout_Props) => {
+const Basic_Layout = ({ page, children }: Basic_Layout_Props) => {
   return (
     <>
       <Header></Header>
-      <main>{children}</main>
+      <main className={page}>{children}</main>
       <Footer></Footer>
     </>
   );

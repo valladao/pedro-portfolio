@@ -10,7 +10,7 @@ type Home_Props = {
 const Home: NextPage<Home_Props> = ({ query }) => {
 
   return (
-    <Basic_Layout>
+    <Basic_Layout page="home">
       <Base_Template data={query} />
     </Basic_Layout>
 
