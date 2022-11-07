@@ -52,6 +52,8 @@ const Hero_Image = ({ imageDesktop, imageMobile, altText }: Hero_Image_Props) =>
     return (
       <Image
         src={buildImageUrl(imageDesktop)}
+        placeholder="blur"
+        blurDataURL={buildImageUrl(imageDesktop) + '?blur=100'}
         alt={altText}
         width={width}
         height={height}
