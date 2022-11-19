@@ -13,7 +13,8 @@
   letter-spacing: 0.05em;
 }
 
-.Text_with_Photo img {
+.Text_with_Photo span {
+  justify-self: center;
   padding: 40px 0;
   margin: auto;
 }
@@ -36,7 +37,7 @@
     align-self: center;
   }
 
-  .Text_with_Photo img {
+  .Text_with_Photo span {
     order: 0;
     padding-right: 9%;
   }
