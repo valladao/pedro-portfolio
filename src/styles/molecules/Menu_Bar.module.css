@@ -1,5 +1,7 @@
 .Menu_Bar {
   height: 34px;
+  display: flex;
+  justify-content: center;
 }
 
 .Menu_Bar img {
