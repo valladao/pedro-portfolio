@@ -1,4 +1,3 @@
-/* eslint-disable @next/next/no-img-element */
 import styles from '../../styles/sections/Hero_Image.module.css'
 import buildImageUrl from '../../scripts/build-image-url';
 import Image from 'next/image';

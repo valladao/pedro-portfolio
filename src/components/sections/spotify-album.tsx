@@ -1,6 +1,7 @@
 /* eslint-disable @next/next/no-img-element */
 import styles from '../../styles/sections/Spotify_Album.module.css'
 import buildImageUrl from '../../scripts/build-image-url'
+import Image from 'next/image'
 
 type Spotify_Album_Props = {
   albumCover: Sanity_Image
@@ -14,7 +15,7 @@ const Spotify_Album = ({ albumCover, altText, albumID }: Spotify_Album_Props) =>
 
   return (
     <div className={styles.Spotify_Album}>
-      <img src={buildImageUrl(albumCover)} alt={altText} />
+      <Image src={buildImageUrl(albumCover)} alt={altText} layout={'intrinsic'} width={460} height={460} />
       <iframe
         src={albumUrl}
         width="100%"

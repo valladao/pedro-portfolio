@@ -1,5 +1,6 @@
 import styles from '../../styles/atoms/Album_Cover.module.css'
-import buildImageUrl from '../../scripts/build-image-url';
+import buildImageUrl from '../../scripts/build-image-url'
+import Image from 'next/image'
 
 type Album_Cover_Props = {
   albumCover: Sanity_Image
@@ -8,12 +9,16 @@ type Album_Cover_Props = {
 
 const Album_Cover = ({ albumCover, altText }: Album_Cover_Props) => {
   return (
-    // eslint-disable-next-line @next/next/no-img-element
-    <img
-      className={styles.Album_Cover}
-      src={buildImageUrl(albumCover)}
-      alt={altText}
-    />
+    <div className={styles.Album_Cover}>
+      <Image
+        src={buildImageUrl(albumCover)}
+        placeholder="blur"
+        blurDataURL={buildImageUrl(albumCover) + '?blur=100'}
+        alt={altText}
+        width={635}
+        height={635}
+      />
+    </div>
   )
 }
 

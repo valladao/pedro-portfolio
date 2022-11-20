@@ -8,6 +8,7 @@
   top: 0;
   transition: 0.4s;
   text-align: center;
+  z-index: 1;
 }
 
 .Link_Button h4 {
@@ -26,12 +27,6 @@
   margin: 0 14%;
   color: hsl(0deg 0% 45% / 1);
 }
-
-/*
-:global(.album-tile) .Link_Button {
-  display: none;
-}
-*/
 
 :global(.album-banner) .Link_Button {
   display: none;
