@@ -10,7 +10,7 @@
 
 :global(.header) .Menu_Bar {
   background-color: hsl(0deg 0% 100% / 1);
-  z-index: 1;
+  z-index: 2;
   position: relative;
 }
 

@@ -5,7 +5,7 @@
 /* move-in */
 .move-in {
   transform: translateY(0%) !important;
-  z-index: 0 !important;
+  z-index: 1 !important;
 }
 
 /* rotate-90-cw */
