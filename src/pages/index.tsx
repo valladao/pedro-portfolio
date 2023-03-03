@@ -28,7 +28,8 @@ export async function getStaticProps() {
   return {
     props: {
       query
-    }
+    },
+    revalidate: 10, // In seconds
   }
 }
 
