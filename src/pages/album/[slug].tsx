@@ -44,7 +44,8 @@ export async function getStaticProps({ params }: Paths_Params) {
   return {
     props: {
       query
-    }
+    },
+    revalidate: 10, // In seconds
   }
 }
 
