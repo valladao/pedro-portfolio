@@ -89,6 +89,10 @@ const sectionRender = (section: Sections) => {
       return (
         <Album_Hero_Banner
           key={section._key}
+          albumTitle={section.albumTitle}
+          shortTitle={section.shortTitle}
+          albumCover={section.albumCover}
+          altText={section.altText}
         ></Album_Hero_Banner>
       )
 

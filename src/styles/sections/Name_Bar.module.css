@@ -6,6 +6,10 @@
   margin-bottom: -112px;
 }
 
+:global(.album-hero-banner) .Name_Bar {
+  background-color: hsl(0deg 0% 0% / 0.5);
+}
+
 @media only screen and (min-width: 920px) {
   .Name_Bar {
     padding-top: 21px;
