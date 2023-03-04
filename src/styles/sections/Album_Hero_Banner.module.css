@@ -1,7 +1,18 @@
-.Album_Hero_Banner {
+.Album_Hero_Banner > div:first-child {
   padding: 75px 15% 125px;
 }
 
 .Album_Hero_Banner h2 {
   display: none;
+}
+
+.Album_Hero_Banner > div:last-child p {
+  font-family: "Open Sans", sans-serif;
+  font-size: 14px;
+  line-height: 19px;
+  text-align: justify;
+  padding: 16px 7px;
+  background-color: hsla(0deg 0% 77% / 0.3);
+  margin: 40px;
+  margin-top: 76px;
 }
