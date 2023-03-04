@@ -224,3 +224,16 @@ export const spotifyAlbum = {
     }
   }
 }
+
+export const albumHeroBanner = {
+  title: "Album Hero Banner",
+  name: "albumHeroBanner",
+  type: "object",
+  fields: [
+    {
+      title: "Blah...",
+      name: "blah",
+      type: "string"
+    }
+  ]
+}

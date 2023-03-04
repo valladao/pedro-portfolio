@@ -28,6 +28,7 @@ export default createSchema({
     sections.contentBody,
     sections.textWithPhoto,
     sections.spotifyAlbum,
+    sections.albumHeroBanner,
 
     // Portfolio Page Template
     {
@@ -69,7 +70,8 @@ export default createSchema({
             { type: "youtubeVideo" },
             { type: "contentBody" },
             { type: "textWithPhoto" },
-            { type: "spotifyAlbum" }
+            { type: "spotifyAlbum" },
+            { type: "albumHeroBanner" }
           ]
         }
       ],
