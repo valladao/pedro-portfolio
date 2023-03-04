@@ -87,7 +87,9 @@ const sectionRender = (section: Sections) => {
 
     case "albumHeroBanner":
       return (
-        <Album_Hero_Banner></Album_Hero_Banner>
+        <Album_Hero_Banner
+          key={section._key}
+        ></Album_Hero_Banner>
       )
 
     default:
