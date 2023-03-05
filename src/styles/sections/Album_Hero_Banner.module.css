@@ -6,7 +6,7 @@
   display: none;
 }
 
-.Album_Hero_Banner > div:last-child p {
+.Album_Hero_Banner_Text p {
   font-family: "Open Sans", sans-serif;
   font-size: 14px;
   line-height: 19px;
@@ -15,4 +15,34 @@
   background-color: hsla(0deg 0% 77% / 0.3);
   margin: 40px;
   margin-top: 76px;
+}
+
+@media only screen and (max-width: 639px) {
+  .Album_Hero_Banner > div:first-child > div:first-child {
+    display: none;
+  }
+}
+
+@media only screen and (min-width: 640px) {
+  .Album_Hero_Banner > div:first-child {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 10%;
+  }
+
+  .Album_Hero_Banner > div:last-child {
+    display: none;
+  }
+
+  .Album_Hero_Banner > div:first-child {
+    padding: 37px 10% 90px;
+  }
+
+  .Album_Hero_Banner_Text p {
+    margin: 54px 0 77px;
+    display: flex;
+    align-items: center;
+    font-size: 18px;
+    line-height: 25px;
+  }
 }
