@@ -7,22 +7,18 @@ import Name_Bar from './name-bar'
 const Album_Hero_Banner = ({albumTitle, shortTitle, albumCover, altText, description, imageDesktop, imageMobile}: Album_Hero_Banner) => {
 
   const [width, setWidth] = useState<number>(0)
+  const [backgroundImage, setbackgroundImage] = useState({})
 
   useEffect(() => {
     setWidth(window.innerWidth)
-  }, [])
-
-  let backgroundImage
-
-  if (width > 639) {
-    backgroundImage = {
-      backgroundImage: `url(${buildImageUrl(imageDesktop)})`
+    if (width > 639) {
+      setbackgroundImage({backgroundImage: `url(${buildImageUrl(imageDesktop)})`})
+      console.log('Desktop')
+    } else {
+      setbackgroundImage({backgroundImage: `url(${buildImageUrl(imageMobile)})`})
+      console.log('Mobile')
     }
-  } else {
-    backgroundImage = {
-      backgroundImage: `url(${buildImageUrl(imageMobile)})`
-    }
-  }
+  }, [backgroundImage, imageDesktop, imageMobile, width])
 
   return (
     <div className={styles.Album_Hero_Banner + ' album-hero-banner'}>
