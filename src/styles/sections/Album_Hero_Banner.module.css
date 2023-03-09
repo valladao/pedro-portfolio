@@ -38,10 +38,13 @@
     padding: 37px 10% 90px;
   }
 
-  .Album_Hero_Banner_Text p {
-    margin: 54px 0 77px;
+  .Album_Hero_Banner_Text {
     display: flex;
     align-items: center;
+  }
+
+  .Album_Hero_Banner_Text p {
+    margin: 54px 0 77px;
     font-size: 18px;
     line-height: 25px;
   }
