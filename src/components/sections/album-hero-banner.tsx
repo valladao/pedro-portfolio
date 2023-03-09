@@ -1,12 +1,27 @@
+import {useEffect, useState} from 'react';
 import buildImageUrl from '../../scripts/build-image-url';
 import styles from '../../styles/sections/Album_Hero_Banner.module.css'
 import Album_Tile from '../molecules/album-tile'
 import Name_Bar from './name-bar'
 
 const Album_Hero_Banner = ({albumTitle, shortTitle, albumCover, altText, description, imageDesktop, imageMobile}: Album_Hero_Banner) => {
-  const backgroundImage = {
-    //backgroundImage: 'url(https://i.ibb.co/tqh4f3q/background-mobile.jpg)'
-    backgroundImage: `url(${buildImageUrl(imageDesktop)})`
+
+  const [width, setWidth] = useState<number>(0)
+
+  useEffect(() => {
+    setWidth(window.innerWidth)
+  }, [])
+
+  let backgroundImage
+
+  if (width > 639) {
+    backgroundImage = {
+      backgroundImage: `url(${buildImageUrl(imageDesktop)})`
+    }
+  } else {
+    backgroundImage = {
+      backgroundImage: `url(${buildImageUrl(imageMobile)})`
+    }
   }
 
   return (
