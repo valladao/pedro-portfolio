@@ -93,6 +93,9 @@ const sectionRender = (section: Sections) => {
           shortTitle={section.shortTitle}
           albumCover={section.albumCover}
           altText={section.altText}
+          description={section.description}
+          imageDesktop={section.imageDesktop}
+          imageMobile={section.imageMobile}
         ></Album_Hero_Banner>
       )
 

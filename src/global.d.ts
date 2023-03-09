@@ -136,6 +136,9 @@ type Album_Hero_Banner = {
   shortTitle: string
   albumCover: Sanity_Image
   altText: string
+  description: string
+  imageDesktop: Sanity_Image
+  imageMobile: Sanity_Image
 }
 
 type Sections = HeroImage &

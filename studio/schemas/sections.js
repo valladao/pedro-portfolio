@@ -231,9 +231,27 @@ export const albumHeroBanner = {
   type: "object",
   fields: [
     {
-      title: "Blah...",
-      name: "blah",
-      type: "string"
+      title: "Description",
+      name: "description",
+      type: "text"
+    },
+    {
+      title: "Background Image | Desktop",
+      name: "imageDesktop",
+      type: "image"
+    },
+    {
+      title: "Background Image | Mobile",
+      name: "imageMobile",
+      type: "image"
     }
-  ]
+  ],
+  preview: {
+    select: {},
+    prepare() {
+      return {
+        title: "Album Hero Banner"
+      }
+    }
+  }
 }
