@@ -20,4 +20,9 @@
     margin-bottom: 0;
     background-color: hsl(0deg 0% 0% / 50%);
   }
+
+  :global(.album-hero-banner) .Name_Bar {
+    position: relative;
+    transform: translateY(-100%);
+  }
 }
