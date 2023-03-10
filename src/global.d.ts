@@ -51,6 +51,7 @@ type Album = {
   _updatedAt: string
   albumCover: Sanity_Image
   albumTitle: string
+  shortTitle: string
   altText: string
   slug: Slug
   releaseDate: number
@@ -130,6 +131,16 @@ type Spotify_Album = {
   albumCover: Sanity_Image
 }
 
+type Album_Hero_Banner = {
+  albumTitle: string
+  shortTitle: string
+  albumCover: Sanity_Image
+  altText: string
+  description: string
+  imageDesktop: Sanity_Image
+  imageMobile: Sanity_Image
+}
+
 type Sections = HeroImage &
   AlbumBanner &
   Track_List &
@@ -137,7 +148,8 @@ type Sections = HeroImage &
   Youtube_Video &
   Content_Body &
   Text_with_Photo &
-  Spotify_Album
+  Spotify_Album &
+  Album_Hero_Banner
 
 type Tracks = Standard_Track & YouTube_Track
 

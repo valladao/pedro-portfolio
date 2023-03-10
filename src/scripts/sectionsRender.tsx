@@ -6,6 +6,7 @@ import YouTube_Banner from "../components/sections/youtube-banner"
 import Content_Body from "../components/sections/content-body"
 import Text_with_Photo from "../components/sections/text-with-photo"
 import Spotify_Album from "../components/sections/spotify-album"
+import Album_Hero_Banner from "../components/sections/album-hero-banner"
 
 const sectionRender = (section: Sections) => {
   switch (section._type) {
@@ -82,6 +83,20 @@ const sectionRender = (section: Sections) => {
           altText={section.altText}
           albumID={section.albumID}
         ></Spotify_Album>
+      )
+
+    case "albumHeroBanner":
+      return (
+        <Album_Hero_Banner
+          key={section._key}
+          albumTitle={section.albumTitle}
+          shortTitle={section.shortTitle}
+          albumCover={section.albumCover}
+          altText={section.altText}
+          description={section.description}
+          imageDesktop={section.imageDesktop}
+          imageMobile={section.imageMobile}
+        ></Album_Hero_Banner>
       )
 
     default:

@@ -224,3 +224,34 @@ export const spotifyAlbum = {
     }
   }
 }
+
+export const albumHeroBanner = {
+  title: "Album Hero Banner",
+  name: "albumHeroBanner",
+  type: "object",
+  fields: [
+    {
+      title: "Description",
+      name: "description",
+      type: "text"
+    },
+    {
+      title: "Background Image | Desktop",
+      name: "imageDesktop",
+      type: "image"
+    },
+    {
+      title: "Background Image | Mobile",
+      name: "imageMobile",
+      type: "image"
+    }
+  ],
+  preview: {
+    select: {},
+    prepare() {
+      return {
+        title: "Album Hero Banner"
+      }
+    }
+  }
+}
