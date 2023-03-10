@@ -10,11 +10,16 @@ export default {
       type: "string"
     },
     {
+      title: "Short Title",
+      name: "shortTitle",
+      type: "string"
+    },
+    {
       title: "Slug",
       name: "slug",
       type: "slug",
       options: {
-        source: "albumTitle",
+        source: "shortTitle",
         maxLength: 200,
         slugify: (input) =>
           input.toLowerCase().replace(/\s+/g, "-").slice(0, 200)

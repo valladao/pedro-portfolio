@@ -12,7 +12,7 @@ type Base_Template_Props = {
   slug?: string
 }
 
-const Base_Template = ({ data, slug = "index" }: Base_Template_Props) => {
+const Base_Template = ({data, slug = "index"}: Base_Template_Props) => {
 
   switch (slug) {
     case "index":
@@ -33,7 +33,7 @@ const Base_Template = ({ data, slug = "index" }: Base_Template_Props) => {
         <>
           <Title_Bar pageTitle={data.pageTitle}></Title_Bar>
           <Hero_Image imageDesktop={data.imageDesktop} imageMobile={data.imageMobile} altText={data.altText}></Hero_Image>
-          <Name_Bar></Name_Bar>
+          <Name_Bar fullName="Pedro Henrique dos Santos Valladao" shortName="Pedro Henrique Valladao"></Name_Bar>
           <Preheading_Bar></Preheading_Bar>
           <Content_Bar></Content_Bar>
           <Content_Body portableText={data.contents}></Content_Body>

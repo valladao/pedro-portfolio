@@ -11,24 +11,34 @@ type Album_Tile_Props = {
   albumTitle: string
   albumCover: Sanity_Image
   altText: string
-  slug: string
+  slug?: string
   releaseDate?: number
 }
 
-const Album_Tile = ({ albumTitle, albumCover, altText, slug, releaseDate }: Album_Tile_Props) => {
+const Album_Tile = ({albumTitle, albumCover, altText, slug, releaseDate}: Album_Tile_Props) => {
   return (
     <div className={styles.Album_Tile + ' album-tile'}>
       <Release_Date releaseDate={releaseDate}></Release_Date>
-      <Link href={`/album/${slug}`}>
-        <a>
+      {slug ?
+        <Link href={`/album/${slug}`}>
+          <a>
+            <Link_Button_2></Link_Button_2>
+            <div className={styles.Album_Box}>
+              <Link_Button></Link_Button>
+              <Album_Cover albumCover={albumCover} altText={altText}></Album_Cover>
+            </div>
+            <Album_Title_2 albumTitle={albumTitle}></Album_Title_2>
+          </a>
+        </Link> :
+        <>
           <Link_Button_2></Link_Button_2>
           <div className={styles.Album_Box}>
             <Link_Button></Link_Button>
             <Album_Cover albumCover={albumCover} altText={altText}></Album_Cover>
           </div>
           <Album_Title_2 albumTitle={albumTitle}></Album_Title_2>
-        </a>
-      </Link>
+        </>
+      }
       <Album_Title albumTitle={albumTitle}></Album_Title>
     </div>
   )
