@@ -6,33 +6,19 @@ My plan was too use the most modern front-end technogies and to focus on perform
 
 ## Dynamic Page Sections
 
-First, run the development server:
+### Hero Image
+![image](https://user-images.githubusercontent.com/527135/224485024-7848baf9-fdde-4eb6-8363-c4c3e68368e4.png)
 
-```bash
-npm run dev
-# or
-yarn dev
-```
+**Section schema:**
+![image](https://user-images.githubusercontent.com/527135/224485089-c1815e12-7136-42a1-b12f-782f81ae56ba.png)
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+![image](https://user-images.githubusercontent.com/527135/224485107-de9fc75c-d420-4fac-a80b-ee2cafc97ddf.png)
 
-You can start editing the page by modifying `pages/index.tsx`. The page auto-updates as you edit the file.
+### Album Banner
+![image](https://user-images.githubusercontent.com/527135/224485147-ac0b1c50-3cd7-4a48-94d8-51a2677106a9.png)
 
-[API routes](https://nextjs.org/docs/api-routes/introduction) can be accessed on [http://localhost:3000/api/hello](http://localhost:3000/api/hello). This endpoint can be edited in `pages/api/hello.ts`.
+### Track List
+![image](https://user-images.githubusercontent.com/527135/224485227-b89e0827-26db-440b-9ac9-38964864cc56.png)
 
-The `pages/api` directory is mapped to `/api/*`. Files in this directory are treated as [API routes](https://nextjs.org/docs/api-routes/introduction) instead of React pages.
-
-## Learn More
-
-To learn more about Next.js, take a look at the following resources:
-
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
-
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js/) - your feedback and contributions are welcome!
-
-## Deploy on Vercel
-
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
-
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/deployment) for more details.
+### Album List
+![image](https://user-images.githubusercontent.com/527135/224485272-dca878ba-c429-4913-ad87-61f16e35b4e0.png)
