@@ -1,6 +1,10 @@
-This is a [Next.js](https://nextjs.org/) project bootstrapped with [`create-next-app`](https://github.com/vercel/next.js/tree/canary/packages/create-next-app).
+Hi, my name is Manoel Valladao and I am web developer. This project is a professional portfolio website that I create to my son, Pedro Henrique Valladao. My son is a talent music composer and artist so we want too much the best way to promote him works and project.
 
-## Getting Started
+With that idea in mind, as Pedro is not only musician, but also likes to draw and paint, since boy, we decided that he would design the website. With some Figma lessons, he could design the album pages and sections so my work was to transport that to the web.
+
+My plan was too use the most modern front-end technogies and to focus on performance and acessabilitiy. Here I explain a little bit of what has been developed and how.
+
+## Dynamic Page Sections
 
 First, run the development server:
 
