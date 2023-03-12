@@ -8,13 +8,19 @@ My plan was too use the most modern front-end technogies and to focus on perform
 
 ### Hero Image
 ![image](https://user-images.githubusercontent.com/527135/224485024-7848baf9-fdde-4eb6-8363-c4c3e68368e4.png)
-
-
+<p align="center">
+  <img src="https://user-images.githubusercontent.com/527135/224550432-6935bb53-8255-4993-a33c-a9b95a3ba277.png"
+</p>
+  
 **Section schema:**
-![image](https://user-images.githubusercontent.com/527135/224485089-c1815e12-7136-42a1-b12f-782f81ae56ba.png)
 
-![image](https://user-images.githubusercontent.com/527135/224485107-de9fc75c-d420-4fac-a80b-ee2cafc97ddf.png)
+| Field Name  | Description |
+| ------------- | ------------- |
+| Hero Image - Desktop | Image should be 1920x826 pixels in WebP format. Use https://squoosh.app/  |
+| Hero Image - Mobile  | Image should be 639x841 pixels in WebP format. Use https://squoosh.app/  |
+| Image ALT Text | Used by Google Search. Use one text that better describe the image and the page that the image is used. |
 
+---
 
 ### Album Banner
 ![image](https://user-images.githubusercontent.com/527135/224485147-ac0b1c50-3cd7-4a48-94d8-51a2677106a9.png)
