@@ -54,6 +54,16 @@ export const albumBanner = {
       name: "album",
       type: "reference",
       to: [{ type: "album" }]
+    },
+    {
+      title: "Background Image | Desktop",
+      name: "imageDesktop",
+      type: "image"
+    },
+    {
+      title: "Background Image | Mobile",
+      name: "imageMobile",
+      type: "image"
     }
   ],
   preview: {
