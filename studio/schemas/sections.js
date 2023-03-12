@@ -8,17 +8,26 @@ export const heroImage = {
     {
       title: "Hero Image | Desktop",
       name: "imageDesktop",
-      type: "image"
+      type: "image",
+      description:
+        "Image should be 1920x826 pixels in WebP format. Use https://squoosh.app/",
+      validation: (Rule) => Rule.required()
     },
     {
       title: "Hero Image | Mobile",
       name: "imageMobile",
-      type: "image"
+      type: "image",
+      description:
+        "Image should be 639x841 pixels in WebP format. Use https://squoosh.app/",
+      validation: (Rule) => Rule.required()
     },
     {
       title: "Image ALT Text",
       name: "altText",
-      type: "string"
+      type: "string",
+      description:
+        "Used by Google Search. Use one text that better describe the image and the page that the image is used.",
+      validation: (Rule) => Rule.required()
     }
   ],
   preview: {
