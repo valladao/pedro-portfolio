@@ -28,6 +28,8 @@ const sectionRender = (section: Sections) => {
           albumCover={section.album.albumCover}
           altText={section.album.altText}
           slug={section.album.slug.current}
+          imageDesktop={section.imageDesktop}
+          imageMobile={section.imageMobile}
         ></Album_Banner>
       )
 
