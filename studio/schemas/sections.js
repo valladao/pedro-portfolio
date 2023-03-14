@@ -53,17 +53,25 @@ export const albumBanner = {
       title: "Album",
       name: "album",
       type: "reference",
-      to: [{ type: "album" }]
+      to: [{ type: "album" }],
+      description: "Select the album that will be shown highlighted",
+      validation: (Rule) => Rule.required()
     },
     {
       title: "Background Image | Desktop",
       name: "imageDesktop",
-      type: "image"
+      type: "image",
+      description:
+        "Image should be 1920x907 pixels in WebP format. Use https://squoosh.app/",
+      validation: (Rule) => Rule.required()
     },
     {
       title: "Background Image | Mobile",
       name: "imageMobile",
-      type: "image"
+      type: "image",
+      description:
+        "Image should be 639x841 pixels in WebP format. Use https://squoosh.app/",
+      validation: (Rule) => Rule.required()
     }
   ],
   preview: {
