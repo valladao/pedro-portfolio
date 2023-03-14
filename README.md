@@ -17,14 +17,26 @@ My plan was too use the most modern front-end technogies and to focus on perform
 | Field Name  | Description |
 | ------------- | ------------- |
 | Hero Image - Desktop | Image should be 1920x826 pixels in WebP format. Use https://squoosh.app/  |
-| Hero Image - Mobile  | Image should be 639x841 pixels in WebP format. Use https://squoosh.app/  |
+| Hero Image - Mobile | Image should be 639x672 pixels in WebP format. Use https://squoosh.app/  |
 | Image ALT Text | Used by Google Search. Use one text that better describe the image and the page that the image is used. |
 
 ---
 
 ### Album Banner
 ![image](https://user-images.githubusercontent.com/527135/224485147-ac0b1c50-3cd7-4a48-94d8-51a2677106a9.png)
+<p align="center">
+  <img src="https://user-images.githubusercontent.com/527135/224855565-dbb4d1c6-ff72-499b-bb53-c0021d405254.png"
+</p>
 
+**Section schema:**
+
+| Field Name  | Description |
+| ------------- | ------------- |
+| Album | Select the album that will be shown highkighted |
+| Background Image - Desktop | Image should be 1920x907 pixels in WebP format. Use https://squoosh.app/  |
+| Background Image - Mobile | Image should be 639x841 pixels in WebP format. Use https://squoosh.app/ |
+
+---
 
 ### Track List
 ![image](https://user-images.githubusercontent.com/527135/224485227-b89e0827-26db-440b-9ac9-38964864cc56.png)
