@@ -67,7 +67,13 @@ My plan was too use the most modern front-end technogies and to focus on perform
 
 ![image](https://user-images.githubusercontent.com/527135/224485272-dca878ba-c429-4913-ad87-61f16e35b4e0.png)
 
+<p align="center">
+  <img src="https://user-images.githubusercontent.com/527135/225770228-624bc8bf-0d51-4286-a854-eb28e066d53d.png"
+</p>
+
 **Section schema -** Check "All Albums" (now we only have the All Albums option)
+
+---
 
 ### YouTube Video
 
