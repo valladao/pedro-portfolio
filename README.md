@@ -62,10 +62,12 @@ My plan was too use the most modern front-end technogies and to focus on perform
 | Start time (seconds) | (Only for YouTube) The time that the video will start to play |
 
 ---
-  
+
 ### Album List
 
 ![image](https://user-images.githubusercontent.com/527135/224485272-dca878ba-c429-4913-ad87-61f16e35b4e0.png)
+
+**Section schema -** Check "All Albums" (now we only have the All Albums option)
 
 ### YouTube Video
 
