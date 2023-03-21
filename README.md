@@ -130,6 +130,18 @@ My plan was too use the most modern front-end technogies and to focus on perform
 ### Spotify Album
 
 ![image](https://user-images.githubusercontent.com/527135/224544040-ffa4a7d8-6635-481c-b941-1c6936e0f458.png)
+<p align="center">
+  <img src="https://user-images.githubusercontent.com/527135/226595812-764670a3-8197-4668-8e3d-11bc17510a5c.png"
+</p>
+
+  **Section schema:**
+
+| Field Name           | Description                                               |
+| ---------------------| --------------------------------------------------------- |
+| Album ID             | The unique Spotify APP ID for the Album                   |
+| Include Album cover? | Include the album cover beside the Spotify embeded widget |
+
+---
 
 ### Album Hero Banner
 
