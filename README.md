@@ -83,17 +83,13 @@ My plan was too use the most modern front-end technogies and to focus on perform
   <img src="https://user-images.githubusercontent.com/527135/226568312-bbcb23b9-385c-43a5-b408-11b76815cbcb.png"
 </p>
 
-**Section schema -** You must add at least one of this three different types of tracks:
+**Section schema:**
 
-- Soundcloud Track
-- Spotify Track
-- YouTube Track
-
-| Field Name           | Description                                                     |
-| -------------------- | --------------------------------------------------------------- |
-| Track ID             | The unique APP ID for the track                                 |
-| Start time (seconds) | The time that the video will start to play                      |
-| Title (optional)     | (Optional) Usually used to add a title for Albums, below video) |
+| Field Name           | Description                                                    |
+| -------------------- | -------------------------------------------------------------- |
+| Track ID             | The unique APP ID for the track                                |
+| Start time (seconds) | (Optional) The time that the video will start to play          |
+| Bottom Title         | (Optional) Usually used to add a title for Albums, below video |
 
 ---
 

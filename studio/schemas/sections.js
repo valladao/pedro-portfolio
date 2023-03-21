@@ -147,17 +147,21 @@ export const youtubeVideo = {
     {
       title: "Track ID",
       name: "trackID",
-      type: "string"
+      type: "string",
+      validation: (Rule) => Rule.required()
     },
     {
       title: "Start time (seconds)",
       name: "startTime",
-      type: "number"
+      type: "number",
+      description: "(Optional) The time that the video will start to play"
     },
     {
-      title: "Title Below (usually used for Albums)",
+      title: "Bottom Title",
       name: "withTitle",
-      type: "string"
+      type: "string",
+      description:
+        "(Optional) Usually used to add a title for Albums, below video)"
     }
   ],
   preview: {
