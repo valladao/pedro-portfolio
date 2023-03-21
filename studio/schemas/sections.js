@@ -207,17 +207,24 @@ export const textWithPhoto = {
       title: "Content",
       type: "array",
       name: "content",
-      of: [{ type: "block" }]
+      of: [{ type: "block" }],
+      validation: (Rule) => Rule.required()
     },
     {
       title: "Image",
       name: "image",
-      type: "image"
+      type: "image",
+      description:
+        "Image size may vary but must be in WebP format. Use https://squoosh.app/",
+      validation: (Rule) => Rule.required()
     },
     {
       title: "Image ALT Text",
       name: "altText",
-      type: "string"
+      type: "string",
+      description:
+        "Used by Google Search. Use one text that better describe the image and the page that the image is used.",
+      validation: (Rule) => Rule.required()
     }
   ],
   preview: {
