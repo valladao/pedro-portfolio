@@ -113,6 +113,20 @@ My plan was too use the most modern front-end technogies and to focus on perform
 
 ![image](https://user-images.githubusercontent.com/527135/224544012-a137adaa-b35f-44ae-9569-f670ed0d3da6.png)
 
+<p align="center">
+  <img src="https://user-images.githubusercontent.com/527135/226587722-fede67d9-8e99-46e7-a90b-5e3fe7cdfdac.png"
+</p>
+
+  **Section schema:**
+
+| Field Name     | Description                                                                                             |
+| ---------------| ------------------------------------------------------------------------------------------------------- |
+| Content        | Simple add here the rich text                                                                           |
+| Image          | Image size may vary but must be in WebP format. Use https://squoosh.app/                                |
+| Image ALT Text | Used by Google Search. Use one text that better describe the image and the page that the image is used. |
+
+---
+
 ### Spotify Album
 
 ![image](https://user-images.githubusercontent.com/527135/224544040-ffa4a7d8-6635-481c-b941-1c6936e0f458.png)
