@@ -275,17 +275,25 @@ export const albumHeroBanner = {
     {
       title: "Description",
       name: "description",
-      type: "text"
+      type: "text",
+      description: "Simple a small description text here",
+      validation: (Rule) => Rule.required()
     },
     {
       title: "Background Image | Desktop",
       name: "imageDesktop",
-      type: "image"
+      type: "image",
+      description:
+        "Image should be 1920x762 pixels in WebP format. Use https://squoosh.app/",
+      validation: (Rule) => Rule.required()
     },
     {
       title: "Background Image | Mobile",
       name: "imageMobile",
-      type: "image"
+      type: "image",
+      description:
+        "Image should be 639x648 pixels in WebP format. Use https://squoosh.app/",
+      validation: (Rule) => Rule.required()
     }
   ],
   preview: {
