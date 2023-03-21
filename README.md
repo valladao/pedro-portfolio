@@ -101,10 +101,10 @@ My plan was too use the most modern front-end technogies and to focus on perform
   <img src="https://user-images.githubusercontent.com/527135/226585141-6f3a307f-257c-477e-afa1-a6c752759cf3.png"
 </p>
 
-  **Section schema:**
+**Section schema:**
 
 | Field Name | Description                   |
-| -----------| ----------------------------- |
+| ---------- | ----------------------------- |
 | Content    | Simple add here the rich text |
 
 ---
@@ -117,10 +117,10 @@ My plan was too use the most modern front-end technogies and to focus on perform
   <img src="https://user-images.githubusercontent.com/527135/226587722-fede67d9-8e99-46e7-a90b-5e3fe7cdfdac.png"
 </p>
 
-  **Section schema:**
+**Section schema:**
 
 | Field Name     | Description                                                                                             |
-| ---------------| ------------------------------------------------------------------------------------------------------- |
+| -------------- | ------------------------------------------------------------------------------------------------------- |
 | Content        | Simple add here the rich text                                                                           |
 | Image          | Image size may vary but must be in WebP format. Use https://squoosh.app/                                |
 | Image ALT Text | Used by Google Search. Use one text that better describe the image and the page that the image is used. |
@@ -130,16 +130,17 @@ My plan was too use the most modern front-end technogies and to focus on perform
 ### Spotify Album
 
 ![image](https://user-images.githubusercontent.com/527135/224544040-ffa4a7d8-6635-481c-b941-1c6936e0f458.png)
+
 <p align="center">
   <img src="https://user-images.githubusercontent.com/527135/226595812-764670a3-8197-4668-8e3d-11bc17510a5c.png"
 </p>
 
-  **Section schema:**
+**Section schema:**
 
-| Field Name           | Description                                               |
-| ---------------------| --------------------------------------------------------- |
-| Album ID             | The unique Spotify APP ID for the Album                   |
-| Include Album cover? | Include the album cover beside the Spotify embeded widget |
+| Field Name           | Description                                                          |
+| -------------------- | -------------------------------------------------------------------- |
+| Album ID             | The unique Spotify APP ID for the Album                              |
+| Include Album cover? | (Optional) Include the album cover beside the Spotify embeded widget |
 
 ---
 

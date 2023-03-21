@@ -245,12 +245,16 @@ export const spotifyAlbum = {
     {
       title: "Album ID",
       name: "albumID",
-      type: "string"
+      type: "string",
+      description: "The unique Spotify APP ID for the Album",
+      validation: (Rule) => Rule.required()
     },
     {
       title: "Include Album cover?",
       name: "hasCover",
-      type: "boolean"
+      type: "boolean",
+      description:
+        "(Optional) Include the album cover beside the Spotify embeded widget"
     }
   ],
   preview: {
