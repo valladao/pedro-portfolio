@@ -147,3 +147,17 @@ My plan was too use the most modern front-end technogies and to focus on perform
 ### Album Hero Banner
 
 ![image](https://user-images.githubusercontent.com/527135/224544087-e54c432e-f8ac-497d-9740-546eebb40eea.png)
+
+<p align="center">
+  <img src="https://user-images.githubusercontent.com/527135/226599453-cf64d11a-c1c5-4bcb-8416-5a83400d1e75.png"
+</p>
+
+**Section schema:**
+
+| Field Name                 | Description                                                              |
+| -------------------------- | ------------------------------------------------------------------------ |
+| Description                | Simple a small description text here                                     |
+| Background Image - Desktop | Image should be 1920x762 pixels in WebP format. Use https://squoosh.app/ |
+| Background Image - Mobile  | Image should be 639x648 pixels in WebP format. Use https://squoosh.app/  |
+
+---
