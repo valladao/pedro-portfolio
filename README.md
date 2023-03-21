@@ -97,6 +97,18 @@ My plan was too use the most modern front-end technogies and to focus on perform
 
 ![image](https://user-images.githubusercontent.com/527135/224543963-b7eca12a-622d-4f0a-83e9-113ba3f273fe.png)
 
+<p align="center">
+  <img src="https://user-images.githubusercontent.com/527135/226585141-6f3a307f-257c-477e-afa1-a6c752759cf3.png"
+</p>
+
+  **Section schema:**
+
+| Field Name | Description                   |
+| -----------| ----------------------------- |
+| Content    | Simple add here the rich text |
+
+---
+
 ### Text with Photo
 
 ![image](https://user-images.githubusercontent.com/527135/224544012-a137adaa-b35f-44ae-9569-f670ed0d3da6.png)
