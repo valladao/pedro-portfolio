@@ -97,7 +97,8 @@ export default createSchema({
         {
           title: "Page Title",
           name: "pageTitle",
-          type: "string"
+          type: "string",
+          validation: (Rule) => Rule.required()
         },
         {
           title: "Slug",
@@ -108,22 +109,26 @@ export default createSchema({
             maxLength: 200,
             slugify: (input) =>
               input.toLowerCase().replace(/\s+/g, "-").slice(0, 200)
-          }
+          },
+          validation: (Rule) => Rule.required()
         },
         {
           title: "Hero Image | Desktop",
           name: "imageDesktop",
-          type: "image"
+          type: "image",
+          validation: (Rule) => Rule.required()
         },
         {
           title: "Hero Image | Mobile",
           name: "imageMobile",
-          type: "image"
+          type: "image",
+          validation: (Rule) => Rule.required()
         },
         {
           title: "Image ALT Text",
           name: "altText",
-          type: "string"
+          type: "string",
+          validation: (Rule) => Rule.required()
         },
         {
           title: "Contact E-mail (optional)",
