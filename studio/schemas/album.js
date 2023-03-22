@@ -7,12 +7,14 @@ export default {
     {
       title: "Album Title",
       name: "albumTitle",
-      type: "string"
+      type: "string",
+      validation: (Rule) => Rule.required()
     },
     {
       title: "Short Title",
       name: "shortTitle",
-      type: "string"
+      type: "string",
+      validation: (Rule) => Rule.required()
     },
     {
       title: "Slug",
@@ -23,22 +25,26 @@ export default {
         maxLength: 200,
         slugify: (input) =>
           input.toLowerCase().replace(/\s+/g, "-").slice(0, 200)
-      }
+      },
+      validation: (Rule) => Rule.required()
     },
     {
       title: "Release Date",
       name: "releaseDate",
-      type: "number"
+      type: "number",
+      validation: (Rule) => Rule.required()
     },
     {
       title: "Album Cover",
       name: "albumCover",
-      type: "image"
+      type: "image",
+      validation: (Rule) => Rule.required()
     },
     {
       title: "Album Cover ALT Text",
       name: "altText",
-      type: "string"
+      type: "string",
+      validation: (Rule) => Rule.required()
     }
   ]
 }

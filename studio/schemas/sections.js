@@ -8,17 +8,26 @@ export const heroImage = {
     {
       title: "Hero Image | Desktop",
       name: "imageDesktop",
-      type: "image"
+      type: "image",
+      description:
+        "Image should be 1920x826 pixels in WebP format. Use https://squoosh.app/",
+      validation: (Rule) => Rule.required()
     },
     {
       title: "Hero Image | Mobile",
       name: "imageMobile",
-      type: "image"
+      type: "image",
+      description:
+        "Image should be 639x841 pixels in WebP format. Use https://squoosh.app/",
+      validation: (Rule) => Rule.required()
     },
     {
       title: "Image ALT Text",
       name: "altText",
-      type: "string"
+      type: "string",
+      description:
+        "Used by Google Search. Use one text that better describe the image and the page that the image is used.",
+      validation: (Rule) => Rule.required()
     }
   ],
   preview: {
@@ -44,17 +53,25 @@ export const albumBanner = {
       title: "Album",
       name: "album",
       type: "reference",
-      to: [{ type: "album" }]
+      to: [{ type: "album" }],
+      description: "Select the album that will be shown highlighted",
+      validation: (Rule) => Rule.required()
     },
     {
       title: "Background Image | Desktop",
       name: "imageDesktop",
-      type: "image"
+      type: "image",
+      description:
+        "Image should be 1920x907 pixels in WebP format. Use https://squoosh.app/",
+      validation: (Rule) => Rule.required()
     },
     {
       title: "Background Image | Mobile",
       name: "imageMobile",
-      type: "image"
+      type: "image",
+      description:
+        "Image should be 639x841 pixels in WebP format. Use https://squoosh.app/",
+      validation: (Rule) => Rule.required()
     }
   ],
   preview: {
@@ -130,17 +147,21 @@ export const youtubeVideo = {
     {
       title: "Track ID",
       name: "trackID",
-      type: "string"
+      type: "string",
+      validation: (Rule) => Rule.required()
     },
     {
       title: "Start time (seconds)",
       name: "startTime",
-      type: "number"
+      type: "number",
+      description: "(Optional) The time that the video will start to play"
     },
     {
-      title: "Title Below (usually used for Albums)",
+      title: "Bottom Title",
       name: "withTitle",
-      type: "string"
+      type: "string",
+      description:
+        "(Optional) Usually used to add a title for Albums, below video)"
     }
   ],
   preview: {
@@ -186,17 +207,24 @@ export const textWithPhoto = {
       title: "Content",
       type: "array",
       name: "content",
-      of: [{ type: "block" }]
+      of: [{ type: "block" }],
+      validation: (Rule) => Rule.required()
     },
     {
       title: "Image",
       name: "image",
-      type: "image"
+      type: "image",
+      description:
+        "Image size may vary but must be in WebP format. Use https://squoosh.app/",
+      validation: (Rule) => Rule.required()
     },
     {
       title: "Image ALT Text",
       name: "altText",
-      type: "string"
+      type: "string",
+      description:
+        "Used by Google Search. Use one text that better describe the image and the page that the image is used.",
+      validation: (Rule) => Rule.required()
     }
   ],
   preview: {
@@ -217,12 +245,16 @@ export const spotifyAlbum = {
     {
       title: "Album ID",
       name: "albumID",
-      type: "string"
+      type: "string",
+      description: "The unique Spotify APP ID for the Album",
+      validation: (Rule) => Rule.required()
     },
     {
       title: "Include Album cover?",
       name: "hasCover",
-      type: "boolean"
+      type: "boolean",
+      description:
+        "(Optional) Include the album cover beside the Spotify embeded widget"
     }
   ],
   preview: {
@@ -243,17 +275,25 @@ export const albumHeroBanner = {
     {
       title: "Description",
       name: "description",
-      type: "text"
+      type: "text",
+      description: "Simple a small description text here",
+      validation: (Rule) => Rule.required()
     },
     {
       title: "Background Image | Desktop",
       name: "imageDesktop",
-      type: "image"
+      type: "image",
+      description:
+        "Image should be 1920x762 pixels in WebP format. Use https://squoosh.app/",
+      validation: (Rule) => Rule.required()
     },
     {
       title: "Background Image | Mobile",
       name: "imageMobile",
-      type: "image"
+      type: "image",
+      description:
+        "Image should be 639x648 pixels in WebP format. Use https://squoosh.app/",
+      validation: (Rule) => Rule.required()
     }
   ],
   preview: {

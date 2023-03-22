@@ -1,34 +1,163 @@
-This is a [Next.js](https://nextjs.org/) project bootstrapped with [`create-next-app`](https://github.com/vercel/next.js/tree/canary/packages/create-next-app).
+Hi, my name is Manoel Valladao and I am web developer. This project is a professional portfolio website that I create to my son, Pedro Henrique Valladao. My son is a talent music composer and artist so we want too much the best way to promote him works and project.
 
-## Getting Started
+With that idea in mind, as Pedro is not only musician, but also likes to draw and paint, since boy, we decided that he would design the website. With some Figma lessons, he could design the album pages and sections so my work was to transport that to the web.
 
-First, run the development server:
+My plan was too use the most modern front-end technogies and to focus on performance and acessabilitiy. Here I explain a little bit of what has been developed and how.
 
-```bash
-npm run dev
-# or
-yarn dev
-```
+## Dynamic Page Sections
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+### Hero Image
 
-You can start editing the page by modifying `pages/index.tsx`. The page auto-updates as you edit the file.
+![image](https://user-images.githubusercontent.com/527135/224485024-7848baf9-fdde-4eb6-8363-c4c3e68368e4.png)
 
-[API routes](https://nextjs.org/docs/api-routes/introduction) can be accessed on [http://localhost:3000/api/hello](http://localhost:3000/api/hello). This endpoint can be edited in `pages/api/hello.ts`.
+<p align="center">
+  <img src="https://user-images.githubusercontent.com/527135/224550432-6935bb53-8255-4993-a33c-a9b95a3ba277.png"
+</p>
 
-The `pages/api` directory is mapped to `/api/*`. Files in this directory are treated as [API routes](https://nextjs.org/docs/api-routes/introduction) instead of React pages.
+**Section schema:**
 
-## Learn More
+| Field Name           | Description                                                                                             |
+| -------------------- | ------------------------------------------------------------------------------------------------------- |
+| Hero Image - Desktop | Image should be 1920x826 pixels in WebP format. Use https://squoosh.app/                                |
+| Hero Image - Mobile  | Image should be 639x672 pixels in WebP format. Use https://squoosh.app/                                 |
+| Image ALT Text       | Used by Google Search. Use one text that better describe the image and the page that the image is used. |
 
-To learn more about Next.js, take a look at the following resources:
+---
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+### Album Banner
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js/) - your feedback and contributions are welcome!
+![image](https://user-images.githubusercontent.com/527135/224485147-ac0b1c50-3cd7-4a48-94d8-51a2677106a9.png)
 
-## Deploy on Vercel
+<p align="center">
+  <img src="https://user-images.githubusercontent.com/527135/224855565-dbb4d1c6-ff72-499b-bb53-c0021d405254.png"
+</p>
 
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
+**Section schema:**
 
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/deployment) for more details.
+| Field Name                 | Description                                                              |
+| -------------------------- | ------------------------------------------------------------------------ |
+| Album                      | Select the album that will be shown highlighted                          |
+| Background Image - Desktop | Image should be 1920x907 pixels in WebP format. Use https://squoosh.app/ |
+| Background Image - Mobile  | Image should be 639x841 pixels in WebP format. Use https://squoosh.app/  |
+
+---
+
+### Track List
+
+![image](https://user-images.githubusercontent.com/527135/224485227-b89e0827-26db-440b-9ac9-38964864cc56.png)
+
+<p align="center">
+  <img src="https://user-images.githubusercontent.com/527135/224860400-02f5c694-b09b-47a1-b91f-db3a31973e26.png"
+</p>
+
+**Section schema -** You must add at least one of this three different types of tracks:
+
+- Soundcloud Track
+- Spotify Track
+- YouTube Track
+
+| Field Name           | Description                                                   |
+| -------------------- | ------------------------------------------------------------- |
+| Track ID             | The unique APP ID for the track                               |
+| Start time (seconds) | (Only for YouTube) The time that the video will start to play |
+
+---
+
+### Album List
+
+![image](https://user-images.githubusercontent.com/527135/224485272-dca878ba-c429-4913-ad87-61f16e35b4e0.png)
+
+<p align="center">
+  <img src="https://user-images.githubusercontent.com/527135/225770228-624bc8bf-0d51-4286-a854-eb28e066d53d.png"
+</p>
+
+**Section schema -** Check "All Albums" (now we only have the All Albums option)
+
+---
+
+### YouTube Video
+
+![image](https://user-images.githubusercontent.com/527135/224543843-d72d5531-bd85-48e6-b336-f6e5decb07df.png)
+
+<p align="center">
+  <img src="https://user-images.githubusercontent.com/527135/226568312-bbcb23b9-385c-43a5-b408-11b76815cbcb.png"
+</p>
+
+**Section schema:**
+
+| Field Name           | Description                                                    |
+| -------------------- | -------------------------------------------------------------- |
+| Track ID             | The unique APP ID for the track                                |
+| Start time (seconds) | (Optional) The time that the video will start to play          |
+| Bottom Title         | (Optional) Usually used to add a title for Albums, below video |
+
+---
+
+### Content Body
+
+![image](https://user-images.githubusercontent.com/527135/224543963-b7eca12a-622d-4f0a-83e9-113ba3f273fe.png)
+
+<p align="center">
+  <img src="https://user-images.githubusercontent.com/527135/226585141-6f3a307f-257c-477e-afa1-a6c752759cf3.png"
+</p>
+
+**Section schema:**
+
+| Field Name | Description                   |
+| ---------- | ----------------------------- |
+| Content    | Simple add here the rich text |
+
+---
+
+### Text with Photo
+
+![image](https://user-images.githubusercontent.com/527135/224544012-a137adaa-b35f-44ae-9569-f670ed0d3da6.png)
+
+<p align="center">
+  <img src="https://user-images.githubusercontent.com/527135/226587722-fede67d9-8e99-46e7-a90b-5e3fe7cdfdac.png"
+</p>
+
+**Section schema:**
+
+| Field Name     | Description                                                                                             |
+| -------------- | ------------------------------------------------------------------------------------------------------- |
+| Content        | Simple add here the rich text                                                                           |
+| Image          | Image size may vary but must be in WebP format. Use https://squoosh.app/                                |
+| Image ALT Text | Used by Google Search. Use one text that better describe the image and the page that the image is used. |
+
+---
+
+### Spotify Album
+
+![image](https://user-images.githubusercontent.com/527135/224544040-ffa4a7d8-6635-481c-b941-1c6936e0f458.png)
+
+<p align="center">
+  <img src="https://user-images.githubusercontent.com/527135/226595812-764670a3-8197-4668-8e3d-11bc17510a5c.png"
+</p>
+
+**Section schema:**
+
+| Field Name           | Description                                                          |
+| -------------------- | -------------------------------------------------------------------- |
+| Album ID             | The unique Spotify APP ID for the Album                              |
+| Include Album cover? | (Optional) Include the album cover beside the Spotify embeded widget |
+
+---
+
+### Album Hero Banner
+
+![image](https://user-images.githubusercontent.com/527135/224544087-e54c432e-f8ac-497d-9740-546eebb40eea.png)
+
+<p align="center">
+  <img src="https://user-images.githubusercontent.com/527135/226599453-cf64d11a-c1c5-4bcb-8416-5a83400d1e75.png"
+</p>
+
+**Section schema:**
+
+| Field Name                 | Description                                                              |
+| -------------------------- | ------------------------------------------------------------------------ |
+| Description                | Simple a small description text here                                     |
+| Background Image - Desktop | Image should be 1920x762 pixels in WebP format. Use https://squoosh.app/ |
+| Background Image - Mobile  | Image should be 639x648 pixels in WebP format. Use https://squoosh.app/  |
+
+---
