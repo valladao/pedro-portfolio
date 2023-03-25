@@ -38,6 +38,8 @@ export default {
       title: "Album Cover",
       name: "albumCover",
       type: "image",
+      description:
+        "Image should be 665x665 pixels in WebP format. Use https://squoosh.app/",
       validation: (Rule) => Rule.required()
     },
     {
