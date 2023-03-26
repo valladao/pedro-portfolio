@@ -6,7 +6,8 @@ export const soundcloudTrack = {
     {
       title: "Track ID",
       name: "trackID",
-      type: "string"
+      type: "string",
+      validation: (Rule) => Rule.required()
     }
   ],
   preview: {
@@ -29,7 +30,8 @@ export const spotifyTrack = {
     {
       title: "Track ID",
       name: "trackID",
-      type: "string"
+      type: "string",
+      validation: (Rule) => Rule.required()
     }
   ],
   preview: {
@@ -52,7 +54,8 @@ export const youtubeTrack = {
     {
       title: "Track ID",
       name: "trackID",
-      type: "string"
+      type: "string",
+      validation: (Rule) => Rule.required()
     },
     {
       title: "Start time (seconds)",
