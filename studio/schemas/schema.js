@@ -37,18 +37,21 @@ export default createSchema({
       type: "document",
       fields: [
         {
-          title: "Album",
+          title: "Album (Only for Album page)",
           name: "album",
           type: "reference",
-          to: [{ type: "album" }]
+          to: [{ type: "album" }],
+          description: "Don't use in portfolio page: only for album page."
         },
         {
-          title: "Page Title (only when Album is not set)",
+          title: "Page Title (Only for Portfolio page)",
           name: "pageTitle",
-          type: "string"
+          type: "string",
+          description:
+            "The oposite: only for portfolio page - don't use in album page."
         },
         {
-          title: "Slug (only when Album is not set)",
+          title: "Slug (Only for Portfolio page)",
           name: "slug",
           type: "slug",
           options: {
@@ -56,7 +59,8 @@ export default createSchema({
             maxLength: 200,
             slugify: (input) =>
               input.toLowerCase().replace(/\s+/g, "-").slice(0, 200)
-          }
+          },
+          description: "Only for portfolio page - don't use in album page."
         },
         {
           title: "Sections",
@@ -116,18 +120,24 @@ export default createSchema({
           title: "Hero Image | Desktop",
           name: "imageDesktop",
           type: "image",
+          description:
+            "Image should be 1920x768 pixels in WebP format. Use https://squoosh.app/",
           validation: (Rule) => Rule.required()
         },
         {
           title: "Hero Image | Mobile",
           name: "imageMobile",
           type: "image",
+          description:
+            "Image should be 640x800 pixels in WebP format. Use https://squoosh.app/",
           validation: (Rule) => Rule.required()
         },
         {
           title: "Image ALT Text",
           name: "altText",
           type: "string",
+          description:
+            "Used by Google Search. Use one text that better describe the image and the page that the image is used.",
           validation: (Rule) => Rule.required()
         },
         {
