@@ -116,12 +116,16 @@ export default createSchema({
           title: "Hero Image | Desktop",
           name: "imageDesktop",
           type: "image",
+          description:
+            "Image should be 1920x768 pixels in WebP format. Use https://squoosh.app/",
           validation: (Rule) => Rule.required()
         },
         {
           title: "Hero Image | Mobile",
           name: "imageMobile",
           type: "image",
+          description:
+            "Image should be 640x800 pixels in WebP format. Use https://squoosh.app/",
           validation: (Rule) => Rule.required()
         },
         {
