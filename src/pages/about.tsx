@@ -6,9 +6,9 @@ type About_Props = {
   query: Base_Pages_Props
 }
 
-const About = ({ query }: About_Props) => {
+const About = ({query}: About_Props) => {
   return (
-    <Basic_Layout page="about">
+    <Basic_Layout page="about" pageTitle="About">
       <Base_Template data={query} slug="about"></Base_Template>
     </Basic_Layout>
   );
