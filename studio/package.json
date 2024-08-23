@@ -30,5 +30,8 @@
     "sanity": "^3.55.0",
     "styled-components": "^5.2.0"
   },
-  "devDependencies": {}
+  "devDependencies": {},
+  "resolutions": {
+    "loader-utils": "^1.4.1"
+  }
 }
