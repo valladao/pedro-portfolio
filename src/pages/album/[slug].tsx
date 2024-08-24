@@ -7,9 +7,9 @@ type Album_Props = {
   query: Portfolio_Pages_Props
 }
 
-const Album = ({ query }: Album_Props) => {
+const Album = ({query}: Album_Props) => {
   return (
-    <Basic_Layout page="album">
+    <Basic_Layout page="album" pageTitle={query.album.shortTitle}>
       <Portfolio_Template data={query}></Portfolio_Template>
     </Basic_Layout>
   )
@@ -26,14 +26,14 @@ export async function getStaticPaths() {
   })
 
   const paths = items.map((item: string) => {
-    if (item) return { params: { slug: item } }
+    if (item) return {params: {slug: item}}
   })
 
-  return { paths, fallback: false }
+  return {paths, fallback: false}
 
 }
 
-export async function getStaticProps({ params }: Paths_Params) {
+export async function getStaticProps({params}: Paths_Params) {
 
   const filters = `*[_type == "portfolioPage" && album->slug.current=="${params.slug}"]`
 
