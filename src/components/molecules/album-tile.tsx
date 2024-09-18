@@ -21,14 +21,12 @@ const Album_Tile = ({albumTitle, albumCover, altText, slug, releaseDate}: Album_
       <Release_Date releaseDate={releaseDate}></Release_Date>
       {slug ?
         <Link href={`/album/${slug}`}>
-          <a>
-            <Link_Button_2></Link_Button_2>
-            <div className={styles.Album_Box}>
-              <Link_Button></Link_Button>
-              <Album_Cover albumCover={albumCover} altText={altText}></Album_Cover>
-            </div>
-            <Album_Title_2 albumTitle={albumTitle}></Album_Title_2>
-          </a>
+          <Link_Button_2></Link_Button_2>
+          <div className={styles.Album_Box}>
+            <Link_Button></Link_Button>
+            <Album_Cover albumCover={albumCover} altText={altText}></Album_Cover>
+          </div>
+          <Album_Title_2 albumTitle={albumTitle}></Album_Title_2>
         </Link> :
         <>
           <Link_Button_2></Link_Button_2>
