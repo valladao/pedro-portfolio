@@ -29,6 +29,7 @@ export default createSchema({
     sections.textWithPhoto,
     sections.spotifyAlbum,
     sections.albumHeroBanner,
+    sections.photoSlides,
 
     // Portfolio Page Template
     {
@@ -75,7 +76,8 @@ export default createSchema({
             { type: "contentBody" },
             { type: "textWithPhoto" },
             { type: "spotifyAlbum" },
-            { type: "albumHeroBanner" }
+            { type: "albumHeroBanner" },
+            { type: "photoSlides" }
           ]
         }
       ],

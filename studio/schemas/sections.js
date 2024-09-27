@@ -305,3 +305,18 @@ export const albumHeroBanner = {
     }
   }
 }
+
+export const photoSlides = {
+  title: "Photo Slides",
+  name: "photoSlides",
+  type: "object",
+  fields: [
+    {
+      title: "Description",
+      name: "description",
+      type: "text",
+      description: "Simple a small description text here",
+      validation: (Rule) => Rule.required()
+    }
+  ]
+}
