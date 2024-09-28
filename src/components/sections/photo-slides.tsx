@@ -1,6 +1,8 @@
+import styles from '../../styles/sections/Photo_Slides.module.css'
+
 const Photo_Slides = () => {
   return (
-    <p>Add here Photo Slides</p>
+    <p className={styles.Photo_Slides}>Add here Photo Slides</p>
   )
 }
 
