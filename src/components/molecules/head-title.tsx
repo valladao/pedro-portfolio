@@ -9,15 +9,13 @@ const Head_Title = () => {
 
     <div className={styles.Head_Title + ' head-title'}>
       <Link href="/">
-        <a>
-          <Title_1></Title_1>
-          <Header_Line></Header_Line>
-          <Subtitle_1></Subtitle_1>
-        </a>
+        <Title_1></Title_1>
+        <Header_Line></Header_Line>
+        <Subtitle_1></Subtitle_1>
       </Link>
     </div>
 
-   );
+  );
 };
 
 export default Head_Title;

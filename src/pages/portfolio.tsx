@@ -6,9 +6,9 @@ type Portfolio_Props = {
   query: Portfolio_Pages_Props
 }
 
-const Portfolio = ({ query }: Portfolio_Props) => {
+const Portfolio = ({query}: Portfolio_Props) => {
   return (
-    <Basic_Layout page="portfolio">
+    <Basic_Layout page="portfolio" pageTitle="Portfolio">
       <Portfolio_Template data={query}></Portfolio_Template>
     </Basic_Layout>
   )

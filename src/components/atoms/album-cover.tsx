@@ -7,7 +7,7 @@ type Album_Cover_Props = {
   altText: string
 }
 
-const Album_Cover = ({ albumCover, altText }: Album_Cover_Props) => {
+const Album_Cover = ({albumCover, altText}: Album_Cover_Props) => {
   return (
     <div className={styles.Album_Cover}>
       <Image
@@ -17,6 +17,7 @@ const Album_Cover = ({ albumCover, altText }: Album_Cover_Props) => {
         alt={altText}
         width={635}
         height={635}
+        layout='intrinsic'
       />
     </div>
   )

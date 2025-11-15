@@ -1,4 +1,4 @@
-import type { NextPage } from 'next'
+import type {NextPage} from 'next'
 import Basic_Layout from '../components/layouts/basic'
 import Base_Template from "../components/templates/base"
 import getSanityPagesQuery from '../scripts/get-sanity-pages-query'
@@ -7,9 +7,9 @@ type Contact_Props = {
   query: Base_Pages_Props
 }
 
-const Contact: NextPage<Contact_Props> = ({ query }) => {
+const Contact: NextPage<Contact_Props> = ({query}) => {
   return (
-    <Basic_Layout page="contact">
+    <Basic_Layout page="contact" pageTitle="Contact">
       <Base_Template slug="contact" data={query}></Base_Template>
     </Basic_Layout>
   )
