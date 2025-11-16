@@ -41,14 +41,6 @@ const sectionRender = (section: Sections) => {
         ></Track_List>
       )
 
-    case "albumList":
-      return (
-        <Album_List
-          key={section._key}
-          albumGroups={section.albumGroups}
-        ></Album_List>
-      )
-
     case "albumGroup":
       return (
         <Album_List

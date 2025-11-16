@@ -114,62 +114,6 @@ export const trackList = {
   }
 }
 
-export const albumList = {
-  title: "Album List",
-  name: "albumList",
-  type: "object",
-  fields: [
-    {
-      title: "Album Groups",
-      name: "albumGroups",
-      type: "array",
-      of: [
-        {
-          title: "Album Group",
-          name: "albumGroup",
-          type: "object",
-          fields: [
-            {
-              title: "Group Title",
-              name: "title",
-              type: "string",
-              description:
-                "Optional title displayed above this set of albums (e.g. 'Featured')."
-            },
-            {
-              title: "Albums",
-              name: "albums",
-              type: "array",
-              of: [
-                {
-                  type: "reference",
-                  to: [{ type: "album" }]
-                }
-              ],
-              validation: (Rule) => Rule.required().min(1)
-            }
-          ]
-        }
-      ],
-      validation: (Rule) => Rule.required().min(1)
-    }
-  ],
-  preview: {
-    select: {
-      groups: "albumGroups"
-    },
-    prepare({ groups }) {
-      const totalGroups = groups ? groups.length : 0
-      return {
-        title:
-          totalGroups > 0
-            ? `Album List | ${totalGroups} group${totalGroups > 1 ? "s" : ""}`
-            : "Album List"
-      }
-    }
-  }
-}
-
 export const albumGroup = {
   title: "Album Group",
   name: "albumGroup",
