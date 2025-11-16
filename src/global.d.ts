@@ -104,6 +104,7 @@ type Album_Group = {
   _key: string
   title?: string
   albums: Array<Album>
+  _type?: string
 }
 
 type Album_List = {
@@ -151,6 +152,7 @@ type Sections = HeroImage &
   AlbumBanner &
   Track_List &
   Album_List &
+  Album_Group &
   Youtube_Video &
   Content_Body &
   Text_with_Photo &

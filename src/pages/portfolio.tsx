@@ -56,6 +56,23 @@ export async function getStaticProps() {
             }
           ]
         )
+      },
+      _type == "albumGroup" => {
+        "albumGroups": [
+          {
+            _key,
+            title,
+            albums[]->{
+              ...,
+              'slug': slug,
+              albumCover,
+              albumTitle,
+              shortTitle,
+              altText,
+              releaseDate
+            }
+          }
+        ]
       }
     }
   }`

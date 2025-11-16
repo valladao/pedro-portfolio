@@ -49,6 +49,14 @@ const sectionRender = (section: Sections) => {
         ></Album_List>
       )
 
+    case "albumGroup":
+      return (
+        <Album_List
+          key={section._key}
+          albumGroups={section.albumGroups}
+        ></Album_List>
+      )
+
     case "youtubeVideo":
       return (
         <YouTube_Banner

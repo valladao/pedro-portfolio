@@ -75,6 +75,23 @@ export async function getStaticProps({params}: Paths_Params) {
             }
           ]
         )
+      },
+      _type == "albumGroup" => {
+        "albumGroups": [
+          {
+            _key,
+            title,
+            albums[]->{
+              ...,
+              'slug': slug,
+              albumCover,
+              albumTitle,
+              shortTitle,
+              altText,
+              releaseDate
+            }
+          }
+        ]
       }
     }
   }`
