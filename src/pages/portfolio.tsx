@@ -25,7 +25,38 @@ export async function getStaticProps() {
     sections[]{
       ...,
       album != NULL => { album ->},
-      selectedAlbuns[0] == "all" => { "albunsList": * [_type == "album"] | order(releaseDate desc) | order(_createdAt asc) }
+      _type == "albumList" => {
+        "albumGroups": select(
+          defined(albumGroups) && count(albumGroups) > 0 => albumGroups[]{
+            _key,
+            title,
+            albums[]->{
+              ...,
+              'slug': slug,
+              albumCover,
+              albumTitle,
+              shortTitle,
+              altText,
+              releaseDate
+            }
+          },
+          true => [
+            {
+              "_key": "all",
+              "title": null,
+              "albums": *[_type == "album"] | order(releaseDate desc) | order(_createdAt asc){
+                ...,
+                'slug': slug,
+                albumCover,
+                albumTitle,
+                shortTitle,
+                altText,
+                releaseDate
+              }
+            }
+          ]
+        )
+      }
     }
   }`
 

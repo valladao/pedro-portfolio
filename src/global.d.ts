@@ -100,10 +100,16 @@ type Track_List = {
   tracks: Array<Tracks>
 }
 
+type Album_Group = {
+  _key: string
+  title?: string
+  albums: Array<Album>
+}
+
 type Album_List = {
   _key: string
   _type: string
-  albunsList: Array<Album>
+  albumGroups: Array<Album_Group>
 }
 
 type Youtube_Video = {

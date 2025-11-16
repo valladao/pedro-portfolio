@@ -45,7 +45,7 @@ const sectionRender = (section: Sections) => {
       return (
         <Album_List
           key={section._key}
-          albuns={section.albunsList}
+          albumGroups={section.albumGroups}
         ></Album_List>
       )
 
