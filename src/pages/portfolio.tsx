@@ -24,6 +24,13 @@ export async function getStaticProps() {
     'slug': slug.current,
     sections[]{
       ...,
+      _type == "photoSlides" => {
+        ...,
+        slides[]{
+          image,
+          altText
+        }
+      },
       album != NULL => { album ->},
       _type == "albumGroup" => {
         "albumGroups": [

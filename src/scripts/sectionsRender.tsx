@@ -106,7 +106,7 @@ const sectionRender = (section: Sections) => {
       return (
         <Photo_Slides
           key={section._key}
-          description={section.description}
+          slides={section.slides}
         ></Photo_Slides>
       )
 

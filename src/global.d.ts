@@ -149,7 +149,10 @@ type Album_Hero_Banner = {
 }
 
 type Photo_Slides = {
-  description: string
+  slides: Array<{
+    image: Sanity_Image
+    altText: string
+  }>
 }
 
 type Sections = HeroImage &

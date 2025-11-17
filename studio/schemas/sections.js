@@ -330,11 +330,41 @@ export const photoSlides = {
   type: "object",
   fields: [
     {
-      title: "Description",
-      name: "description",
-      type: "text",
-      description: "Simple a small description text here",
-      validation: (Rule) => Rule.required()
+      title: "Slides",
+      name: "slides",
+      type: "array",
+      of: [
+        {
+          type: "object",
+          fields: [
+            {
+              title: "Image",
+              name: "image",
+              type: "image",
+              validation: (Rule) => Rule.required()
+            },
+            {
+              title: "ALT Text",
+              name: "altText",
+              type: "string",
+              validation: (Rule) => Rule.required()
+            }
+          ]
+        }
+      ],
+      validation: (Rule) => Rule.required().min(1)
     }
-  ]
+  ],
+  preview: {
+    select: {
+      slides: "slides"
+    },
+    prepare({ slides }) {
+      const count = slides?.length || 0
+      return {
+        title: "Photo Slides",
+        subtitle: `${count} photo${count === 1 ? "" : "s"}`
+      }
+    }
+  }
 }

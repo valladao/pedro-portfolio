@@ -43,6 +43,13 @@ export async function getStaticProps({params}: Paths_Params) {
     album ->,
     sections[]{
       ...,
+      _type == "photoSlides" => {
+        ...,
+        slides[]{
+          image,
+          altText
+        }
+      },
       album != NULL => { album ->},
       _type == "albumGroup" => {
         "albumGroups": [
