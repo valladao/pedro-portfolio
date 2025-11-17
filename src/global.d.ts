@@ -107,6 +107,12 @@ type Album_Group = {
   _type?: string
 }
 
+type Album_Group_Section = {
+  _key: string
+  _type: string
+  albumGroups: Array<Album_Group>
+}
+
 type Youtube_Video = {
   _key: string
   _type: string
@@ -146,6 +152,7 @@ type Sections = HeroImage &
   AlbumBanner &
   Track_List &
   Album_Group &
+  Album_Group_Section &
   Youtube_Video &
   Content_Body &
   Text_with_Photo &
