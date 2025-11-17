@@ -100,10 +100,17 @@ type Track_List = {
   tracks: Array<Tracks>
 }
 
-type Album_List = {
+type Album_Group = {
+  _key: string
+  title?: string
+  albums: Array<Album>
+  _type?: string
+}
+
+type Album_Group_Section = {
   _key: string
   _type: string
-  albunsList: Array<Album>
+  albumGroups: Array<Album_Group>
 }
 
 type Youtube_Video = {
@@ -144,7 +151,8 @@ type Album_Hero_Banner = {
 type Sections = HeroImage &
   AlbumBanner &
   Track_List &
-  Album_List &
+  Album_Group &
+  Album_Group_Section &
   Youtube_Video &
   Content_Body &
   Text_with_Photo &

@@ -114,26 +114,44 @@ export const trackList = {
   }
 }
 
-export const albumList = {
-  title: "Album List",
-  name: "albumList",
+export const albumGroup = {
+  title: "Album Group",
+  name: "albumGroup",
   type: "object",
   fields: [
     {
-      title: "Selected Albuns",
-      name: "selectedAlbuns",
+      title: "Group Title",
+      name: "title",
+      type: "string",
+      description:
+        "Optional title displayed above this set of albums (e.g. 'Featured')."
+    },
+    {
+      title: "Albums",
+      name: "albums",
       type: "array",
-      of: [{ type: "string" }],
-      options: {
-        list: [{ title: "All Albuns", value: "all" }]
-      }
+      of: [
+        {
+          type: "reference",
+          to: [{ type: "album" }]
+        }
+      ],
+      validation: (Rule) => Rule.required().min(1)
     }
   ],
   preview: {
-    select: {},
-    prepare() {
+    select: {
+      title: "title",
+      albums: "albums"
+    },
+    prepare({ title, albums }) {
+      const totalAlbums = albums ? albums.length : 0
       return {
-        title: "Album List"
+        title: title || "Album Group",
+        subtitle:
+          totalAlbums > 0
+            ? `${totalAlbums} album${totalAlbums > 1 ? "s" : ""}`
+            : "No albums"
       }
     }
   }

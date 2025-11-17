@@ -1,6 +1,18 @@
 {
-  // Note: This config is only used to help editors like VS Code understand/resolve
-  // parts, the actual transpilation is done by babel. Any compiler configuration in
-  // here will be ignored.
-  "include": ["./node_modules/@sanity/base/types/**/*.ts", "./**/*.ts", "./**/*.tsx"]
+  "compilerOptions": {
+    "target": "ES2020",
+    "module": "ESNext",
+    "moduleResolution": "node",
+    "jsx": "react-jsx",
+    "esModuleInterop": true,
+    "allowSyntheticDefaultImports": true,
+    "resolveJsonModule": true,
+    "types": ["sanity"]
+  },
+  "include": [
+    "sanity.config.ts",
+    "schemas/**/*",
+    "plugins/**/*",
+    "config/**/*"
+  ]
 }
