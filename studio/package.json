@@ -7,7 +7,7 @@
   "author": "Pedro Henrique Valladão <pedrohvalladao@gmail.com>",
   "license": "UNLICENSED",
   "scripts": {
-    "start": "sanity start",
+    "start": "sanity dev",
     "build": "sanity build",
     "version": "sanity versions",
     "upgrade": "sanity upgrade"
@@ -16,19 +16,13 @@
     "sanity"
   ],
   "dependencies": {
-    "@sanity/base": "^2.36.2",
-    "@sanity/core": "^2.36.2",
-    "@sanity/default-layout": "^2.36.2",
-    "@sanity/default-login": "^2.36.2",
-    "@sanity/desk-tool": "^2.36.2",
-    "@sanity/eslint-config-studio": "^2.0.4",
-    "@sanity/vision": "^2.36.2",
+    "@sanity/vision": "^3.55.0",
     "eslint": "^8.6.0",
-    "prop-types": "^15.7",
-    "react": "^17.0",
-    "react-dom": "^17.0",
+    "prop-types": "^15.7.0",
+    "react": "^18.3.1",
+    "react-dom": "^18.3.1",
     "sanity": "^3.55.0",
-    "styled-components": "^5.2.0"
+    "styled-components": "^6.1.15"
   },
   "devDependencies": {},
   "resolutions": {
