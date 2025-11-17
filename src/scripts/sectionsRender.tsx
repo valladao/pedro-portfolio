@@ -104,7 +104,10 @@ const sectionRender = (section: Sections) => {
 
     case "photoSlides":
       return (
-        <Photo_Slides key={section._key}></Photo_Slides>
+        <Photo_Slides
+          key={section._key}
+          description={section.description}
+        ></Photo_Slides>
       )
 
     default:

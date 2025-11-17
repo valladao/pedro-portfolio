@@ -1,8 +1,12 @@
-import styles from '../../styles/sections/Photo_Slides.module.css'
+import styles from "../../styles/sections/Photo_Slides.module.css"
 
-const Photo_Slides = () => {
+type PhotoSlidesProps = {
+  description: string
+}
+
+const Photo_Slides = ({ description }: PhotoSlidesProps) => {
   return (
-    <p className={styles.Photo_Slides}>Add here Photo Slides</p>
+    <p className={styles.Photo_Slides}>{description}</p>
   )
 }
 
