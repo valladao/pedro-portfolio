@@ -17,21 +17,6 @@ type PhotoSlidesProps = {
   }>
 }
 
-const normalizeWidths = (slides: PhotoSlidesProps["slides"]) => {
-  const providedTotal = slides.reduce((sum, slide) => sum + (slide.widthPercentage || 0), 0)
-  if (providedTotal <= 0) {
-    const fallbackWidth = slides.length > 0 ? 100 / slides.length : 100
-    return slides.map((slide) => ({ ...slide, normalizedWidth: fallbackWidth }))
-  }
-
-  // If less than 100%, scale up proportionally to reach 100%
-  const multiplier = providedTotal < 100 ? 100 / providedTotal : 1
-  return slides.map((slide) => ({
-    ...slide,
-    normalizedWidth: (slide.widthPercentage || 0) * multiplier
-  }))
-}
-
 const Photo_Slides = ({ slides, sectionHeight, sectionHeightMobile }: PhotoSlidesProps) => {
   if (!slides || slides.length === 0) {
     return null
@@ -40,17 +25,15 @@ const Photo_Slides = ({ slides, sectionHeight, sectionHeightMobile }: PhotoSlide
   const desktopHeight = Number(sectionHeight) > 0 ? sectionHeight : 550
   const mobileHeight = Number(sectionHeightMobile) > 0 ? sectionHeightMobile : desktopHeight
 
-  const normalizedSlides = normalizeWidths(slides)
-  const totalWidth = normalizedSlides.reduce((sum, slide) => sum + slide.normalizedWidth, 0)
-  const singleSlide = normalizedSlides.length === 1 && totalWidth <= 100
-
   const heightVars = {
     ["--photo-slides-height" as string]: `${desktopHeight}px`,
     ["--photo-slides-height-mobile" as string]: `${mobileHeight}px`
   }
 
-  if (singleSlide) {
-    const slide = normalizedSlides[0]
+  const hasSingleSlide = slides.length === 1
+
+  if (hasSingleSlide) {
+    const slide = slides[0]
     return (
       <div className={styles.Photo_Slides} style={heightVars}>
         <div className={styles.SingleSlide}>
@@ -59,7 +42,7 @@ const Photo_Slides = ({ slides, sectionHeight, sectionHeightMobile }: PhotoSlide
             alt={slide.altText}
             fill
             style={{ objectFit: "cover" }}
-            loading="lazy"
+            loading="eager"
             sizes="100vw"
           />
         </div>
@@ -70,25 +53,22 @@ const Photo_Slides = ({ slides, sectionHeight, sectionHeightMobile }: PhotoSlide
   return (
     <div className={styles.Photo_Slides} style={heightVars}>
       <Swiper
-        slidesPerView="auto"
+        slidesPerView={3}
         spaceBetween={0}
-        freeMode
-        loop
+        freeMode={true}
+        loop={true}
         modules={[FreeMode]}
         className="photo-slides-swiper"
       >
-        {normalizedSlides.map((slide) => (
-          <SwiperSlide
-            key={slide._key || slide.altText}
-            style={{ width: `${slide.normalizedWidth}%` }}
-          >
+        {slides.map((slide) => (
+          <SwiperSlide key={slide._key || slide.altText}>
             <div className={styles.SlideImage}>
               <Image
                 src={buildImageUrl(slide.image)}
                 alt={slide.altText}
                 fill
                 style={{ objectFit: "cover" }}
-                loading="lazy"
+                loading="eager"
                 sizes="(max-width: 639px) 100vw, (max-width: 1023px) 50vw, 33vw"
               />
             </div>
