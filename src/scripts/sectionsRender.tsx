@@ -106,6 +106,8 @@ const sectionRender = (section: Sections) => {
       return (
         <Photo_Slides
           key={section._key}
+          sectionHeight={section.sectionHeight}
+          sectionHeightMobile={section.sectionHeightMobile}
           slides={section.slides}
         ></Photo_Slides>
       )
