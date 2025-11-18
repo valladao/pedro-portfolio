@@ -149,9 +149,13 @@ type Album_Hero_Banner = {
 }
 
 type Photo_Slides = {
+  sectionHeight: number
+  sectionHeightMobile?: number
   slides: Array<{
     image: Sanity_Image
     altText: string
+    widthPercentage: number
+    _key?: string
   }>
 }
 

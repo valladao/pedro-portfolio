@@ -26,9 +26,12 @@ export async function getStaticProps() {
       ...,
       _type == "photoSlides" => {
         ...,
+        sectionHeight,
+        sectionHeightMobile,
         slides[]{
           image,
-          altText
+          altText,
+          widthPercentage
         }
       },
       album != NULL => { album ->},

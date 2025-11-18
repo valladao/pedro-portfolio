@@ -330,6 +330,19 @@ export const photoSlides = {
   type: "object",
   fields: [
     {
+      title: "Section height (px)",
+      name: "sectionHeight",
+      type: "number",
+      description: "Height in pixels for the section on desktop.",
+      validation: (Rule) => Rule.required().min(1)
+    },
+    {
+      title: "Section height | Mobile (px)",
+      name: "sectionHeightMobile",
+      type: "number",
+      description: "Optional mobile height in pixels. Falls back to desktop height."
+    },
+    {
       title: "Slides",
       name: "slides",
       type: "array",
@@ -348,6 +361,13 @@ export const photoSlides = {
               name: "altText",
               type: "string",
               validation: (Rule) => Rule.required()
+            },
+            {
+              title: "Width percentage",
+              name: "widthPercentage",
+              type: "number",
+              description: "Relative width for this slide (values can exceed 100).",
+              validation: (Rule) => Rule.required().min(1)
             }
           ]
         }
@@ -357,13 +377,14 @@ export const photoSlides = {
   ],
   preview: {
     select: {
-      slides: "slides"
+      slides: "slides",
+      sectionHeight: "sectionHeight"
     },
-    prepare({ slides }) {
+    prepare({ slides, sectionHeight }) {
       const count = slides?.length || 0
       return {
         title: "Photo Slides",
-        subtitle: `${count} photo${count === 1 ? "" : "s"}`
+        subtitle: `${count} photo${count === 1 ? "" : "s"}${sectionHeight ? ` · ${sectionHeight}px` : ""}`
       }
     }
   }
