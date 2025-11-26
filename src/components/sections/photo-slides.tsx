@@ -6,15 +6,17 @@ import "swiper/css/free-mode"
 import Image from "next/image"
 import buildImageUrl from "../../scripts/build-image-url"
 
+type SlideItem = {
+  image: Sanity_Image
+  altText: string
+  widthPercentage: number
+  _key?: string
+}
+
 type PhotoSlidesProps = {
   sectionHeight: number
   sectionHeightMobile?: number
-  slides: Array<{
-    image: Sanity_Image
-    altText: string
-    widthPercentage: number
-    _key?: string
-  }>
+  slides: Array<SlideItem>
 }
 
 const Photo_Slides = ({ slides, sectionHeight, sectionHeightMobile }: PhotoSlidesProps) => {
@@ -53,10 +55,13 @@ const Photo_Slides = ({ slides, sectionHeight, sectionHeightMobile }: PhotoSlide
   return (
     <div className={styles.Photo_Slides} style={heightVars}>
       <Swiper
-        slidesPerView={3}
+        slidesPerView={1}
         spaceBetween={0}
         freeMode={true}
-        loop={true}
+        loop={false}
+        breakpoints={{
+          1024: { slidesPerView: 3 }
+        }}
         modules={[FreeMode]}
         className="photo-slides-swiper"
       >
@@ -69,7 +74,7 @@ const Photo_Slides = ({ slides, sectionHeight, sectionHeightMobile }: PhotoSlide
                 fill
                 style={{ objectFit: "cover" }}
                 loading="eager"
-                sizes="(max-width: 639px) 100vw, (max-width: 1023px) 50vw, 33vw"
+                sizes="(max-width: 639px) 100vw, (max-width: 1023px) 100vw, 33vw"
               />
             </div>
           </SwiperSlide>
