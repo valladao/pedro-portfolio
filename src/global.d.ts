@@ -154,7 +154,6 @@ type Photo_Slides = {
   slides: Array<{
     image: Sanity_Image
     altText: string
-    widthPercentage: number
     _key?: string
   }>
 }

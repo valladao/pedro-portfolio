@@ -11,7 +11,6 @@ import buildImageUrl from "../../scripts/build-image-url"
 type SlideItem = {
   image: Sanity_Image
   altText: string
-  widthPercentage: number
   _key?: string
 }
 

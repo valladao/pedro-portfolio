@@ -361,13 +361,6 @@ export const photoSlides = {
               name: "altText",
               type: "string",
               validation: (Rule) => Rule.required()
-            },
-            {
-              title: "Width percentage",
-              name: "widthPercentage",
-              type: "number",
-              description: "Relative width for this slide (values can exceed 100).",
-              validation: (Rule) => Rule.required().min(1)
             }
           ]
         }
