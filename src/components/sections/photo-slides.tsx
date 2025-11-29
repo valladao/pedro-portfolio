@@ -1,8 +1,9 @@
 import styles from "../../styles/sections/Photo_Slides.module.css"
-import { FreeMode } from "swiper/modules"
+import { FreeMode, Pagination } from "swiper/modules"
 import { Swiper, SwiperSlide } from "swiper/react"
 import "swiper/css"
 import "swiper/css/free-mode"
+import "swiper/css/pagination"
 import Image from "next/image"
 import buildImageUrl from "../../scripts/build-image-url"
 
@@ -59,10 +60,14 @@ const Photo_Slides = ({ slides, sectionHeight, sectionHeightMobile }: PhotoSlide
         spaceBetween={0}
         freeMode={true}
         loop={false}
+        pagination={{
+          clickable: true,
+          dynamicBullets: true
+        }}
         breakpoints={{
           1024: { slidesPerView: 3 }
         }}
-        modules={[FreeMode]}
+        modules={[FreeMode, Pagination]}
         className="photo-slides-swiper"
       >
         {slides.map((slide) => (
