@@ -161,3 +161,20 @@ My plan was too use the most modern front-end technogies and to focus on perform
 | Background Image - Mobile  | Image should be 639x648 pixels in WebP format. Use https://squoosh.app/  |
 
 ---
+
+### Photo Slides
+
+**Behavior:**
+
+- 3 slides per view on desktop with navigation arrows; 1 slide per view on mobile with pagination bullets.
+- Images use the section height (desktop/mobile) and cover the available space.
+
+**Section schema:**
+
+| Field Name              | Description                                              |
+| ----------------------- | -------------------------------------------------------- |
+| Section height (px)     | Height in pixels for the section on desktop              |
+| Section height (Mobile) | Optional mobile height in pixels (falls back to desktop) |
+| Slides                  | Array of images                                          |
+| Image                   | Image asset (recommended to upload optimized WebP)       |
+| ALT Text                | Required alt text for the image                          |
