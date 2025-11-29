@@ -1,9 +1,10 @@
 import styles from "../../styles/sections/Photo_Slides.module.css"
-import { FreeMode, Pagination } from "swiper/modules"
+import { FreeMode, Pagination, Navigation } from "swiper/modules"
 import { Swiper, SwiperSlide } from "swiper/react"
 import "swiper/css"
 import "swiper/css/free-mode"
 import "swiper/css/pagination"
+import "swiper/css/navigation"
 import Image from "next/image"
 import buildImageUrl from "../../scripts/build-image-url"
 
@@ -64,10 +65,17 @@ const Photo_Slides = ({ slides, sectionHeight, sectionHeightMobile }: PhotoSlide
           clickable: true,
           dynamicBullets: true
         }}
-        breakpoints={{
-          1024: { slidesPerView: 3 }
+        navigation={{
+          nextEl: ".photo-slides-next",
+          prevEl: ".photo-slides-prev"
         }}
-        modules={[FreeMode, Pagination]}
+        breakpoints={{
+          1024: {
+            slidesPerView: 3,
+            pagination: false
+          }
+        }}
+        modules={[FreeMode, Pagination, Navigation]}
         className="photo-slides-swiper"
       >
         {slides.map((slide) => (
@@ -84,6 +92,8 @@ const Photo_Slides = ({ slides, sectionHeight, sectionHeightMobile }: PhotoSlide
             </div>
           </SwiperSlide>
         ))}
+        <div className={`swiper-button-prev ${styles.NavButton} ${styles.Prev} photo-slides-prev`}></div>
+        <div className={`swiper-button-next ${styles.NavButton} ${styles.Next} photo-slides-next`}></div>
       </Swiper>
     </div>
   )

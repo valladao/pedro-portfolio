@@ -68,10 +68,50 @@
   box-shadow: 0 0 0 2px rgba(0, 0, 0, 0.4);
 }
 
+.NavButton {
+  color: #fff !important;
+  text-shadow: 0 0 6px rgba(0, 0, 0, 0.7);
+}
+
+.Photo_Slides :global(.swiper-button-prev),
+.Photo_Slides :global(.swiper-button-next) {
+  color: #fff;
+  text-shadow: 0 0 6px rgba(0, 0, 0, 0.7);
+}
+
+.NavButton:hover {
+  color: #fff !important;
+}
+
+.Prev {
+  left: 8px !important;
+}
+
+.Next {
+  right: 24px !important;
+}
+
+@media (max-width: 1023px) {
+  .NavButton,
+  .Photo_Slides :global(.swiper-button-prev),
+  .Photo_Slides :global(.swiper-button-next) {
+    display: none !important;
+  }
+}
+
+@media (min-width: 1024px) {
+  .Photo_Slides :global(.swiper-pagination) {
+    display: none;
+  }
+}
+
 @media (max-width: 640px) {
   .Photo_Slides {
     height: var(--photo-slides-height-mobile, var(--photo-slides-height, 100%));
-    max-height: var(--photo-slides-height-mobile, var(--photo-slides-height, 100%));
+    max-height: var(
+      --photo-slides-height-mobile,
+      var(--photo-slides-height, 100%)
+    );
     min-height: 200px;
   }
 }
