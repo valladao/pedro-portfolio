@@ -164,10 +164,18 @@ My plan was too use the most modern front-end technogies and to focus on perform
 
 ### Photo Slides
 
-**Behavior:**
-
 - 3 slides per view on desktop with navigation arrows; 1 slide per view on mobile with pagination bullets.
 - Images use the section height (desktop/mobile) and cover the available space.
+
+**Desktop version:**
+<img width="1881" height="536" alt="image" src="https://github.com/user-attachments/assets/eae63221-283f-4fc4-8181-3e432f8fbe3c" />
+
+**Mobile version:**
+<p align="center">
+  <img width="367" height="284" alt="image" src="https://github.com/user-attachments/assets/b511d41f-e0c4-4450-a9a2-d614dc938228" />
+</p>
+
+**Behavior:**
 
 **Section schema:**
 
