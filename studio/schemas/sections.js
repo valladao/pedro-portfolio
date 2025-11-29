@@ -323,3 +323,62 @@ export const albumHeroBanner = {
     }
   }
 }
+
+export const photoSlides = {
+  title: "Photo Slides",
+  name: "photoSlides",
+  type: "object",
+  fields: [
+    {
+      title: "Section height (px)",
+      name: "sectionHeight",
+      type: "number",
+      description: "Height in pixels for the section on desktop.",
+      validation: (Rule) => Rule.required().min(1)
+    },
+    {
+      title: "Section height | Mobile (px)",
+      name: "sectionHeightMobile",
+      type: "number",
+      description: "Optional mobile height in pixels. Falls back to desktop height."
+    },
+    {
+      title: "Slides",
+      name: "slides",
+      type: "array",
+      of: [
+        {
+          type: "object",
+          fields: [
+            {
+              title: "Image",
+              name: "image",
+              type: "image",
+              validation: (Rule) => Rule.required()
+            },
+            {
+              title: "ALT Text",
+              name: "altText",
+              type: "string",
+              validation: (Rule) => Rule.required()
+            }
+          ]
+        }
+      ],
+      validation: (Rule) => Rule.required().min(1)
+    }
+  ],
+  preview: {
+    select: {
+      slides: "slides",
+      sectionHeight: "sectionHeight"
+    },
+    prepare({ slides, sectionHeight }) {
+      const count = slides?.length || 0
+      return {
+        title: "Photo Slides",
+        subtitle: `${count} photo${count === 1 ? "" : "s"}${sectionHeight ? ` · ${sectionHeight}px` : ""}`
+      }
+    }
+  }
+}

@@ -18,6 +18,7 @@ export const schemaTypes = [
   sections.textWithPhoto,
   sections.spotifyAlbum,
   sections.albumHeroBanner,
+  sections.photoSlides,
 
   // Documents
   {
@@ -64,7 +65,8 @@ export const schemaTypes = [
           { type: "contentBody" },
           { type: "textWithPhoto" },
           { type: "spotifyAlbum" },
-          { type: "albumHeroBanner" }
+          { type: "albumHeroBanner" },
+          { type: "photoSlides" }
         ]
       }
     ],

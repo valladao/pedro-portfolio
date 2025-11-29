@@ -7,6 +7,7 @@ import Content_Body from "../components/sections/content-body"
 import Text_with_Photo from "../components/sections/text-with-photo"
 import Spotify_Album from "../components/sections/spotify-album"
 import Album_Hero_Banner from "../components/sections/album-hero-banner"
+import Photo_Slides from "../components/sections/photo-slides"
 
 const sectionRender = (section: Sections) => {
   switch (section._type) {
@@ -99,6 +100,16 @@ const sectionRender = (section: Sections) => {
           imageDesktop={section.imageDesktop}
           imageMobile={section.imageMobile}
         ></Album_Hero_Banner>
+      )
+
+    case "photoSlides":
+      return (
+        <Photo_Slides
+          key={section._key}
+          sectionHeight={section.sectionHeight}
+          sectionHeightMobile={section.sectionHeightMobile}
+          slides={section.slides}
+        ></Photo_Slides>
       )
 
     default:

@@ -148,6 +148,16 @@ type Album_Hero_Banner = {
   imageMobile: Sanity_Image
 }
 
+type Photo_Slides = {
+  sectionHeight: number
+  sectionHeightMobile?: number
+  slides: Array<{
+    image: Sanity_Image
+    altText: string
+    _key?: string
+  }>
+}
+
 type Sections = HeroImage &
   AlbumBanner &
   Track_List &
@@ -157,7 +167,8 @@ type Sections = HeroImage &
   Content_Body &
   Text_with_Photo &
   Spotify_Album &
-  Album_Hero_Banner
+  Album_Hero_Banner &
+  Photo_Slides
 
 type Tracks = Standard_Track & YouTube_Track
 
