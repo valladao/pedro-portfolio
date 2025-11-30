@@ -37,7 +37,41 @@ export async function getStaticProps({params}: Paths_Params) {
 
   const filters = `*[_type == "portfolioPage" && album->slug.current=="${params.slug}"]`
 
-  const projections = `{...,album ->}`
+  const projections = `
+  {
+    ...,
+    album ->,
+    sections[]{
+      ...,
+      _type == "photoSlides" => {
+        ...,
+        sectionHeight,
+        sectionHeightMobile,
+        slides[]{
+          image,
+          altText
+        }
+      },
+      album != NULL => { album ->},
+      _type == "albumGroup" => {
+        "albumGroups": [
+          {
+            _key,
+            title,
+            albums[]->{
+              ...,
+              'slug': slug,
+              albumCover,
+              albumTitle,
+              shortTitle,
+              altText,
+              releaseDate
+            }
+          }
+        ]
+      }
+    }
+  }`
 
   const query = await getSanityPagesQuery(filters, projections)
 

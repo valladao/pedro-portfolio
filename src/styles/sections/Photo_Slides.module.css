@@ -1,0 +1,117 @@
+.Photo_Slides {
+  width: 100%;
+  height: var(--photo-slides-height, 100%);
+  max-height: var(--photo-slides-height, 100%);
+  min-height: 200px;
+}
+
+.Photo_Slides :global(.swiper),
+.Photo_Slides :global(.swiper-wrapper) {
+  width: 100%;
+  height: 100%;
+}
+
+.Photo_Slides :global(.swiper-slide) {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: #fff;
+  height: 100%;
+}
+
+.SlideImage {
+  position: relative;
+  width: 100%;
+  height: 100%;
+}
+
+.Photo_Slides :global(.swiper-slide img) {
+  display: block;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.SingleSlide {
+  width: 100%;
+  height: 100%;
+  position: relative;
+}
+
+.SingleSlide :global(img),
+.SlideImage :global(img) {
+  object-fit: cover;
+}
+
+.Photo_Slides :global(.swiper-pagination) {
+  position: absolute;
+  bottom: 12px;
+  left: 0;
+  right: 0;
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.Photo_Slides :global(.swiper-pagination-bullet) {
+  background: rgba(0, 0, 0, 0.6);
+  opacity: 1;
+  width: 10px;
+  height: 10px;
+  margin: 4px 6px !important;
+  box-sizing: content-box;
+}
+
+.Photo_Slides :global(.swiper-pagination-bullet-active) {
+  background: #fff;
+  box-shadow: 0 0 0 2px rgba(0, 0, 0, 0.4);
+}
+
+.NavButton {
+  color: #fff !important;
+  text-shadow: 0 0 6px rgba(0, 0, 0, 0.7);
+}
+
+.Photo_Slides :global(.swiper-button-prev),
+.Photo_Slides :global(.swiper-button-next) {
+  color: #fff;
+  text-shadow: 0 0 6px rgba(0, 0, 0, 0.7);
+}
+
+.NavButton:hover {
+  color: #fff !important;
+}
+
+.Prev {
+  left: 8px !important;
+}
+
+.Next {
+  right: 24px !important;
+}
+
+@media (max-width: 1023px) {
+  .NavButton,
+  .Photo_Slides :global(.swiper-button-prev),
+  .Photo_Slides :global(.swiper-button-next) {
+    display: none !important;
+  }
+}
+
+@media (min-width: 1024px) {
+  .Photo_Slides :global(.swiper-pagination) {
+    display: none;
+  }
+}
+
+@media (max-width: 640px) {
+  .Photo_Slides {
+    height: var(--photo-slides-height-mobile, var(--photo-slides-height, 100%));
+    max-height: var(
+      --photo-slides-height-mobile,
+      var(--photo-slides-height, 100%)
+    );
+    min-height: 200px;
+  }
+}

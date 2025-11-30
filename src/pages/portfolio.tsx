@@ -24,8 +24,33 @@ export async function getStaticProps() {
     'slug': slug.current,
     sections[]{
       ...,
+      _type == "photoSlides" => {
+        ...,
+        sectionHeight,
+        sectionHeightMobile,
+        slides[]{
+          image,
+          altText
+        }
+      },
       album != NULL => { album ->},
-      selectedAlbuns[0] == "all" => { "albunsList": * [_type == "album"] | order(releaseDate desc) | order(_createdAt asc) }
+      _type == "albumGroup" => {
+        "albumGroups": [
+          {
+            _key,
+            title,
+            albums[]->{
+              ...,
+              'slug': slug,
+              albumCover,
+              albumTitle,
+              shortTitle,
+              altText,
+              releaseDate
+            }
+          }
+        ]
+      }
     }
   }`
 
