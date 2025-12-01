@@ -29,7 +29,7 @@ export async function getStaticPaths() {
     if (item) return {params: {slug: item}}
   })
 
-  return {paths, fallback: false}
+  return {paths, fallback: 'blocking'}
 
 }
 
