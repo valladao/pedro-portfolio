@@ -4,7 +4,25 @@ import styles from '../../styles/sections/Album_Hero_Banner.module.css'
 import Album_Tile from '../molecules/album-tile'
 import Name_Bar from './name-bar'
 
-const Album_Hero_Banner = ({albumTitle, shortTitle, albumCover, altText, description, imageDesktop, imageMobile}: Album_Hero_Banner) => {
+type AlbumHeroBannerProps = {
+  albumTitle: string
+  shortTitle: string
+  albumCover: Sanity_Image
+  altText: string
+  description: string
+  imageDesktop: Sanity_Image
+  imageMobile: Sanity_Image
+}
+
+const Album_Hero_Banner = ({
+  albumTitle,
+  shortTitle,
+  albumCover,
+  altText,
+  description,
+  imageDesktop,
+  imageMobile
+}: AlbumHeroBannerProps) => {
 
   const [width, setWidth] = useState<number>(0)
   const [backgroundImage, setBackgroundImage] = useState({})
