@@ -1,4 +1,5 @@
 import album from "./album"
+import project from "./project"
 import * as objects from "./objects"
 import * as sections from "./sections"
 
@@ -12,7 +13,7 @@ export const schemaTypes = [
   sections.heroImage,
   sections.albumBanner,
   sections.trackList,
-  sections.albumGroup,
+  sections.itemGroup,
   sections.youtubeVideo,
   sections.contentBody,
   sections.textWithPhoto,
@@ -27,18 +28,18 @@ export const schemaTypes = [
     type: "document",
     fields: [
       {
-        title: "Album (Only for Album page)",
+        title: "Album or Project (Only for detail page)",
         name: "album",
         type: "reference",
-        to: [{ type: "album" }],
-        description: "Don't use in portfolio page: only for album page."
+        to: [{ type: "album" }, { type: "project" }],
+        description: "Don't use in portfolio page: only for album/project page."
       },
       {
         title: "Page Title (Only for Portfolio page)",
         name: "pageTitle",
         type: "string",
         description:
-          "The oposite: only for portfolio page - don't use in album page."
+          "The oposite: only for portfolio page - don't use in album/project page."
       },
       {
         title: "Slug (Only for Portfolio page)",
@@ -50,7 +51,7 @@ export const schemaTypes = [
           slugify: (input: string) =>
             input.toLowerCase().replace(/\s+/g, "-").slice(0, 200)
         },
-        description: "Only for portfolio page - don't use in album page."
+        description: "Only for portfolio page - don't use in album/project page."
       },
       {
         title: "Sections",
@@ -60,7 +61,7 @@ export const schemaTypes = [
           { type: "heroImage" },
           { type: "albumBanner" },
           { type: "trackList" },
-          { type: "albumGroup" },
+          { type: "itemGroup" },
           { type: "youtubeVideo" },
           { type: "contentBody" },
           { type: "textWithPhoto" },
@@ -72,10 +73,17 @@ export const schemaTypes = [
     ],
     preview: {
       select: {
-        albumTitle: "album.albumTitle"
+        albumTitle: "album.albumTitle",
+        projectTitle: "album.projectTitle"
       },
-      prepare({ albumTitle }: { albumTitle?: string }) {
-        const title = albumTitle ? albumTitle : "Portfolio"
+      prepare({
+        albumTitle,
+        projectTitle
+      }: {
+        albumTitle?: string
+        projectTitle?: string
+      }) {
+        const title = albumTitle || projectTitle || "Portfolio"
         return {
           title: title
         }
@@ -142,5 +150,6 @@ export const schemaTypes = [
       }
     ]
   },
-  album
+  album,
+  project
 ]

@@ -63,15 +63,26 @@ My plan was too use the most modern front-end technogies and to focus on perform
 
 ---
 
-### Album List
+### Item Group
 
-![image](https://user-images.githubusercontent.com/527135/224485272-dca878ba-c429-4913-ad87-61f16e35b4e0.png)
+Flexible list that accepts **albums** or **projects** (references). It keeps the Album List grid and can show project descriptions.
+
+<img width="1881" height="742" alt="image" src="https://github.com/user-attachments/assets/f9ca257e-fe0f-44c9-a26f-d59d53aa3239" />
+
+<img width="1878" height="622" alt="image" src="https://github.com/user-attachments/assets/c8d085ab-4070-4678-b883-022ac61b3223" />
 
 <p align="center">
-  <img src="https://user-images.githubusercontent.com/527135/225770228-624bc8bf-0d51-4286-a854-eb28e066d53d.png"
+  <img width="384" height="842" alt="image" src="https://github.com/user-attachments/assets/610cdf18-f548-40aa-93d6-49733306c237" />
+  <img width="386" height="845" alt="image" src="https://github.com/user-attachments/assets/fe3f6ebd-79d6-415b-b5a9-7085b4fc42a4" />
 </p>
 
-**Section schema -** Check "All Albums" (now we only have the All Albums option)
+**Section schema:**
+
+| Field Name        | Description                                                             |
+| ----------------- | ----------------------------------------------------------------------- |
+| Group Title       | (Optional) Title displayed above the group.                             |
+| Items             | Array of references (`album` or `project`).                             |
+| Show description? | (Optional) Displays the project plain-text description under the title. |
 
 ---
 

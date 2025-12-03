@@ -4,10 +4,30 @@ import styles from '../../styles/sections/Album_Hero_Banner.module.css'
 import Album_Tile from '../molecules/album-tile'
 import Name_Bar from './name-bar'
 
-const Album_Hero_Banner = ({albumTitle, shortTitle, albumCover, altText, description, imageDesktop, imageMobile}: Album_Hero_Banner) => {
+type AlbumHeroBannerProps = {
+  albumTitle: string
+  shortTitle: string
+  albumCover: Sanity_Image
+  altText: string
+  description: string
+  imageDesktop: Sanity_Image
+  imageMobile: Sanity_Image
+}
+
+const Album_Hero_Banner = ({
+  albumTitle,
+  shortTitle,
+  albumCover,
+  altText,
+  description,
+  imageDesktop,
+  imageMobile
+}: AlbumHeroBannerProps) => {
 
   const [width, setWidth] = useState<number>(0)
   const [backgroundImage, setBackgroundImage] = useState({})
+  const desktopUrl = buildImageUrl(imageDesktop)
+  const mobileUrl = buildImageUrl(imageMobile)
 
   useEffect(() => {
 
@@ -15,13 +35,13 @@ const Album_Hero_Banner = ({albumTitle, shortTitle, albumCover, altText, descrip
 
       setWidth(window.innerWidth)
 
-      if (width > 639) {
+      if (window.innerWidth > 639) {
         setBackgroundImage({
-          backgroundImage: `url(${buildImageUrl(imageDesktop)})`
+          backgroundImage: `url(${desktopUrl})`
         })
       } else {
         setBackgroundImage({
-          backgroundImage: `url(${buildImageUrl(imageMobile)})`
+          backgroundImage: `url(${mobileUrl})`
         })
       }
     }
@@ -34,7 +54,9 @@ const Album_Hero_Banner = ({albumTitle, shortTitle, albumCover, altText, descrip
       window.removeEventListener('resize', handleResize)
     };
 
-  }, [imageDesktop, imageMobile, width])
+  }, [desktopUrl, mobileUrl])
+
+  if (!desktopUrl || !mobileUrl) return null
 
   return (
     <div className={styles.Album_Hero_Banner + ' album-hero-banner'}>

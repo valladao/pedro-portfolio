@@ -3,30 +3,42 @@ import Album_Tile from '../molecules/album-tile';
 import Portfolio_Bar from '../molecules/portfolio-bar';
 
 type Album_List_Props = {
-  albumGroups: Array<Album_Group>
+  itemGroups: Array<Item_Group>
 }
 
-const Album_List = ({ albumGroups }: Album_List_Props) => {
-  if (!albumGroups || albumGroups.length === 0) return null
+const Album_List = ({ itemGroups }: Album_List_Props) => {
+  if (!itemGroups || itemGroups.length === 0) return null
 
   return (
     <>
-      {albumGroups.map((group) => {
-        if (!group?.albums || group.albums.length === 0) return null
+      {itemGroups.map((group) => {
+        if (!group?.items || group.items.length === 0) return null
 
         return (
           <section key={group._key} className={styles.Album_Group}>
             <Portfolio_Bar title={group.title}></Portfolio_Bar>
             <div className={styles.Album_List + ' album-list'}>
-              {group.albums.map((album) => {
+              {group.items.map((item) => {
+                const isProject = item._type === "project"
+                const title = isProject
+                  ? (item as Project).projectTitle
+                  : (item as Album).albumTitle
+                const cover = isProject
+                  ? (item as Project).projectCover
+                  : (item as Album).albumCover
+                const slug = item.slug?.current
+                const description = isProject ? (item as Project).description : undefined
+
                 return (
                   <Album_Tile
-                    key={album._id}
-                    albumTitle={album.albumTitle}
-                    albumCover={album.albumCover}
-                    altText={album.altText}
-                    slug={album.slug.current}
-                    releaseDate={album.releaseDate}
+                    key={item._id}
+                    albumTitle={title}
+                    albumCover={cover}
+                    altText={item.altText}
+                    slug={slug}
+                    releaseDate={item.releaseDate}
+                    itemType={isProject ? "project" : "album"}
+                    description={group.showDescription ? description : undefined}
                   ></Album_Tile>
                 )
               })}

@@ -5,3 +5,10 @@
 :global(.album-banner) .Album_Cover {
   padding-top: 15px;
 }
+
+@media only screen and (min-width: 640px) {
+  :global(.album-list) .Album_Cover img {
+    aspect-ratio: 1 / 1;
+    object-fit: contain;
+  }
+}

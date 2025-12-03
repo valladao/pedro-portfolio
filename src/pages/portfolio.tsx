@@ -34,19 +34,23 @@ export async function getStaticProps() {
         }
       },
       album != NULL => { album ->},
-      _type == "albumGroup" => {
-        "albumGroups": [
+      _type == "itemGroup" => {
+        "itemGroups": [
           {
             _key,
             title,
-            albums[]->{
+            showDescription,
+            items[]->{
               ...,
               'slug': slug,
               albumCover,
               albumTitle,
+              projectCover,
+              projectTitle,
               shortTitle,
               altText,
-              releaseDate
+              releaseDate,
+              description
             }
           }
         ]

@@ -13,6 +13,8 @@ const Hero_Image = ({ imageDesktop, imageMobile, altText }: Hero_Image_Props) =>
 
   const [width, setWidth] = useState<number>(0);
   const [height, setHeight] = useState<number>(0);
+  const desktopUrl = buildImageUrl(imageDesktop)
+  const mobileUrl = buildImageUrl(imageMobile)
 
   useEffect(() => {
 
@@ -47,12 +49,14 @@ const Hero_Image = ({ imageDesktop, imageMobile, altText }: Hero_Image_Props) =>
     };
   });
 
+  if (!desktopUrl || !mobileUrl) return null
+
   if (width > 639) {
     return (
       <Image
-        src={buildImageUrl(imageDesktop)}
+        src={desktopUrl}
         placeholder="blur"
-        blurDataURL={buildImageUrl(imageDesktop) + '?blur=100'}
+        blurDataURL={desktopUrl + '?blur=100'}
         alt={altText}
         width={width}
         height={height}
@@ -63,7 +67,7 @@ const Hero_Image = ({ imageDesktop, imageMobile, altText }: Hero_Image_Props) =>
   } else {
     return (
       <Image
-        src={buildImageUrl(imageMobile)}
+        src={mobileUrl}
         alt={altText}
         width={width}
         height={height}

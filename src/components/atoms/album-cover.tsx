@@ -8,12 +8,17 @@ type Album_Cover_Props = {
 }
 
 const Album_Cover = ({albumCover, altText}: Album_Cover_Props) => {
+  if (!albumCover) return null
+
+  const url = buildImageUrl(albumCover)
+  if (!url) return null
+
   return (
     <div className={styles.Album_Cover}>
       <Image
-        src={buildImageUrl(albumCover)}
+        src={url}
         placeholder="blur"
-        blurDataURL={buildImageUrl(albumCover) + '?blur=100'}
+        blurDataURL={url + '?blur=100'}
         alt={altText}
         width={635}
         height={635}

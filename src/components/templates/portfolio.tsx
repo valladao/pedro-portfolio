@@ -8,17 +8,20 @@ type Portfolio_Template_Props = {
 
 const Portfolio_Template = ({data}: Portfolio_Template_Props) => {
 
+  const item = data.item || data.album
+  const albumData = item && "albumTitle" in item ? (item as Album) : undefined
+
   // Special rules to move certain general album informations to sections
-  for (let index = 0; index < data.sections.length; index++) {
-    if (data.sections[index]._type === "spotifyAlbum" && data.sections[index].hasCover === true) {
-      data.sections[index].albumCover = data.album.albumCover
-      data.sections[index].altText = data.album.altText
+  for (const section of data.sections) {
+    if (albumData && section._type === "spotifyAlbum" && section.hasCover === true) {
+      section.albumCover = albumData.albumCover
+      section.altText = albumData.altText
     }
-    if (data.sections[index]._type === "albumHeroBanner") {
-      data.sections[index].albumTitle = data.album.albumTitle
-      data.sections[index].shortTitle = data.album.shortTitle
-      data.sections[index].albumCover = data.album.albumCover
-      data.sections[index].altText = data.album.altText
+    if (albumData && section._type === "albumHeroBanner") {
+      section.albumTitle = albumData.albumTitle
+      section.shortTitle = albumData.shortTitle
+      section.albumCover = albumData.albumCover
+      section.altText = albumData.altText
     }
   }
 
