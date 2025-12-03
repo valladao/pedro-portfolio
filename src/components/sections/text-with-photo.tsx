@@ -4,7 +4,13 @@ import { PortableText } from '@portabletext/react'
 import buildImageUrl from '../../scripts/build-image-url'
 import Image from 'next/image'
 
-const Text_with_Photo = ({ content, image, altText }: Text_with_Photo) => {
+type TextWithPhotoProps = {
+  content: Array<Block>
+  image: Sanity_Image
+  altText: string
+}
+
+const Text_with_Photo = ({ content, image, altText }: TextWithPhotoProps) => {
 
   const url = buildImageUrl(image)
   if (!url) return null
