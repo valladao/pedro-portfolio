@@ -67,6 +67,15 @@ My plan was too use the most modern front-end technogies and to focus on perform
 
 Flexible list that accepts **albums** or **projects** (references). It keeps the Album List grid and can show project descriptions.
 
+<img width="1881" height="742" alt="image" src="https://github.com/user-attachments/assets/f9ca257e-fe0f-44c9-a26f-d59d53aa3239" />
+
+<img width="1878" height="622" alt="image" src="https://github.com/user-attachments/assets/c8d085ab-4070-4678-b883-022ac61b3223" />
+
+<p align="center">
+  <img width="384" height="842" alt="image" src="https://github.com/user-attachments/assets/610cdf18-f548-40aa-93d6-49733306c237" />
+  <img width="386" height="845" alt="image" src="https://github.com/user-attachments/assets/fe3f6ebd-79d6-415b-b5a9-7085b4fc42a4" />
+</p>
+
 **Section schema:**
 
 | Field Name        | Description                                                             |
