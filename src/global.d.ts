@@ -57,6 +57,23 @@ type Album = {
   releaseDate: number
 }
 
+type Project = {
+  _createdAt: string
+  _id: string
+  _rev: string
+  _type: string
+  _updatedAt: string
+  projectCover: Sanity_Image
+  projectTitle: string
+  shortTitle: string
+  altText: string
+  slug: Slug
+  releaseDate: number
+  description: string
+}
+
+type Item = Album | Project
+
 type Base_Pages_Props = {
   imageDesktop: Sanity_Image
   imageMobile: Sanity_Image
@@ -69,7 +86,7 @@ type Base_Pages_Props = {
 
 type HeroImage = {
   _key: string
-  _type: string
+  _type: "heroImage"
   altText: string
   imageDesktop: Sanity_Image
   imageMobile: Sanity_Image
@@ -77,7 +94,7 @@ type HeroImage = {
 
 type AlbumBanner = {
   _key: string
-  _type: string
+  _type: "albumBanner"
   album: Album
 }
 
@@ -96,42 +113,49 @@ type YouTube_Track = {
 
 type Track_List = {
   _key: string
-  _type: string
+  _type: "trackList"
   tracks: Array<Tracks>
 }
 
-type Album_Group = {
+type Item_Group = {
   _key: string
   title?: string
-  albums: Array<Album>
+  items: Array<Item>
+  showDescription?: boolean
   _type?: string
 }
 
-type Album_Group_Section = {
+type Item_Group_Section = {
   _key: string
-  _type: string
-  albumGroups: Array<Album_Group>
+  _type: "itemGroup"
+  itemGroups: Array<Item_Group>
 }
 
 type Youtube_Video = {
   _key: string
-  _type: string
+  _type: "youtubeVideo"
   trackID: string
   startTime: number
   withTitle: string
 }
 
 type Content_Body = {
+  _key: string
+  _type: "contentBody"
   contents: Array<Block>
 }
 
 type Text_with_Photo = {
+  _key: string
+  _type: "textWithPhoto"
   content: Array<Block>
   image: Sanity_Image
   altText: string
 }
 
 type Spotify_Album = {
+  _key: string
+  _type: "spotifyAlbum"
   albumID: string
   hasCover: boolean
   altText: string
@@ -139,6 +163,8 @@ type Spotify_Album = {
 }
 
 type Album_Hero_Banner = {
+  _key: string
+  _type: "albumHeroBanner"
   albumTitle: string
   shortTitle: string
   albumCover: Sanity_Image
@@ -149,6 +175,8 @@ type Album_Hero_Banner = {
 }
 
 type Photo_Slides = {
+  _key: string
+  _type: "photoSlides"
   sectionHeight: number
   sectionHeightMobile?: number
   slides: Array<{
@@ -158,25 +186,26 @@ type Photo_Slides = {
   }>
 }
 
-type Sections = HeroImage &
-  AlbumBanner &
-  Track_List &
-  Album_Group &
-  Album_Group_Section &
-  Youtube_Video &
-  Content_Body &
-  Text_with_Photo &
-  Spotify_Album &
-  Album_Hero_Banner &
-  Photo_Slides
+type Sections =
+  | HeroImage
+  | AlbumBanner
+  | Track_List
+  | Item_Group_Section
+  | Youtube_Video
+  | Content_Body
+  | Text_with_Photo
+  | Spotify_Album
+  | Album_Hero_Banner
+  | Photo_Slides
 
 type Tracks = Standard_Track & YouTube_Track
 
 type Portfolio_Pages_Props = {
-  pageTitle: string
+  pageTitle?: string
   sections: Array<Sections>
-  slug: string
-  album: Album
+  slug?: string
+  album?: Album
+  item?: Item
 }
 
 // Other types (used multiple times)

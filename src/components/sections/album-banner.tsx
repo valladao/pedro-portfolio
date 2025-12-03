@@ -17,6 +17,8 @@ const Album_Banner = ({albumTitle, albumCover, altText, slug, imageDesktop, imag
 
   const [width, setWidth] = useState<number>(0)
   const [backgroundImage, setBackgroundImage] = useState({})
+  const desktopUrl = buildImageUrl(imageDesktop)
+  const mobileUrl = buildImageUrl(imageMobile)
 
   useEffect(() => {
 
@@ -24,13 +26,13 @@ const Album_Banner = ({albumTitle, albumCover, altText, slug, imageDesktop, imag
 
       setWidth(window.innerWidth)
 
-      if (width > 639) {
+      if (window.innerWidth > 639) {
         setBackgroundImage({
-          backgroundImage: `url(${buildImageUrl(imageDesktop)})`
+          backgroundImage: `url(${desktopUrl})`
         })
       } else {
         setBackgroundImage({
-          backgroundImage: `url(${buildImageUrl(imageMobile)})`
+          backgroundImage: `url(${mobileUrl})`
         })
       }
     }
@@ -43,7 +45,9 @@ const Album_Banner = ({albumTitle, albumCover, altText, slug, imageDesktop, imag
       window.removeEventListener('resize', handleResize)
     };
 
-  }, [imageDesktop, imageMobile, width])
+  }, [desktopUrl, mobileUrl])
+
+  if (!desktopUrl || !mobileUrl) return null
 
   return (
     <>

@@ -37,11 +37,13 @@ const Photo_Slides = ({ slides, sectionHeight, sectionHeightMobile }: PhotoSlide
 
   if (hasSingleSlide) {
     const slide = slides[0]
+    const singleUrl = buildImageUrl(slide.image)
+    if (!singleUrl) return null
     return (
       <div className={styles.Photo_Slides} style={heightVars}>
         <div className={styles.SingleSlide}>
           <Image
-            src={buildImageUrl(slide.image)}
+            src={singleUrl}
             alt={slide.altText}
             fill
             style={{ objectFit: "cover" }}
@@ -77,20 +79,24 @@ const Photo_Slides = ({ slides, sectionHeight, sectionHeightMobile }: PhotoSlide
         modules={[FreeMode, Pagination, Navigation]}
         className="photo-slides-swiper"
       >
-        {slides.map((slide) => (
-          <SwiperSlide key={slide._key || slide.altText}>
-            <div className={styles.SlideImage}>
-              <Image
-                src={buildImageUrl(slide.image)}
-                alt={slide.altText}
-                fill
-                style={{ objectFit: "cover" }}
-                loading="eager"
-                sizes="(max-width: 639px) 100vw, (max-width: 1023px) 100vw, 33vw"
-              />
-            </div>
-          </SwiperSlide>
-        ))}
+        {slides.map((slide) => {
+          const slideUrl = buildImageUrl(slide.image)
+          if (!slideUrl) return null
+          return (
+            <SwiperSlide key={slide._key || slide.altText}>
+              <div className={styles.SlideImage}>
+                <Image
+                  src={slideUrl}
+                  alt={slide.altText}
+                  fill
+                  style={{ objectFit: "cover" }}
+                  loading="eager"
+                  sizes="(max-width: 639px) 100vw, (max-width: 1023px) 100vw, 33vw"
+                />
+              </div>
+            </SwiperSlide>
+          )
+        })}
         <div className={`swiper-button-prev ${styles.NavButton} ${styles.Prev} photo-slides-prev`}></div>
         <div className={`swiper-button-next ${styles.NavButton} ${styles.Next} photo-slides-next`}></div>
       </Swiper>

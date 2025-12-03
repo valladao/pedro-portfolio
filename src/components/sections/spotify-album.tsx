@@ -12,10 +12,13 @@ type Spotify_Album_Props = {
 const Spotify_Album = ({ albumCover, altText, albumID }: Spotify_Album_Props) => {
 
   let albumUrl = `https://open.spotify.com/embed/album/${albumID}?utm_source=generator&theme=0`
+  const coverUrl = buildImageUrl(albumCover)
 
   return (
     <div className={styles.Spotify_Album}>
-      <Image src={buildImageUrl(albumCover)} alt={altText} layout={'intrinsic'} width={460} height={460} />
+      {coverUrl ? (
+        <Image src={coverUrl} alt={altText} layout={'intrinsic'} width={460} height={460} />
+      ) : null}
       <iframe
         src={albumUrl}
         width="100%"

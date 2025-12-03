@@ -114,9 +114,9 @@ export const trackList = {
   }
 }
 
-export const albumGroup = {
-  title: "Album Group",
-  name: "albumGroup",
+export const itemGroup = {
+  title: "Item Group",
+  name: "itemGroup",
   type: "object",
   fields: [
     {
@@ -124,34 +124,41 @@ export const albumGroup = {
       name: "title",
       type: "string",
       description:
-        "Optional title displayed above this set of albums (e.g. 'Featured')."
+        "Optional title displayed above this set of items (e.g. 'Featured')."
     },
     {
-      title: "Albums",
-      name: "albums",
+      title: "Items",
+      name: "items",
       type: "array",
       of: [
         {
           type: "reference",
-          to: [{ type: "album" }]
+          to: [{ type: "album" }, { type: "project" }]
         }
       ],
       validation: (Rule) => Rule.required().min(1)
+    },
+    {
+      title: "Show description?",
+      name: "showDescription",
+      type: "boolean",
+      description:
+        "Toggle to display item descriptions (for example, project descriptions) under the titles."
     }
   ],
   preview: {
     select: {
       title: "title",
-      albums: "albums"
+      items: "items"
     },
-    prepare({ title, albums }) {
-      const totalAlbums = albums ? albums.length : 0
+    prepare({ title, items }) {
+      const totalItems = items ? items.length : 0
       return {
-        title: title || "Album Group",
+        title: title || "Item Group",
         subtitle:
-          totalAlbums > 0
-            ? `${totalAlbums} album${totalAlbums > 1 ? "s" : ""}`
-            : "No albums"
+          totalItems > 0
+            ? `${totalItems} item${totalItems > 1 ? "s" : ""}`
+            : "No items"
       }
     }
   }

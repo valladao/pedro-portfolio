@@ -7,6 +7,7 @@ import Image from 'next/image'
 const Text_with_Photo = ({ content, image, altText }: Text_with_Photo) => {
 
   const url = buildImageUrl(image)
+  if (!url) return null
 
   const size = url.substring(
     url.indexOf("-") + 1,

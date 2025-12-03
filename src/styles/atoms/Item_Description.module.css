@@ -1,0 +1,12 @@
+.Item_Description {
+  font-family: "Open Sans", sans-serif;
+  font-style: normal;
+  font-weight: 600;
+  font-size: 18px;
+  line-height: 26px;
+  text-align: center;
+  letter-spacing: 0.2em;
+  text-transform: uppercase;
+  color: hsl(0deg 0% 0% / 1);
+  margin-top: 20px;
+}
