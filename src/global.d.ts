@@ -96,6 +96,8 @@ type AlbumBanner = {
   _key: string
   _type: "albumBanner"
   album: Album
+  imageDesktop: Sanity_Image
+  imageMobile: Sanity_Image
 }
 
 type Standard_Track = {
