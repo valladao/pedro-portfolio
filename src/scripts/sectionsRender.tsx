@@ -38,6 +38,8 @@ const sectionRender = (section: Sections) => {
       return (
         <Track_List
           key={section._key}
+          title={section.title}
+          description={section.description}
           tracks={section.tracks}
         ></Track_List>
       )
