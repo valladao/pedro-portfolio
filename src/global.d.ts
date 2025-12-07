@@ -116,6 +116,8 @@ type YouTube_Track = {
 type Track_List = {
   _key: string
   _type: "trackList"
+  title?: string
+  description?: Array<Block>
   tracks: Array<Tracks>
 }
 

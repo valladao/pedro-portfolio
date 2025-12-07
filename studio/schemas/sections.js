@@ -94,6 +94,21 @@ export const trackList = {
   type: "object",
   fields: [
     {
+      title: "Section Title",
+      name: "title",
+      type: "string",
+      description:
+        "(Optional) Title shown in the top bar above the tracks. Leave empty to hide the bar."
+    },
+    {
+      title: "Description",
+      name: "description",
+      type: "array",
+      of: [{ type: "block" }],
+      description:
+        "(Optional) Paragraph displayed between the title bar and the tracks."
+    },
+    {
       title: "Tracks",
       name: "tracks",
       type: "array",
@@ -105,10 +120,18 @@ export const trackList = {
     }
   ],
   preview: {
-    select: {},
-    prepare() {
+    select: {
+      title: "title",
+      tracks: "tracks"
+    },
+    prepare({ title, tracks }) {
+      const totalTracks = tracks ? tracks.length : 0
       return {
-        title: "Track List"
+        title: title || "Track List",
+        subtitle:
+          totalTracks > 0
+            ? `${totalTracks} track${totalTracks > 1 ? "s" : ""}`
+            : "No tracks"
       }
     }
   }
