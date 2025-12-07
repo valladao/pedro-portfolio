@@ -1,6 +1,12 @@
 .Track_List {
-  max-width: 1440px;
+  max-width: 960px;
   margin: 0 auto 44px;
+}
+
+.Track_List > * {
+  max-width: 480px;
+  width: 100%;
+  margin: 0 auto;
 }
 
 .Description {
@@ -43,8 +49,8 @@
 }
 
 @media only screen and (min-width: 920px) {
-  .Track_List {
-    display: grid;
+  .\33 _Columns {
+    max-width: 1440px;
     grid-template-columns: 1fr 1fr 1fr;
   }
 }

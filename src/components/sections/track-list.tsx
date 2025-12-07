@@ -11,6 +11,12 @@ type Track_List_Props = {
 
 const Track_List = ({ title, description, tracks }: Track_List_Props) => {
   const hasDescription = !!description?.length
+  const threeOrMoreTracks = tracks.length >= 3
+  const trackListClassNames = [
+    styles.Track_List,
+    threeOrMoreTracks ? styles["3_Columns"] : '',
+    'track-list'
+  ].filter(Boolean).join(' ')
 
   return (
     <>
@@ -20,7 +26,7 @@ const Track_List = ({ title, description, tracks }: Track_List_Props) => {
           <PortableText value={description}></PortableText>
         </div>
       )}
-      <div className={styles.Track_List + ' track-list'}>
+      <div className={trackListClassNames}>
         {tracksRender(tracks).map(
           (component) => { return component }
         )}
