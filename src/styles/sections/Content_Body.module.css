@@ -11,6 +11,9 @@
   text-align: justify;
   letter-spacing: 0.1em;
   text-indent: 10px;
+  overflow-wrap: break-word;
+  word-break: break-word;
+  hyphens: auto;
   color: hsl(0deg 0% 0% / 1);
   margin: 0;
   margin-bottom: 27px;
