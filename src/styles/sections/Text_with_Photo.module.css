@@ -11,6 +11,9 @@
   line-height: 19px;
   text-align: justify;
   letter-spacing: 0.05em;
+  overflow-wrap: break-word;
+  word-break: break-word;
+  hyphens: auto;
 }
 
 .Text_with_Photo span {
