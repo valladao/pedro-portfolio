@@ -5,16 +5,28 @@ import Head from "next/head";
 
 type Basic_Layout_Props = {
   page?: string
-  pageTitle?: string
+  pageTitle?: string | string[]
   children: React.ReactNode
 }
 
 const Basic_Layout = ({page, pageTitle, children}: Basic_Layout_Props) => {
+  const normalizedTitle =
+    typeof pageTitle === "string"
+      ? pageTitle
+      : Array.isArray(pageTitle)
+      ? pageTitle.filter((part): part is string => typeof part === "string").join(" ")
+      : undefined
+
+  const fullTitle = normalizedTitle
+    ? `${normalizedTitle} - Pedro H. Valladao`
+    : undefined
+
   return (
     <>
-      {pageTitle && (
+      {fullTitle && (
         <Head>
-          <title>{pageTitle} - Pedro H. Valladao</title></Head>
+          <title>{fullTitle}</title>
+        </Head>
       )}
       <Header></Header>
       <main className={page}>{children}</main>

@@ -17,7 +17,7 @@ const Spotify_Album = ({ albumCover, altText, albumID }: Spotify_Album_Props) =>
   return (
     <div className={styles.Spotify_Album}>
       {coverUrl ? (
-        <Image src={coverUrl} alt={altText} layout={'intrinsic'} width={460} height={460} />
+        <Image src={coverUrl} alt={altText} width={460} height={460} style={{ width: '100%', height: 'auto' }} />
       ) : null}
       <iframe
         src={albumUrl}
