@@ -56,10 +56,18 @@ My plan was too use the most modern front-end technogies and to focus on perform
 - Spotify Track
 - YouTube Track
 
-| Field Name           | Description                                                   |
-| -------------------- | ------------------------------------------------------------- |
-| Track ID             | The unique APP ID for the track                               |
-| Start time (seconds) | (Only for YouTube) The time that the video will start to play |
+| Field Name           | Description                                                                            |
+| -------------------- | -------------------------------------------------------------------------------------- |
+| Title                | (Optional) Text shown in the top bar. If empty, the bar is hidden.                     |
+| Description          | (Optional) Rich text shown between the title bar and the tracks.                       |
+| Track ID             | The unique APP ID for the track                                                        |
+| Start time (seconds) | (Only for YouTube) The time that the video will start to play                          |
+
+**Layout behavior:**
+
+- On desktop, 3 columns are used only when there are 3+ tracks; fewer tracks stay centered.
+- On tablet, 2 columns remain.
+- Each track card keeps its original embed size with a max width of 412px.
 
 ---
 
