@@ -28,7 +28,14 @@ const Text_with_Photo = ({ content, image, altText }: TextWithPhotoProps) => {
       <PortableText
         value={content}
       ></PortableText>
-      <Image src={url} alt={altText} width={width} height={height} sizes={size} layout={"intrinsic"} />
+      <Image
+        src={url}
+        alt={altText}
+        width={width}
+        height={height}
+        sizes={size}
+        style={{ width: '100%', height: 'auto' }}
+      />
     </div>
   );
 };

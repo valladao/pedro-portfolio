@@ -22,7 +22,7 @@ const Album_Cover = ({albumCover, altText}: Album_Cover_Props) => {
         alt={altText}
         width={635}
         height={635}
-        layout='intrinsic'
+        style={{ width: '100%', height: 'auto' }}
       />
     </div>
   )
