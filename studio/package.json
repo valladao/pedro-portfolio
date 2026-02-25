@@ -25,6 +25,16 @@
     "styled-components": "^6.1.15"
   },
   "devDependencies": {},
+  "overrides": {
+    "@architect/hydrate": {
+      "glob": "^10.5.0"
+    },
+    "@architect/utils": {
+      "glob": "^10.5.0"
+    },
+    "prismjs": "^1.30.0",
+    "undici": "^6.23.0"
+  },
   "resolutions": {
     "loader-utils": "^1.4.1"
   }
