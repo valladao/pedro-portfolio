@@ -6,7 +6,7 @@ type Menu_Props = {
 }
 
 const Menu = ({ mobile = true }: Menu_Props) => {
-  let menuClass = mobile ? styles.Menu_Mobile : styles.Menu_Desktop
+  const menuClass = mobile ? styles.Menu_Mobile : styles.Menu_Desktop
   return (
     <nav className={menuClass + ' menu'}>
       <ul>

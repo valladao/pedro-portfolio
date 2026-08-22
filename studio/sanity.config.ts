@@ -1,5 +1,5 @@
 import { defineConfig } from "sanity"
-import { deskTool } from "sanity/desk"
+import { structureTool } from "sanity/structure"
 import { visionTool } from "@sanity/vision"
 import { schemaTypes } from "./schemas/schema"
 
@@ -8,7 +8,7 @@ export default defineConfig({
   title: "Pedro H. Valladao | Portfolio",
   projectId: "xq90hv4m",
   dataset: "production",
-  plugins: [deskTool(), visionTool()],
+  plugins: [structureTool(), visionTool()],
   schema: {
     types: schemaTypes
   }

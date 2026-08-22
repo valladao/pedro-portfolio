@@ -11,24 +11,31 @@ const Portfolio_Template = ({data}: Portfolio_Template_Props) => {
   const item = data.item || data.album
   const albumData = item && "albumTitle" in item ? (item as Album) : undefined
 
-  // Special rules to move certain general album informations to sections
-  for (const section of data.sections) {
+  // Special rules to move certain general album information to sections
+  const sections = data.sections.map((section): Sections => {
     if (albumData && section._type === "spotifyAlbum" && section.hasCover === true) {
-      section.albumCover = albumData.albumCover
-      section.altText = albumData.altText
+      return {
+        ...section,
+        albumCover: albumData.albumCover,
+        altText: albumData.altText
+      }
     }
     if (albumData && section._type === "albumHeroBanner") {
-      section.albumTitle = albumData.albumTitle
-      section.shortTitle = albumData.shortTitle
-      section.albumCover = albumData.albumCover
-      section.altText = albumData.altText
+      return {
+        ...section,
+        albumTitle: albumData.albumTitle,
+        shortTitle: albumData.shortTitle,
+        albumCover: albumData.albumCover,
+        altText: albumData.altText
+      }
     }
-  }
+    return section
+  })
 
   return (
     <>
       <Title_Bar pageTitle="Portfolio"></Title_Bar>
-      {sectionsRender(data.sections).map(
+      {sectionsRender(sections).map(
         (component) => {return component}
       )}
     </>

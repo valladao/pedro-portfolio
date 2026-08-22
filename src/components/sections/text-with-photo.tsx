@@ -1,4 +1,3 @@
-/* eslint-disable @next/next/no-img-element */
 import styles from '../../styles/sections/Text_with_Photo.module.css'
 import { PortableText } from '@portabletext/react'
 import buildImageUrl from '../../scripts/build-image-url'

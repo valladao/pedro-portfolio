@@ -120,7 +120,7 @@ const sectionRender = (section: Sections) => {
 }
 
 export default function sectionsRender(sections: Array<Sections>) {
-  let renderedSections: Array<React.ReactNode> = []
+  const renderedSections: Array<React.ReactNode> = []
 
   for (const section of sections) {
     renderedSections.push(sectionRender(section))

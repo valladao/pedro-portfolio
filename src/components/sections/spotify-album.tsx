@@ -1,4 +1,3 @@
-/* eslint-disable @next/next/no-img-element */
 import styles from '../../styles/sections/Spotify_Album.module.css'
 import buildImageUrl from '../../scripts/build-image-url'
 import Image from 'next/image'
@@ -11,7 +10,7 @@ type Spotify_Album_Props = {
 
 const Spotify_Album = ({ albumCover, altText, albumID }: Spotify_Album_Props) => {
 
-  let albumUrl = `https://open.spotify.com/embed/album/${albumID}?utm_source=generator&theme=0`
+  const albumUrl = `https://open.spotify.com/embed/album/${albumID}?utm_source=generator&theme=0`
   const coverUrl = buildImageUrl(albumCover)
 
   return (

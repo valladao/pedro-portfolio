@@ -6,9 +6,13 @@
   "main": "package.json",
   "author": "Pedro Henrique Valladão <pedrohvalladao@gmail.com>",
   "license": "UNLICENSED",
+  "engines": {
+    "node": "24.x"
+  },
   "scripts": {
     "start": "sanity dev",
     "build": "sanity build",
+    "lint": "eslint .",
     "version": "sanity versions",
     "upgrade": "sanity upgrade"
   },
@@ -16,26 +20,24 @@
     "sanity"
   ],
   "dependencies": {
-    "@sanity/vision": "^3.55.0",
-    "eslint": "^8.6.0",
+    "@sanity/vision": "^6.10.1",
+    "eslint": "^9.0.0",
     "prop-types": "^15.7.0",
-    "react": "^18.3.1",
-    "react-dom": "^18.3.1",
-    "sanity": "^3.55.0",
-    "styled-components": "^6.1.15"
+    "react": "^19.2.2",
+    "react-dom": "^19.2.2",
+    "sanity": "^6.10.1",
+    "styled-components": "^6.5.3"
   },
-  "devDependencies": {},
+  "devDependencies": {
+    "@sanity/eslint-config-studio": "^6.0.0"
+  },
   "overrides": {
-    "@architect/hydrate": {
-      "glob": "^10.5.0"
+    "@vercel/frameworks": {
+      "js-yaml": "3.15.1",
+      "smol-toml": "1.6.1"
     },
-    "@architect/utils": {
-      "glob": "^10.5.0"
-    },
-    "prismjs": "^1.30.0",
-    "undici": "^6.23.0"
-  },
-  "resolutions": {
-    "loader-utils": "^1.4.1"
+    "typeid-js": {
+      "uuid": "11.1.1"
+    }
   }
 }
