@@ -15,7 +15,6 @@ type Album_Banner_Props = {
 
 const Album_Banner = ({albumTitle, albumCover, altText, slug, imageDesktop, imageMobile}: Album_Banner_Props) => {
 
-  const [width, setWidth] = useState<number>(0)
   const [backgroundImage, setBackgroundImage] = useState({})
   const desktopUrl = buildImageUrl(imageDesktop)
   const mobileUrl = buildImageUrl(imageMobile)
@@ -23,8 +22,6 @@ const Album_Banner = ({albumTitle, albumCover, altText, slug, imageDesktop, imag
   useEffect(() => {
 
     function handleResize() {
-
-      setWidth(window.innerWidth)
 
       if (window.innerWidth > 639) {
         setBackgroundImage({

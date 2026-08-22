@@ -24,7 +24,6 @@ const Album_Hero_Banner = ({
   imageMobile
 }: AlbumHeroBannerProps) => {
 
-  const [width, setWidth] = useState<number>(0)
   const [backgroundImage, setBackgroundImage] = useState({})
   const desktopUrl = buildImageUrl(imageDesktop)
   const mobileUrl = buildImageUrl(imageMobile)
@@ -32,8 +31,6 @@ const Album_Hero_Banner = ({
   useEffect(() => {
 
     function handleResize() {
-
-      setWidth(window.innerWidth)
 
       if (window.innerWidth > 639) {
         setBackgroundImage({

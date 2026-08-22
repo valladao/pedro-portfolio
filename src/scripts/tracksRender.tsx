@@ -34,7 +34,7 @@ const trackRender = (track: Tracks) => {
 }
 
 export default function tracksRender(tracks: Array<Tracks>) {
-  let renderedTracks: Array<React.ReactNode> = []
+  const renderedTracks: Array<React.ReactNode> = []
 
   for (const track of tracks) {
     renderedTracks.push(trackRender(track))
