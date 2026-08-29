@@ -1,0 +1,13 @@
+.Sheet_Music_Archive { width: 100%; overflow: hidden; background: #fff; }
+.Title, .BottomBar { background: #898989; }
+.Title { min-height: 44px; padding: 7px 5.8%; color: #fff; font-size: 24px; letter-spacing: .18em; line-height: 30px; text-transform: uppercase; }
+.Carousel { padding: 37px 5.8% 40px; }
+.Slide { height: auto; }
+.ScoreLink { position: relative; display: block; aspect-ratio: .75; overflow: hidden; background: #f7f7f7; box-shadow: 2px 3px 5px rgba(0,0,0,.28); transition: transform 180ms ease, box-shadow 180ms ease; }
+.ScoreLink:hover, .ScoreLink:focus-visible { transform: translateY(-4px); box-shadow: 3px 7px 9px rgba(0,0,0,.3); }
+.ScoreLink :global(img) { object-fit: cover; }
+.Carousel :global(.swiper-button-prev), .Carousel :global(.swiper-button-next) { color: #555; }
+.Carousel :global(.swiper-button-prev) { left: 18px; }
+.Carousel :global(.swiper-button-next) { right: 18px; }
+.BottomBar { height: 40px; }
+@media (max-width: 639px) { .Title { padding-left: 5%; font-size: 16px; letter-spacing: .14em; } .Carousel { padding: 28px 8% 32px; } .Carousel :global(.swiper-button-prev), .Carousel :global(.swiper-button-next) { display: none; } }

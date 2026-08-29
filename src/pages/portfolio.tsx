@@ -33,6 +33,7 @@ export async function getStaticProps() {
           altText
         }
       },
+      _type == "sheetMusicArchive" => { ..., scores[]->{ _id, title, altText, thumbnail, pdf{asset->{url}} } },
       album != NULL => { album ->},
       _type == "itemGroup" => {
         "itemGroups": [

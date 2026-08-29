@@ -8,6 +8,7 @@ import Text_with_Photo from "../components/sections/text-with-photo"
 import Spotify_Album from "../components/sections/spotify-album"
 import Album_Hero_Banner from "../components/sections/album-hero-banner"
 import Photo_Slides from "../components/sections/photo-slides"
+import Sheet_Music_Archive from "../components/sections/sheet-music-archive"
 
 const sectionRender = (section: Sections) => {
   switch (section._type) {
@@ -113,6 +114,9 @@ const sectionRender = (section: Sections) => {
           slides={section.slides}
         ></Photo_Slides>
       )
+
+    case "sheetMusicArchive":
+      return <Sheet_Music_Archive key={section._key} title={section.title} scores={section.scores} />
 
     default:
       break

@@ -189,6 +189,8 @@ type Photo_Slides = {
     _key?: string
   }>
 }
+type Sheet_Music = { _id: string; title: string; altText: string; thumbnail: Sanity_Image; pdf: { asset: { url: string } } }
+type Sheet_Music_Archive = { _key: string; _type: "sheetMusicArchive"; title?: string; scores: Array<Sheet_Music> }
 
 type Sections =
   | HeroImage
@@ -201,6 +203,7 @@ type Sections =
   | Spotify_Album
   | Album_Hero_Banner
   | Photo_Slides
+  | Sheet_Music_Archive
 
 type Tracks = Standard_Track & YouTube_Track
 

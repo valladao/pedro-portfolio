@@ -1,5 +1,6 @@
 import album from "./album"
 import project from "./project"
+import sheetMusic from "./sheetMusic"
 import * as objects from "./objects"
 import * as sections from "./sections"
 
@@ -20,6 +21,7 @@ export const schemaTypes = [
   sections.spotifyAlbum,
   sections.albumHeroBanner,
   sections.photoSlides,
+  sections.sheetMusicArchive,
 
   // Documents
   {
@@ -68,6 +70,7 @@ export const schemaTypes = [
           { type: "spotifyAlbum" },
           { type: "albumHeroBanner" },
           { type: "photoSlides" }
+          ,{ type: "sheetMusicArchive" }
         ]
       }
     ],
@@ -151,5 +154,6 @@ export const schemaTypes = [
     ]
   },
   album,
-  project
+  project,
+  sheetMusic
 ]

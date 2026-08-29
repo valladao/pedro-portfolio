@@ -412,3 +412,26 @@ export const photoSlides = {
     }
   }
 }
+
+export const sheetMusicArchive = {
+  title: "Music Score Archive",
+  name: "sheetMusicArchive",
+  type: "object",
+  fields: [
+    { title: "Section Title", name: "title", type: "string" },
+    {
+      title: "Music Scores",
+      name: "scores",
+      type: "array",
+      of: [{ type: "reference", to: [{ type: "sheetMusic" }] }],
+      validation: (Rule) => Rule.required().min(1)
+    }
+  ],
+  preview: {
+    select: { title: "title", scores: "scores" },
+    prepare({ title, scores }) {
+      const count = scores?.length || 0
+      return { title: title || "Music Score Archive", subtitle: `${count} score${count === 1 ? "" : "s"}` }
+    }
+  }
+}
