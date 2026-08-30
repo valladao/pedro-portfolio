@@ -1,8 +1,82 @@
-Hi, my name is Manoel Valladao and I am web developer. This project is a professional portfolio website that I create to my son, Pedro Henrique Valladao. My son is a talent music composer and artist so we want too much the best way to promote him works and project.
+# Pedro Henrique Valladao Portfolio
 
-With that idea in mind, as Pedro is not only musician, but also likes to draw and paint, since boy, we decided that he would design the website. With some Figma lessons, he could design the album pages and sections so my work was to transport that to the web.
+A portfolio for musician and visual artist Pedro Henrique Valladao. Pedro
+designed the experience in Figma, and the site translates those designs into a
+content-managed website focused on performance and accessibility.
 
-My plan was too use the most modern front-end technogies and to focus on performance and acessabilitiy. Here I explain a little bit of what has been developed and how.
+The repository contains two applications:
+
+- a Next.js site in the repository root;
+- a Sanity Studio in [`studio/`](studio/), which manages pages, albums,
+  projects, and reusable page sections.
+
+See [the architecture guide](docs/architecture.md) for the data flow and the
+main extension points. The section reference remains below for editors and
+developers working with the content model.
+
+## Requirements
+
+- Node.js 24 (see [`.nvmrc`](.nvmrc))
+- npm
+
+## Getting started
+
+Install and start the website:
+
+```bash
+nvm use
+npm ci
+npm run dev
+```
+
+The site is available at `http://localhost:3000` by default. Its pages read
+published content from the configured Sanity dataset, so normal page rendering
+requires network access. No local environment file is required for those
+public reads.
+
+Install the Studio dependencies separately:
+
+```bash
+cd studio
+npm ci
+npm start
+```
+
+The Studio configuration currently targets the `production` dataset. Starting
+it can expose production content to edits; only do so when that access is
+intended and authorized.
+
+## Commands
+
+Run website commands from the repository root:
+
+| Command         | Purpose                         |
+| --------------- | ------------------------------- |
+| `npm run dev`   | Start the Next.js dev server    |
+| `npm run lint`  | Run the website ESLint checks   |
+| `npm run build` | Create the website build        |
+| `npm run start` | Serve an existing website build |
+
+Run Studio commands from `studio/`:
+
+| Command         | Purpose                      |
+| --------------- | ---------------------------- |
+| `npm start`     | Start Sanity Studio          |
+| `npm run lint`  | Run the Studio ESLint checks |
+| `npm run build` | Create the Studio build      |
+
+There is currently no automated test suite. Validate changes with the relevant
+lint and build commands and with focused manual checks when behavior changes.
+
+## Environment variables
+
+The `/api/revalidate` endpoint uses these server-only variables:
+
+- `SANITY_API_READ_TOKEN`
+- `REVALIDATE_SECRET`
+
+Keep their values in the deployment platform or a local ignored environment
+file. Never commit or document their values.
 
 ## Dynamic Page Sections
 
