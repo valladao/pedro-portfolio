@@ -1,9 +1,20 @@
-# Sanity Clean Content Studio
+# Pedro Portfolio Studio
 
-Congratulations, you have now installed the Sanity Content Studio, an open source real-time content editing environment connected to the Sanity backend.
+Sanity Studio for managing the portfolio's base pages, albums, projects, and
+dynamic page sections. For repository-wide setup and conventions, see the
+[root README](../README.md) and [architecture guide](../docs/architecture.md).
 
-Now you can do the following things:
+This is a separate npm project and requires Node.js 24:
 
-- [Read “getting started” in the docs](https://www.sanity.io/docs/introduction/getting-started?utm_source=readme)
-- [Join the community Slack](https://slack.sanity.io/?utm_source=readme)
-- [Extend and build plugins](https://www.sanity.io/docs/content-studio/extending?utm_source=readme)
+```bash
+cd studio
+npm ci
+npm start
+```
+
+Use `npm run lint` for static checks and `npm run build` for a production build.
+
+The configuration in `sanity.config.ts` and `sanity.cli.ts` points to the
+`production` dataset. Starting the Studio can allow production content edits;
+do so only when that access is intended and authorized. Keep authentication
+tokens and other credentials outside the repository.
