@@ -21,7 +21,6 @@ export const schemaTypes = [
   sections.spotifyAlbum,
   sections.albumHeroBanner,
   sections.photoSlides,
-  sections.sheetMusicArchive,
 
   // Documents
   {
@@ -70,7 +69,6 @@ export const schemaTypes = [
           { type: "spotifyAlbum" },
           { type: "albumHeroBanner" },
           { type: "photoSlides" }
-          ,{ type: "sheetMusicArchive" }
         ]
       }
     ],

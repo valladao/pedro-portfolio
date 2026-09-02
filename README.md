@@ -258,6 +258,22 @@ Flexible list that accepts **albums** or **projects** (references). It keeps the
 ### Photo Slides
 
 - 3 slides per view on desktop with navigation arrows; 1 slide per view on mobile with pagination bullets.
+
+### Music Score Archive
+
+The music score archive is rendered automatically above the footer on every
+page except the home and contact pages. It includes every published music
+score document, ordered by creation date. The archive is not added as a page
+section or selected individually by editors.
+
+**Music score document fields:**
+
+| Field Name | Description |
+| ---------- | ----------- |
+| Title | Name shown to editors and used for accessibility. |
+| PDF File | The published PDF opened when a score thumbnail is selected. |
+| Thumbnail | Portrait cover image displayed in the carousel. |
+| Thumbnail ALT Text | Alternative text for the thumbnail image. |
 - Images use the section height (desktop/mobile) and cover the available space.
 
 **Desktop version:**

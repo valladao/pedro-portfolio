@@ -39,6 +39,8 @@ them without exposing the read token to the browser.
 - `src/scripts/get-sanity-pages-query.ts`: shared Sanity query execution.
 - `src/scripts/sectionsRender.tsx`: maps Sanity section `_type` values to React
   section components.
+- `src/scripts/get-sheet-music.ts`: fetches all published music scores for the
+  static archive shown above the footer.
 - `src/global.d.ts`: shared content and component types.
 - `studio/schemas/`: Sanity documents, reusable objects, and dynamic sections.
 
@@ -51,6 +53,10 @@ When adding or changing a dynamic section, inspect every layer it crosses:
 5. update `src/scripts/sectionsRender.tsx`;
 6. implement or reuse the React component and matching CSS Module;
 7. document editor-facing fields in `README.md` when the content model changes.
+
+The music score archive is a fixed layout element rather than a dynamic page
+section. Its documents are queried by the pages that display it and passed to
+`Basic_Layout`; home and contact intentionally omit that query and render.
 
 ## Routes and page models
 

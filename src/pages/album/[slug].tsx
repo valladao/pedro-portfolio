@@ -2,6 +2,7 @@ import Basic_Layout from "../../components/layouts/basic"
 import Portfolio_Template from "../../components/templates/portfolio"
 import getSanityPagesQuery from "../../scripts/get-sanity-pages-query"
 import client from "../../client"
+import getSheetMusic from "../../scripts/get-sheet-music"
 
 type Album_Props = {
   query: Portfolio_Pages_Props
@@ -9,7 +10,7 @@ type Album_Props = {
 
 const Album = ({query}: Album_Props) => {
   return (
-    <Basic_Layout page="album" pageTitle={query.item?.shortTitle || query.album?.shortTitle}>
+    <Basic_Layout page="album" pageTitle={query.item?.shortTitle || query.album?.shortTitle} sheetMusic={query.sheetMusic}>
       <Portfolio_Template data={query}></Portfolio_Template>
     </Basic_Layout>
   )
@@ -53,7 +54,6 @@ export async function getStaticProps({params}: Paths_Params) {
           altText
         }
       },
-      _type == "sheetMusicArchive" => { ..., scores[]->{ _id, title, altText, thumbnail, pdf{asset->{url}} } },
       album != NULL => { album ->},
       _type == "itemGroup" => {
         "itemGroups": [
@@ -79,11 +79,14 @@ export async function getStaticProps({params}: Paths_Params) {
     }
   }`
 
-  const query = await getSanityPagesQuery(filters, projections)
+  const [pageQuery, sheetMusic] = await Promise.all([
+    getSanityPagesQuery(filters, projections),
+    getSheetMusic()
+  ])
 
   return {
     props: {
-      query
+      query: { ...pageQuery, sheetMusic }
     },
     revalidate: 10, // In seconds
   }
