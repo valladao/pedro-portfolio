@@ -1,13 +1,17 @@
 import client from "../client"
 
 export default async function getSheetMusic() {
-  return client.fetch<Array<Sheet_Music>>(
-    `*[_type == "sheetMusic"] | order(_createdAt asc){
-      _id,
-      title,
-      altText,
-      thumbnail,
-      pdf{asset->{url}}
+  const archive = await client.fetch<{ scores?: Array<Sheet_Music> } | null>(
+    `*[_type == "sheetMusicArchive"][0]{
+      scores[]->{
+        _id,
+        title,
+        altText,
+        thumbnail,
+        pdf{asset->{url}}
+      }
     }`
   )
+
+  return archive?.scores || []
 }

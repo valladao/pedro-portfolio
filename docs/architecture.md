@@ -55,8 +55,10 @@ When adding or changing a dynamic section, inspect every layer it crosses:
 7. document editor-facing fields in `README.md` when the content model changes.
 
 The music score archive is a fixed layout element rather than a dynamic page
-section. Its documents are queried by the pages that display it and passed to
-`Basic_Layout`; home and contact intentionally omit that query and render.
+section. Its ordered references are queried from the singleton
+`sheetMusicArchive` document by the pages that display it and passed to
+`Basic_Layout`; home and contact intentionally omit that query and do not
+render it.
 
 ## Routes and page models
 

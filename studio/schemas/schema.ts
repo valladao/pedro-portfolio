@@ -1,6 +1,7 @@
 import album from "./album"
 import project from "./project"
 import sheetMusic from "./sheetMusic"
+import sheetMusicArchive from "./sheetMusicArchive"
 import * as objects from "./objects"
 import * as sections from "./sections"
 
@@ -153,5 +154,6 @@ export const schemaTypes = [
   },
   album,
   project,
-  sheetMusic
+  sheetMusic,
+  sheetMusicArchive
 ]

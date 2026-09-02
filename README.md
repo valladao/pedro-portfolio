@@ -263,8 +263,12 @@ Flexible list that accepts **albums** or **projects** (references). It keeps the
 
 The music score archive is rendered automatically above the footer on every
 page except the home and contact pages. It includes every published music
-score document, ordered by creation date. The archive is not added as a page
-section or selected individually by editors.
+score document in the order configured in `Settings | Music Score Archive`.
+The archive is not added as a page section or selected individually by editors.
+
+To change the order, open `Settings | Music Score Archive` in the Studio and
+drag the score references into the desired order. New scores must be added to
+this list to become visible on the site.
 
 **Music score document fields:**
 
